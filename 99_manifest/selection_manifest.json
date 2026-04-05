@@ -1,0 +1,105 @@
+{
+  "source_archive": "Agent_Cellphone_docs.zip",
+  "selected_count": 13,
+  "selected_files": [
+    {
+      "path": "01_core/README.md",
+      "reason": "Top-level system overview and quick start. Good anchor doc."
+    },
+    {
+      "path": "01_core/AGENT_README.md",
+      "reason": "Most concrete communication guide; covers mechanical messaging and file inbox listener."
+    },
+    {
+      "path": "01_core/INTER_AGENT_COMMUNICATION_GUIDE.md",
+      "reason": "Protocol-level message queue design and message format."
+    },
+    {
+      "path": "01_core/FSM_STRUCTURE.md",
+      "reason": "Execution lifecycle and recovery model; essential for making the system deterministic."
+    },
+    {
+      "path": "01_core/CONFIG_STRUCTURE.md",
+      "reason": "Canonical config locations and runtime config references."
+    },
+    {
+      "path": "02_architecture/PRODUCT_REQUIREMENTS_DOCUMENT.md",
+      "reason": "Product-level intent, scope, and success criteria."
+    },
+    {
+      "path": "02_architecture/TECHNICAL_SPECIFICATIONS.md",
+      "reason": "Most complete architecture and component spec; kept instead of relying only on summaries."
+    },
+    {
+      "path": "02_architecture/FINAL_PROJECT_STRUCTURE.md",
+      "reason": "Useful for reconstructing repository layout without dragging the whole archive back in."
+    },
+    {
+      "path": "03_execution/PROJECT_ROADMAP.md",
+      "reason": "Phase-level sequencing from MVP toward listener loop and robustness."
+    },
+    {
+      "path": "03_execution/IMPLEMENTATION_ROADMAP.md",
+      "reason": "Detailed implementation sequence and staged build plan."
+    },
+    {
+      "path": "03_execution/changes_2025-08-10_phase2-contract.json",
+      "reason": "Concrete change contract for phase 2 scaffolds; strongest executable planning artifact in the set."
+    },
+    {
+      "path": "04_onboarding/COMPREHENSIVE_ONBOARDING_SUMMARY.md",
+      "reason": "Captures the single-message onboarding pattern cleanly."
+    },
+    {
+      "path": "04_onboarding/ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "reason": "Operational onboarding improvements and verification/system metrics."
+    }
+  ],
+  "excluded_groups": {
+    "resume_templates": [
+      "AUTONOMOUS_AGENT_RESUME_TEMPLATE.md",
+      "COMPREHENSIVE_RESUME_TEMPLATE.md",
+      "DATA_ENGINEER_RESUME_TEMPLATE.md",
+      "RESUME_EXAMPLE_CONVERSION.md",
+      "RESUME_TEMPLATES_SUMMARY.md",
+      "RESUME_TEMPLATE_USAGE_GUIDE.md",
+      "ROLE_SPECIFIC_RESUME_PROMPTS.md",
+      "SKILL_MAPPING_REFERENCE.md",
+      "SYSTEM_ARCHITECT_RESUME_TEMPLATE.md",
+      "INTERVIEW_PREPARATION_GUIDE.md"
+    ],
+    "gui_heavy_or_duplicate_summaries": [
+      "AGENT_MESSENGER_INTEGRATION.md",
+      "AGENT_MESSENGER_REVIEW.md",
+      "DUAL_BUTTON_SENDING_APPROACH.md",
+      "GUI_CONSOLIDATION_SUMMARY.md",
+      "GUI_DEVELOPMENT_SUMMARY.md",
+      "GUI_V2_DESIGN_DOCUMENT.md",
+      "GUI_V2_USER_GUIDE.md",
+      "PHASE_1_GUI_CONSOLIDATION_SUMMARY.md",
+      "TWO_AGENT_HORIZONTAL_GUI.md",
+      "VISION_SYSTEM_README.md"
+    ],
+    "redundant_status_or_summary_docs": [
+      "TECHNICAL_SPECIFICATIONS_SUMMARY.md",
+      "INTER_AGENT_FRAMEWORK_SUMMARY.md",
+      "PROJECT_REORGANIZATION_SUMMARY.md",
+      "PROJECT_REQUIREMENTS_ANALYSIS.md",
+      "PROJECT_STATUS.md",
+      "PROJECT_STRUCTURE.md",
+      "PUSH_SUMMARY.md",
+      "ORGANIZATION_PLAN.md",
+      "HARDCODING_SOLUTION_SUMMARY.md",
+      "DREAM_OS_BRANDING_UPDATE.md",
+      "ONBOARDING_IMPROVEMENT_COMPLETE.md",
+      "ONBOARDING_IMPROVEMENT_SUCCESS.md",
+      "FINAL_ONBOARDING_IMPROVEMENT_SUMMARY.md",
+      "IMPROVED_ONBOARDING_APPROACH.md",
+      "DEVELOPMENT_AUTOMATION_GUIDE.md",
+      "AutonomousModes.md",
+      "PROJECT_FOCUS_CONFIGURATION.md",
+      "PRACTICAL_CONVERSION_GUIDE.md",
+      "ai_ml/TDD_TESTING_GUIDE.md"
+    ]
+  }
+}
