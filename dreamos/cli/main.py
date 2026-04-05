@@ -21,7 +21,11 @@ from dreamos.tools import build_default_registry
 from dreamos.core.agent import CognitiveAgent
 from dreamos.core.memory import Memory, VectorMemory, KnowledgeGraph, RAGEngine
 from dreamos.core.swarm import SwarmController
+from dreamos.core.task_adapter import TaskAdapter
 from dreamos.logging.logger import setup_logger
+from src.core.message import BusMessage, load_message
+from src.relay.device_relay import DeviceRelay
+from src.transports.file_transport import FileTransport
 
 
 def find_repos():
@@ -123,7 +127,31 @@ def main():
     print(f"  👥 Agents : {[a.name for a in agents]}")
     print(f"  📝 Log    : {SETTINGS.log_file}")
 
-    swarm.run(goal, repos)
+    bus_root = Path(SETTINGS.github_dir).expanduser() / ".dreamos_bus"
+    worker_node = "dreamos-worker"
+    cli_node = "dreamos-cli"
+    transport = FileTransport(bus_root=bus_root, nodes=[worker_node, cli_node])
+    relay = DeviceRelay(
+        node_id=worker_node,
+        transport=transport,
+        task_adapter=TaskAdapter(swarm),
+    )
+    message = BusMessage(
+        from_agent=cli_node,
+        to_agent=worker_node,
+        msg_type="task",
+        body=goal,
+        device_hint=worker_node,
+        meta={"goal": goal, "repos": repos},
+    )
+    transport.send(message)
+    relay.poll_once()
+    complete_path = bus_root / "complete" / f"{worker_node}__{message.id}.json"
+    final_message = load_message(complete_path)
+    if final_message.result:
+        print(f"\n  ✅ Message execution complete: {final_message.id}")
+    if final_message.error:
+        print(f"\n  ❌ Message execution failed: {final_message.error}")
 
 
 if __name__ == "__main__":

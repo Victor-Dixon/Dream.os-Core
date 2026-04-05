@@ -14,12 +14,13 @@ Execution model:
 import os
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from ..config.settings import SETTINGS
 from ..logging.logger import log
 from ..plans.decomposer import Decomposer
 from ..plans.veto import VetoEngine
+from .routing import RoutingDecision, RoutingPolicy
 from ..tools.base import ToolRegistry
 
 
@@ -48,6 +49,28 @@ class SwarmController:
             log.warning(f"No agent can handle tool: {tool}")
             return None
         return max(capable, key=lambda a: a.bid(tool, repo, self.rag))
+
+    def route_score(
+        self,
+        node_id: str,
+        goal: str,
+        repo: Optional[str],
+        required_capabilities: List[str],
+    ) -> float:
+        if not self.rag or not hasattr(self.rag, "memory"):
+            return 0.5
+        memory = self.rag.memory
+        goal_aff = memory.goal_affinity(node_id, goal) if hasattr(memory, "goal_affinity") else 0.5
+        repo_aff = memory.route_affinity(node_id, repo) if hasattr(memory, "route_affinity") else 0.5
+        capability_bonus = min(len(required_capabilities) * 0.05, 0.25) if required_capabilities else 0.0
+        avoid_penalty = 0.0
+        if repo and "lint" in (goal or "").lower() and memory.should_avoid("lint", repo, self.settings.max_retries):
+            avoid_penalty = 0.5
+        return (goal_aff * 0.5) + (repo_aff * 0.5) + capability_bonus - avoid_penalty
+
+    def advise_route(self, message: Dict[str, Any], nodes: List[Any]) -> RoutingDecision:
+        policy = RoutingPolicy(swarm=self, nodes=nodes)
+        return policy.route(message)
 
     # ── Per-repo step execution ───────────────────────────────────────────────
 
@@ -162,8 +185,17 @@ class SwarmController:
                 f"{s.success_rate:.0%}  ({s.successes}/{s.tasks}){rag_note}"
             )
 
-        if self.rag:
+        if self.rag and hasattr(self.rag, "memory") and hasattr(self.rag.memory, "summary"):
             mem = self.rag.memory.summary()
-            print(f"\n  💾 Memory: {mem['total_actions']} actions, {mem['success_rate']:.0%} success rate")
+            if isinstance(mem, dict):
+                total_actions = mem.get("total_actions", 0)
+                success_rate = mem.get("success_rate", 0.0)
+                if isinstance(success_rate, (int, float)):
+                    print(
+                        f"\n  💾 Memory: {total_actions} actions, "
+                        f"{success_rate:.0%} success rate"
+                    )
+                else:
+                    print(f"\n  💾 Memory: {total_actions} actions")
 
         print(f"{'═'*52}\n")

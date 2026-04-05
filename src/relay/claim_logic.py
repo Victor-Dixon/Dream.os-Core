@@ -26,3 +26,11 @@ def mark_complete(message: BusMessage) -> BusMessage:
     payload["status"] = MessageStatus.COMPLETE.value
     payload["lease_expires_at"] = None
     return BusMessage.from_dict(payload)
+
+
+def mark_failed(message: BusMessage, error: str) -> BusMessage:
+    payload = message.to_dict()
+    payload["status"] = MessageStatus.FAILED.value
+    payload["lease_expires_at"] = None
+    payload["error"] = error
+    return BusMessage.from_dict(payload)

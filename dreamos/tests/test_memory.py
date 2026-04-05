@@ -58,6 +58,14 @@ class TestMemory:
         mem2 = Memory(persist_path=path)
         assert mem2.summary()["total_actions"] == 1
 
+    def test_route_affinity_neutral_without_history(self):
+        assert self.mem.route_affinity("desktop-main", "/repo/a") == 0.5
+
+    def test_goal_affinity_updates_from_node_records(self):
+        self.mem.record("fix lint", "lint", "/repo/a", {"ok": True}, "agent", node_id="desktop-main")
+        self.mem.record("fix lint", "lint", "/repo/a", {"ok": False}, "agent", node_id="desktop-main")
+        assert self.mem.goal_affinity("desktop-main", "fix lint") == 0.5
+
 
 class TestVectorMemory:
     def setup_method(self):

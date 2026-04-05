@@ -24,6 +24,10 @@ class Memory:
     def __init__(self, persist_path: Optional[str] = None):
         self._log: List[Dict] = []
         self._failures: Dict[str, int] = defaultdict(int)
+        self._route_success: Dict[str, int] = defaultdict(int)
+        self._route_failure: Dict[str, int] = defaultdict(int)
+        self._goal_success: Dict[str, int] = defaultdict(int)
+        self._goal_failure: Dict[str, int] = defaultdict(int)
         self._lock = threading.Lock()
         self._path = Path(persist_path) if persist_path else None
 
@@ -39,19 +43,32 @@ class Memory:
         repo: str,
         result: Dict,
         worker: str,
+        node_id: Optional[str] = None,
     ):
+        goal_key = self._goal_key(goal)
         entry = {
             "goal": goal,
+            "goal_key": goal_key,
             "tool": tool,
             "repo": repo,
             "ok": result.get("ok", False),
             "worker": worker,
+            "node_id": node_id,
             "ts": datetime.utcnow().isoformat(),
         }
         with self._lock:
             self._log.append(entry)
             if not entry["ok"]:
                 self._failures[f"{tool}::{repo}"] += 1
+            if node_id:
+                route_key = self._route_key(node_id, repo)
+                goal_node_key = self._goal_node_key(node_id, goal_key)
+                if entry["ok"]:
+                    self._route_success[route_key] += 1
+                    self._goal_success[goal_node_key] += 1
+                else:
+                    self._route_failure[route_key] += 1
+                    self._goal_failure[goal_node_key] += 1
 
         if self._path:
             self._save()
@@ -75,6 +92,24 @@ class Memory:
     def should_avoid(self, tool: str, repo: str, threshold: int = 2) -> bool:
         return self.failure_count(tool, repo) >= threshold
 
+    def route_affinity(self, node_id: str, repo: Optional[str]) -> float:
+        if not repo:
+            return 0.5
+        key = self._route_key(node_id, repo)
+        with self._lock:
+            success = self._route_success[key]
+            failure = self._route_failure[key]
+        total = success + failure
+        return (success / total) if total else 0.5
+
+    def goal_affinity(self, node_id: str, goal: str) -> float:
+        key = self._goal_node_key(node_id, self._goal_key(goal))
+        with self._lock:
+            success = self._goal_success[key]
+            failure = self._goal_failure[key]
+        total = success + failure
+        return (success / total) if total else 0.5
+
     def recent(self, n: int = 20) -> List[Dict]:
         with self._lock:
             return list(self._log[-n:])
@@ -94,7 +129,14 @@ class Memory:
 
     def _save(self):
         try:
-            data = {"log": self._log[-500:], "failures": dict(self._failures)}
+            data = {
+                "log": self._log[-500:],
+                "failures": dict(self._failures),
+                "route_success": dict(self._route_success),
+                "route_failure": dict(self._route_failure),
+                "goal_success": dict(self._goal_success),
+                "goal_failure": dict(self._goal_failure),
+            }
             self._path.write_text(json.dumps(data, indent=2))
         except Exception:
             pass  # don't crash the swarm over a log write
@@ -104,8 +146,35 @@ class Memory:
             data = json.loads(self._path.read_text())
             self._log = data.get("log", [])
             self._failures = defaultdict(int, data.get("failures", {}))
+            self._route_success = defaultdict(int, data.get("route_success", {}))
+            self._route_failure = defaultdict(int, data.get("route_failure", {}))
+            self._goal_success = defaultdict(int, data.get("goal_success", {}))
+            self._goal_failure = defaultdict(int, data.get("goal_failure", {}))
         except Exception:
             pass
+
+    @staticmethod
+    def _route_key(node_id: str, repo: str) -> str:
+        return f"{node_id}::{repo}"
+
+    @staticmethod
+    def _goal_node_key(node_id: str, goal_key: str) -> str:
+        return f"{node_id}::{goal_key}"
+
+    @staticmethod
+    def _goal_key(goal: str) -> str:
+        text = (goal or "").strip().lower()
+        if "lint" in text:
+            return "lint"
+        if "test" in text:
+            return "test"
+        if "push" in text:
+            return "push"
+        if "pull" in text or "update" in text:
+            return "pull"
+        if "status" in text:
+            return "status"
+        return text[:64]
 
 
 # ── Vector Memory (stub — swap in ChromaDB / FAISS) ──────────────────────────
@@ -218,9 +287,17 @@ class RAGEngine:
             "similar_events": [s["text"] for s in similar],
         }
 
-    def learn(self, repo: str, tool: str, result: Dict, worker: str, goal: str = ""):
+    def learn(
+        self,
+        repo: str,
+        tool: str,
+        result: Dict,
+        worker: str,
+        goal: str = "",
+        node_id: Optional[str] = None,
+    ):
         """Update all memory systems after a tool execution."""
-        self.memory.record(goal, tool, repo, result, worker)
+        self.memory.record(goal, tool, repo, result, worker, node_id=node_id)
 
         # Index into vector store
         status = "succeeded" if result.get("ok") else "failed"

@@ -40,10 +40,17 @@ class BaseAgent:
     No memory dependency — pure logic.
     """
 
-    def __init__(self, name: str, expertise: List[str], registry: ToolRegistry):
+    def __init__(
+        self,
+        name: str,
+        expertise: List[str],
+        registry: ToolRegistry,
+        node_id: Optional[str] = None,
+    ):
         self.name = name
         self.expertise = set(expertise)
         self.registry = registry
+        self.node_id = node_id or name
         self.stats = AgentStats()
         self._lock = threading.Lock()
 
@@ -103,6 +110,7 @@ class BaseAgent:
 
         return {
             "agent": self.name,
+            "node_id": self.node_id,
             "tool": tool,
             "repo": repo,
             **result.to_dict(),
@@ -155,6 +163,13 @@ class CognitiveAgent(BaseAgent):
 
         # ── Post-execution: learn ─────────────────────────────────────────────
         if self.rag and not dry_run:
-            self.rag.learn(repo, tool, result, worker=self.name, goal=goal)
+            self.rag.learn(
+                repo,
+                tool,
+                result,
+                worker=self.name,
+                goal=goal,
+                node_id=self.node_id,
+            )
 
         return result

@@ -24,11 +24,17 @@ class FileTransport(Transport):
 
     def claim(self, message_id: str, node_id: str) -> Path:
         source = self.bus_root / INBOX_DIR / node_id / f"{message_id}.json"
-        claimed = self.bus_root / CLAIMED_DIR / f"{node_id}__{message_id}.json"
+        claimed = self._claimed_path(message_id, node_id)
         source.rename(claimed)
         return claimed
 
+    def update_claimed(self, message: BusMessage, node_id: str) -> None:
+        message.write_json(self._claimed_path(message.id, node_id))
+
     def ack(self, message_id: str, node_id: str) -> None:
-        claimed = self.bus_root / CLAIMED_DIR / f"{node_id}__{message_id}.json"
+        claimed = self._claimed_path(message_id, node_id)
         complete = self.bus_root / COMPLETE_DIR / f"{node_id}__{message_id}.json"
         claimed.rename(complete)
+
+    def _claimed_path(self, message_id: str, node_id: str) -> Path:
+        return self.bus_root / CLAIMED_DIR / f"{node_id}__{message_id}.json"

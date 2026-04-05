@@ -3,9 +3,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from src.core.message import BusMessage
-from src.relay.claim_logic import claim_message, mark_complete, mark_running
+from src.core.types import MessageStatus
+from src.relay.claim_logic import claim_message, mark_complete, mark_failed, mark_running
 from src.transports.file_transport import FileTransport
 
+from dreamos.core.task_adapter import TaskAdapter
 
 from typing import Callable
 
@@ -14,6 +16,7 @@ from typing import Callable
 class DeviceRelay:
     node_id: str
     transport: FileTransport
+    task_adapter: TaskAdapter | None = None
     handlers: dict[str, Callable[[BusMessage], BusMessage | None]] = field(default_factory=dict)
     event_log: list[str] = field(default_factory=list)
 
@@ -31,10 +34,23 @@ class DeviceRelay:
         self.event_log.append(f"claimed:{claimed.id}")
 
         running = mark_running(claimed)
-        response = self._handle(running)
-        complete = mark_complete(running)
-        self.transport.ack(complete.id, node_id=self.node_id)
-        self.event_log.append(f"completed:{complete.id}")
+        handled = self._handle(running)
+        is_task_execution = running.msg_type == "task" and self.task_adapter is not None
+        if handled is None:
+            final_message = mark_complete(running)
+            response = None
+        else:
+            response = None if is_task_execution else handled
+            if handled.status == MessageStatus.FAILED:
+                final_message = handled
+            elif handled.status == MessageStatus.COMPLETE:
+                final_message = handled
+            else:
+                final_message = mark_complete(handled)
+
+        self.transport.update_claimed(final_message, node_id=self.node_id)
+        self.transport.ack(final_message.id, node_id=self.node_id)
+        self.event_log.append(f"completed:{final_message.id}")
 
         if response is not None:
             self.transport.send(response)
@@ -42,6 +58,11 @@ class DeviceRelay:
         return 1
 
     def _handle(self, message: BusMessage) -> BusMessage | None:
+        if self.task_adapter and self.task_adapter.can_handle(message.to_dict()):
+            try:
+                return self.task_adapter.execute_bus_message(message)
+            except Exception as exc:
+                return mark_failed(message, str(exc))
         handler = self.handlers.get(message.msg_type)
         if handler is None:
             return None
