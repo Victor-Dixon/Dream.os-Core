@@ -113,7 +113,7 @@ class TestGitCommitTool:
 class TestLintTool:
     @patch("subprocess.run")
     def test_no_issues(self, mock_run, tmp_path):
-        subprocess.run(["git", "init"], cwd=tmp_path, capture_output=True)
+        (tmp_path / ".git").mkdir()
         mock_run.return_value = MagicMock(returncode=0, stdout="", stderr="")
         tool = LintTool()
         result = tool.safe_execute(str(tmp_path))
@@ -122,7 +122,7 @@ class TestLintTool:
 
     @patch("subprocess.run")
     def test_has_issues(self, mock_run, tmp_path):
-        subprocess.run(["git", "init"], cwd=tmp_path, capture_output=True)
+        (tmp_path / ".git").mkdir()
         mock_run.return_value = MagicMock(
             returncode=1, stdout="E501 line too long\n", stderr=""
         )

@@ -22,6 +22,11 @@ REQUIRED_FIELDS = (
     "reply_to",
     "device_hint",
     "transport",
+    "required_capabilities",
+    "routing_hints",
+    "assigned_to",
+    "result",
+    "error",
 )
 
 
@@ -45,6 +50,11 @@ class BusMessage:
     lease_expires_at: str | None = None
     reply_to: str | None = None
     transport: TransportName = TransportName.FILESYSTEM
+    required_capabilities: list[str] = field(default_factory=list)
+    routing_hints: JsonDict = field(default_factory=dict)
+    assigned_to: str | None = None
+    result: JsonDict | None = None
+    error: str | None = None
     meta: JsonDict = field(default_factory=dict)
 
     def to_dict(self) -> JsonDict:
@@ -61,6 +71,11 @@ class BusMessage:
             "reply_to": self.reply_to,
             "device_hint": self.device_hint,
             "transport": self.transport.value,
+            "required_capabilities": self.required_capabilities,
+            "routing_hints": self.routing_hints,
+            "assigned_to": self.assigned_to,
+            "result": self.result,
+            "error": self.error,
             "meta": self.meta,
         }
 
@@ -86,6 +101,11 @@ class BusMessage:
             reply_to=data["reply_to"],
             device_hint=str(data["device_hint"]),
             transport=TransportName(str(data["transport"])),
+            required_capabilities=list(data.get("required_capabilities", [])),
+            routing_hints=dict(data.get("routing_hints", {})),
+            assigned_to=data.get("assigned_to"),
+            result=data.get("result"),
+            error=data.get("error"),
             meta=dict(data.get("meta", {})),
         )
 
@@ -107,6 +127,18 @@ class BusMessage:
         for key in ("lease_owner", "lease_expires_at", "reply_to"):
             if data[key] is not None and not isinstance(data[key], str):
                 raise MessageValidationError(f"{key} must be null or string")
+        if not isinstance(data["required_capabilities"], list):
+            raise MessageValidationError("required_capabilities must be a list")
+        if any(not isinstance(item, str) for item in data["required_capabilities"]):
+            raise MessageValidationError("required_capabilities entries must be strings")
+        if not isinstance(data["routing_hints"], dict):
+            raise MessageValidationError("routing_hints must be an object")
+        if data["assigned_to"] is not None and not isinstance(data["assigned_to"], str):
+            raise MessageValidationError("assigned_to must be null or string")
+        if data["result"] is not None and not isinstance(data["result"], dict):
+            raise MessageValidationError("result must be null or object")
+        if data["error"] is not None and not isinstance(data["error"], str):
+            raise MessageValidationError("error must be null or string")
         if "meta" in data and not isinstance(data["meta"], dict):
             raise MessageValidationError("meta must be an object")
         try:

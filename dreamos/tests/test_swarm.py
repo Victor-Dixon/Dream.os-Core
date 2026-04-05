@@ -79,6 +79,38 @@ class TestSwarmController:
         results = swarm.run("status", ["/repo/x"])
         assert results == []
 
+    def test_route_score_uses_memory_signals(self):
+        rag = MagicMock()
+        rag.memory.goal_affinity.return_value = 0.8
+        rag.memory.route_affinity.return_value = 0.6
+        rag.memory.should_avoid.return_value = False
+        swarm = SwarmController(agents=[self.agent], rag=rag, settings=self.settings)
+        score = swarm.route_score(
+            node_id="desktop-main",
+            goal="fix lint",
+            repo="/repo/x",
+            required_capabilities=["git", "lint"],
+        )
+        assert score > 0.0
+
+    def test_advise_route_returns_routing_decision(self):
+        from dreamos.core.routing import NodeProfile
+
+        rag = MagicMock()
+        rag.memory.goal_affinity.return_value = 0.7
+        rag.memory.route_affinity.return_value = 0.7
+        rag.memory.should_avoid.return_value = False
+        swarm = SwarmController(agents=[self.agent], rag=rag, settings=self.settings)
+        decision = swarm.advise_route(
+            message={
+                "payload": {"goal": "status", "repo": "/repo/x"},
+                "required_capabilities": ["pull"],
+            },
+            nodes=[NodeProfile("desktop-main", ["pull"])],
+        )
+        assert decision.rejected is False
+        assert decision.node_id == "desktop-main"
+
 
 class TestVetoIntegration:
     def test_failing_lint_blocks_commit(self):
