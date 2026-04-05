@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dreamos"
+version = "7.0.0"
+description = "dream.os v7 — Modular Cognitive Swarm"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+lint = ["ruff>=0.4"]
+test = ["pytest>=8", "pytest-mock>=3"]
+all = ["dreamos[lint,test]"]
+
+[project.scripts]
+dreamos = "dreamos.cli.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["dreamos/tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

@@ -1,0 +1,113 @@
+{
+  "included": [
+    {
+      "package_folder": "00_foundation",
+      "source_path": "README.md",
+      "reason": "Repo entrypoint and highest-level system framing.",
+      "sha256_16": "d16497ddd68c5d4d"
+    },
+    {
+      "package_folder": "00_foundation",
+      "source_path": "PRODUCT_REQUIREMENTS_DOCUMENT.md",
+      "reason": "Primary product intent, scope, features, and operating model.",
+      "sha256_16": "b7d76f034e0805f1"
+    },
+    {
+      "package_folder": "00_foundation",
+      "source_path": "TECHNICAL_SPECIFICATIONS.md",
+      "reason": "Most concrete technical design doc; stronger than summary variants.",
+      "sha256_16": "e57ae8046f0f7700"
+    },
+    {
+      "package_folder": "00_foundation",
+      "source_path": "IMPLEMENTATION_ROADMAP.md",
+      "reason": "Sequenced build order for reconstructing the system cleanly.",
+      "sha256_16": "e957286861dd0c08"
+    },
+    {
+      "package_folder": "00_foundation",
+      "source_path": "PROJECT_REQUIREMENTS_ANALYSIS.md",
+      "reason": "Requirements decomposition that can inform v2 extraction decisions.",
+      "sha256_16": "b5a146fa07132c04"
+    },
+    {
+      "package_folder": "00_foundation",
+      "source_path": "PROJECT_STATUS.md",
+      "reason": "Snapshot of what was claimed complete vs pending in v1.",
+      "sha256_16": "60f64349739c6cf3"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "INTER_AGENT_COMMUNICATION_GUIDE.md",
+      "reason": "Core communication protocol concepts for agent-to-agent routing.",
+      "sha256_16": "26166ab3b6e76efd"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "INTER_AGENT_FRAMEWORK_SUMMARY.md",
+      "reason": "Compact framing of the inter-agent framework; useful as companion context.",
+      "sha256_16": "9df9175beb469f3b"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "FSM_STRUCTURE.md",
+      "reason": "Closest thing to an execution-state contract; high-value for runtime rebuild.",
+      "sha256_16": "5a264e9b7fdffaab"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "AutonomousModes.md",
+      "reason": "Operational mode model for task progression and autonomy behavior.",
+      "sha256_16": "0ae62a454596dc8c"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "AGENT_RESCUE_SYSTEM.md",
+      "reason": "Recovery and anti-stall concepts worth preserving.",
+      "sha256_16": "4965eb388b444fb6"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "CONFIG_STRUCTURE.md",
+      "reason": "Canonical configuration structure after cleanup; useful for v2 settings design.",
+      "sha256_16": "ba2925008f8dd3ef"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "PROJECT_FOCUS_CONFIGURATION.md",
+      "reason": "Useful if preserving dynamic project routing without hardcoding.",
+      "sha256_16": "d08147c8969af129"
+    },
+    {
+      "package_folder": "01_runtime_core",
+      "source_path": "AGENT_README.md",
+      "reason": "Practical communication/self-prompting behavior guide tied to ACP workflows.",
+      "sha256_16": "dea60ff003b59fd1"
+    },
+    {
+      "package_folder": "02_onboarding_ops",
+      "source_path": "ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "reason": "Best single onboarding doc; replaces multiple overlapping onboarding summaries.",
+      "sha256_16": "514a11679b218966"
+    },
+    {
+      "package_folder": "99_reference",
+      "source_path": "FINAL_PROJECT_STRUCTURE.md",
+      "reason": "Reference-only snapshot of intended organized layout.",
+      "sha256_16": "aee8a6878ab5fcbc"
+    },
+    {
+      "package_folder": "99_reference",
+      "source_path": "PROJECT_STRUCTURE.md",
+      "reason": "Reference-only snapshot of earlier 'cursor bridge' structure/claims.",
+      "sha256_16": "5868be1c96c16d14"
+    }
+  ],
+  "excluded_groups": {
+    "GUI docs": "Deferred until a stable backend/runtime exists.",
+    "Resume/interview docs": "Not relevant to Dream.OS v2 extraction.",
+    "Branding/update summaries": "Low engineering value for rebuild.",
+    "Duplicate onboarding summaries": "Superseded by ONBOARDING_SYSTEM_IMPROVEMENTS.md.",
+    "Spec/summary duplicates": "Kept full specs, dropped summaries."
+  }
+}
