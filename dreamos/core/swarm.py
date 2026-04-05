@@ -22,6 +22,7 @@ from ..plans.decomposer import Decomposer
 from ..plans.veto import VetoEngine
 from .routing import RoutingDecision, RoutingPolicy
 from ..tools.base import ToolRegistry
+from src.core.execution_guard import assert_execution_entrypoint, require_bus_message
 
 
 class SwarmController:
@@ -115,7 +116,20 @@ class SwarmController:
 
     # ── Main Run ──────────────────────────────────────────────────────────────
 
-    def run(self, goal: str, repos: List[str]) -> List[Dict]:
+    def execute_message(self, message) -> List[Dict]:
+        validated = require_bus_message(message)
+        goal = validated.meta.get("goal") or validated.body or "status"
+        repos = validated.meta.get("repos") or []
+        if not repos and validated.meta.get("repo"):
+            repos = [validated.meta["repo"]]
+        return self.run(goal, repos, _internal=True)
+
+    def run(self, goal: str, repos: List[str], *, _internal: bool = False) -> List[Dict]:
+        assert_execution_entrypoint(
+            source="SwarmController.run",
+            internal_only=True,
+            internal_call=_internal,
+        )
         steps = self.decomposer.decompose(goal)
         self._results.clear()
         self.veto.reset()
