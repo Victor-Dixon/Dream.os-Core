@@ -1,3 +1,20 @@
+# SSOT Update Log
+
+## 2026-04-05 — Execution lock-down (bus-only path enforcement)
+- Status: Completed
+- Changes: added centralized execution/lifecycle guard, hardened TaskAdapter to BusMessage-only input, and added bypass-rejection tests.
+- Artifact: `docs/execution_lockdown.md`
+
+---
+
+## 2026-04-05 — Systems Audit (Dream.OS swarm architecture)
+- Status: Completed
+- Scope audited: transport layer, swarm runtime, bridge layer, routing/capabilities, structure, docs, tests, execution integrity, CI/CD.
+- Evidence source: repository code/contracts/tests as of 2026-04-05.
+- Artifact: `03_execution/SWARM_SYSTEM_AUDIT_2026-04-05.md`
+
+---
+
 # 📱 Agent Cell Phone - Project Status
 
 ## ✅ Phase 1: MVP Comm Layer - COMPLETED

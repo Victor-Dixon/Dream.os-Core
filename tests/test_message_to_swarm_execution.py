@@ -10,7 +10,9 @@ from src.transports.file_transport import FileTransport
 
 
 class StubSwarm:
-    def run(self, goal: str, repos: list[str]):
+    def execute_message(self, message: BusMessage):
+        goal = message.meta.get("goal") or message.body
+        repos = message.meta.get("repos") or []
         return [{"goal": goal, "repos": repos, "ok": True}]
 
 

@@ -43,17 +43,17 @@ class TestSwarmController:
         assert agent is None
 
     def test_run_returns_results(self):
-        results = self.swarm.run("status", ["/repo/x"])
+        results = self.swarm.run("status", ["/repo/x"], _internal=True)
         assert isinstance(results, list)
 
     def test_blocked_repo_skipped(self):
         self.settings.safe_repos = ["allowed"]
-        results = self.swarm.run("status", ["/repo/blocked_thing"])
+        results = self.swarm.run("status", ["/repo/blocked_thing"], _internal=True)
         assert results == []
 
     def test_allowed_repo_runs(self):
         self.settings.safe_repos = ["myrepo"]
-        results = self.swarm.run("status", ["/home/user/myrepo"])
+        results = self.swarm.run("status", ["/home/user/myrepo"], _internal=True)
         assert len(results) >= 1
 
     def test_veto_blocks_downstream(self):
@@ -64,7 +64,7 @@ class TestSwarmController:
 
     def test_multiple_repos_all_run(self):
         repos = [f"/repo/project{i}" for i in range(3)]
-        results = self.swarm.run("status", repos)
+        results = self.swarm.run("status", repos, _internal=True)
         assert len(results) == 3
 
     def test_memory_avoid_skips_repo(self):
@@ -76,7 +76,7 @@ class TestSwarmController:
             rag=rag,
             settings=self.settings,
         )
-        results = swarm.run("status", ["/repo/x"])
+        results = swarm.run("status", ["/repo/x"], _internal=True)
         assert results == []
 
     def test_route_score_uses_memory_signals(self):

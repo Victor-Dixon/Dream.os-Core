@@ -40,13 +40,15 @@ class DeviceRelay:
             final_message = mark_complete(running)
             response = None
         else:
-            response = None if is_task_execution else handled
+            response = None
             if handled.status == MessageStatus.FAILED:
                 final_message = handled
             elif handled.status == MessageStatus.COMPLETE:
                 final_message = handled
             else:
-                final_message = mark_complete(handled)
+                final_message = mark_complete(running)
+                if not is_task_execution:
+                    response = handled
 
         self.transport.update_claimed(final_message, node_id=self.node_id)
         self.transport.ack(final_message.id, node_id=self.node_id)
@@ -58,9 +60,9 @@ class DeviceRelay:
         return 1
 
     def _handle(self, message: BusMessage) -> BusMessage | None:
-        if self.task_adapter and self.task_adapter.can_handle(message.to_dict()):
+        if self.task_adapter and self.task_adapter.can_handle(message):
             try:
-                return self.task_adapter.execute_bus_message(message)
+                return self.task_adapter.execute(message)
             except Exception as exc:
                 return mark_failed(message, str(exc))
         handler = self.handlers.get(message.msg_type)
