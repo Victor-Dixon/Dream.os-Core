@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import importlib
-import os
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -19,13 +18,17 @@ class AgentEngine:
     model: str = "llama3"
     verbose: bool = False
 
-    def _ensure_import_path(self) -> None:
-        zip_path = Path.cwd() / "dreamos_agent.zip"
-        if zip_path.exists() and str(zip_path) not in sys.path:
-            sys.path.insert(0, str(zip_path))
+    def _ensure_import_path(self, repo_path: Path) -> None:
+        candidate_paths = (
+            repo_path / "dreamos_agent.zip",
+            Path.cwd() / "dreamos_agent.zip",
+        )
+        for zip_path in candidate_paths:
+            if zip_path.exists() and str(zip_path) not in sys.path:
+                sys.path.insert(0, str(zip_path))
 
-    def _load_orchestrator_class(self):
-        self._ensure_import_path()
+    def _load_orchestrator_class(self, repo_path: Path):
+        self._ensure_import_path(repo_path)
         module = importlib.import_module("dreamos_agent.agent.orchestrator")
         return module.Orchestrator
 
@@ -39,17 +42,13 @@ class AgentEngine:
         if not repo_path.exists():
             raise AgentEngineError(f"repo path does not exist: {repo_path}")
 
-        Orchestrator = self._load_orchestrator_class()
-        cwd = Path.cwd()
-        os.chdir(repo_path)
+        Orchestrator = self._load_orchestrator_class(repo_path)
         try:
             orchestrator = Orchestrator(workspace=str(repo_path), model=self.model, verbose=self.verbose)
             orchestrator.initialize()
             response = orchestrator.answer(goal)
         except Exception as exc:  # pragma: no cover - guarded by callers/tests
             raise AgentEngineError(str(exc)) from exc
-        finally:
-            os.chdir(cwd)
 
         return {
             "ok": True,

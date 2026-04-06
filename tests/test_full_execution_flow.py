@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from dreamos.config.settings import Settings
 from dreamos.core.swarm import SwarmController
 from dreamos.core.task_adapter import TaskAdapter
 from src.core.message import BusMessage, load_message
@@ -30,11 +31,13 @@ class FakeOrchestrator:
 
 
 def test_full_execution_flow_with_agent_engine(monkeypatch, tmp_path: Path) -> None:
-    monkeypatch.setattr(AgentEngine, "_load_orchestrator_class", lambda self: FakeOrchestrator)
+    monkeypatch.setattr(AgentEngine, "_load_orchestrator_class", lambda self, repo_path: FakeOrchestrator)
 
     transport = FileTransport(tmp_path, ["cli", "worker"])
     engine = AgentEngine(verbose=False)
-    swarm = SwarmController(agents=[], agent_engine=engine)
+    settings = Settings()
+    settings.dry_run = False
+    swarm = SwarmController(agents=[], settings=settings, agent_engine=engine)
     adapter = TaskAdapter(swarm)
     relay = DeviceRelay(node_id="worker", transport=transport, task_adapter=adapter)
 

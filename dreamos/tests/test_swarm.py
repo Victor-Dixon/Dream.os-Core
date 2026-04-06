@@ -9,7 +9,11 @@ from dreamos.tools.base import ToolRegistry, ToolResult
 
 
 class StubAgentEngine:
+    def __init__(self):
+        self.calls = []
+
     def run(self, goal: str, repo: str):
+        self.calls.append((goal, repo))
         return {"ok": True, "goal": goal, "repo": repo, "engine": "stub"}
 
 
@@ -43,6 +47,13 @@ class TestSwarmController:
     def test_run_returns_results(self):
         results = self.swarm.run("status", ["/repo/x"], _internal=True)
         assert isinstance(results, list)
+
+    def test_dry_run_skips_agent_engine_execution(self):
+        results = self.swarm.run("status", ["/repo/x"], _internal=True)
+        assert len(results) == 1
+        assert results[0]["engine"] == "dry-run"
+        assert results[0]["dry_run"] is True
+        assert self.swarm.agent_engine.calls == []
 
     def test_blocked_repo_skipped(self):
         self.settings.safe_repos = ["allowed"]
