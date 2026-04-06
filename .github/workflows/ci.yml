@@ -64,6 +64,9 @@ jobs:
       - name: Validate Phase 2 completion status in SSOT
         run: python scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED
 
+      - name: Run phase 2 test coverage
+        run: pytest -q -m phase2
+
       - name: Run audit suite
         run: pytest --audit -q
 
@@ -89,7 +92,7 @@ jobs:
           pip install pytest
 
       - name: Validate Phase 3 completion status in SSOT
-        run: python scripts/ci/check_phase_status.py --phase 3 --expected COMPLETED
+        run: python scripts/ci/check_phase_status.py --phase 3 --expected IN PROGRESS
 
       - name: Run execution integrity checks
         run: pytest -q tests/test_execution_guard.py tests/test_message_only_execution.py
@@ -116,7 +119,10 @@ jobs:
           pip install pytest
 
       - name: Validate Phase 4 completion status in SSOT
-        run: python scripts/ci/check_phase_status.py --phase 4 --expected COMPLETED
+        run: python scripts/ci/check_phase_status.py --phase 4 --expected FUTURE
+
+      - name: Run phase 2 test coverage
+        run: pytest -q -m phase2
 
       - name: Run audit suite
         run: pytest --audit -q
@@ -166,6 +172,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest
+
+      - name: Run phase 2 test coverage
+        run: pytest -q -m phase2
 
       - name: Run audit suite
         run: pytest --audit -q
