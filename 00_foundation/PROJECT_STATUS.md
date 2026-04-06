@@ -1,5 +1,12 @@
 # SSOT Update Log
 
+## 2026-04-06 — post-review execution safety fixes for PR #6
+- Status: Completed
+- Changes: restored `SwarmController` dry-run behavior to avoid real orchestrator execution in simulation mode, removed process-wide `chdir` from `AgentEngine.run` to prevent parallel-repo CWD races, and added targeted regression tests for both issues.
+- Artifacts: `dreamos/core/swarm.py`, `src/execution/agent_engine.py`, `dreamos/tests/test_swarm.py`, `tests/test_agent_engine.py`
+
+---
+
 ## 2026-04-06 — execution path enforcement hardening
 - Status: Completed
 - Changes: removed vestigial swarm negotiation path, enforced TaskAdapter-only handling for task messages in relay, migrated laptop relay script to TaskAdapter/SwarmController wiring, and added enforcement tests for adapter requirement and orchestrator-import scoping.

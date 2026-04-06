@@ -80,6 +80,17 @@ class SwarmController:
             log.warning(f"⚠️  Skipping {repo_label} (repeated failures)")
             return None
 
+        if self.settings.dry_run:
+            log.info(f"🧪 Dry-run — skipping execution engine for {repo_label}")
+            return {
+                "ok": True,
+                "goal": goal,
+                "repo": repo,
+                "engine": "dry-run",
+                "response": None,
+                "dry_run": True,
+            }
+
         result = self.agent_engine.run(goal=goal, repo=repo)
         if not result.get("ok"):
             self.veto.record_failure("execute", repo)
