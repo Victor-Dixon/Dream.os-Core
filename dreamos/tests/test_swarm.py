@@ -1,11 +1,16 @@
 """tests/test_swarm.py"""
 
-import pytest
-from unittest.mock import MagicMock, patch
-from dreamos.core.swarm import SwarmController
-from dreamos.core.agent import BaseAgent
-from dreamos.tools.base import ToolRegistry, ToolResult
+from unittest.mock import MagicMock
+
 from dreamos.config.settings import Settings
+from dreamos.core.agent import BaseAgent
+from dreamos.core.swarm import SwarmController
+from dreamos.tools.base import ToolRegistry, ToolResult
+
+
+class StubAgentEngine:
+    def run(self, goal: str, repo: str):
+        return {"ok": True, "goal": goal, "repo": repo, "engine": "stub"}
 
 
 def make_settings(**kwargs):
@@ -32,6 +37,7 @@ class TestSwarmController:
         self.swarm = SwarmController(
             agents=[self.agent],
             settings=self.settings,
+            agent_engine=StubAgentEngine(),
         )
 
     def test_negotiate_finds_capable_agent(self):
@@ -57,9 +63,7 @@ class TestSwarmController:
         assert len(results) >= 1
 
     def test_veto_blocks_downstream(self):
-        # Record a lint failure
         self.swarm.veto.record_failure("lint", "/repo/x")
-        # commit should now be vetoed
         assert self.swarm.veto.is_vetoed("commit", "/repo/x") is True
 
     def test_multiple_repos_all_run(self):
@@ -70,11 +74,12 @@ class TestSwarmController:
     def test_memory_avoid_skips_repo(self):
         rag = MagicMock()
         rag.memory.should_avoid.return_value = True
-        rag.recall_repo_affinity.return_value = 0.5
+        rag.memory.recall_repo_affinity.return_value = 0.5
         swarm = SwarmController(
             agents=[self.agent],
             rag=rag,
             settings=self.settings,
+            agent_engine=StubAgentEngine(),
         )
         results = swarm.run("status", ["/repo/x"], _internal=True)
         assert results == []
@@ -84,7 +89,12 @@ class TestSwarmController:
         rag.memory.goal_affinity.return_value = 0.8
         rag.memory.route_affinity.return_value = 0.6
         rag.memory.should_avoid.return_value = False
-        swarm = SwarmController(agents=[self.agent], rag=rag, settings=self.settings)
+        swarm = SwarmController(
+            agents=[self.agent],
+            rag=rag,
+            settings=self.settings,
+            agent_engine=StubAgentEngine(),
+        )
         score = swarm.route_score(
             node_id="desktop-main",
             goal="fix lint",
@@ -100,7 +110,12 @@ class TestSwarmController:
         rag.memory.goal_affinity.return_value = 0.7
         rag.memory.route_affinity.return_value = 0.7
         rag.memory.should_avoid.return_value = False
-        swarm = SwarmController(agents=[self.agent], rag=rag, settings=self.settings)
+        swarm = SwarmController(
+            agents=[self.agent],
+            rag=rag,
+            settings=self.settings,
+            agent_engine=StubAgentEngine(),
+        )
         decision = swarm.advise_route(
             message={
                 "payload": {"goal": "status", "repo": "/repo/x"},
@@ -115,6 +130,7 @@ class TestSwarmController:
 class TestVetoIntegration:
     def test_failing_lint_blocks_commit(self):
         from dreamos.plans.veto import VetoEngine
+
         veto = VetoEngine()
         veto.record_failure("lint", "/repo/x")
         assert veto.is_vetoed("commit", "/repo/x") is True
@@ -122,11 +138,13 @@ class TestVetoIntegration:
 
     def test_passing_lint_does_not_block(self):
         from dreamos.plans.veto import VetoEngine
+
         veto = VetoEngine()
         assert veto.is_vetoed("commit", "/repo/x") is False
 
     def test_reset_clears_veto(self):
         from dreamos.plans.veto import VetoEngine
+
         veto = VetoEngine()
         veto.record_failure("lint", "/repo/x")
         veto.reset("/repo/x")

@@ -17,7 +17,7 @@ from src.core.types import MessageStatus
 
 
 class StubSwarm:
-    def execute_message(self, message: BusMessage):
+    def execute_message(self, message: BusMessage, **kwargs):
         return [{"goal": message.body, "repos": message.meta.get("repos", []), "ok": True}]
 
 

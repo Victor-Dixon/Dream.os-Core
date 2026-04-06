@@ -1,5 +1,12 @@
 # SSOT Update Log
 
+## 2026-04-06 — dreamos_agent execution-engine integration
+- Status: Completed
+- Changes: added `AgentEngine` wrapper for `dreamos_agent` orchestrator, routed task execution through Message → Adapter → Swarm → AgentEngine, and added full-flow relay test coverage.
+- Artifacts: `src/execution/agent_engine.py`, `dreamos/core/swarm.py`, `dreamos/core/task_adapter.py`, `tests/test_full_execution_flow.py`
+
+---
+
 ## 2026-04-06 — Systems Audit (Dream.OS swarm architecture)
 - Status: Completed
 - Scope audited: transport layer, swarm runtime, bridge layer, routing/capabilities, structure, docs, tests, execution integrity, CI/CD.

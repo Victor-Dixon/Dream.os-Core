@@ -4,13 +4,13 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from src.core.message import BusMessage
 from src.core.execution_guard import (
     InvalidExecutionPathError,
     assert_execution_entrypoint,
     require_bus_message,
     validate_transition,
 )
+from src.core.message import BusMessage
 from src.core.types import MessageStatus
 
 
@@ -36,13 +36,15 @@ class TaskAdapter:
             raise InvalidExecutionPathError(
                 "Execution rejected: execute_bus_message requires BusMessage."
             )
+
         payload = message.to_dict()
         goal = message.meta.get("goal") or message.body or "status"
         repos = message.meta.get("repos") or []
         if not repos and message.meta.get("repo"):
             repos = [message.meta["repo"]]
+
         try:
-            result = self.swarm.execute_message(message)
+            result = self.swarm.execute_message(message, goal=goal, repos=repos)
             validate_transition(message.status.value, MessageStatus.COMPLETE.value)
             payload["status"] = MessageStatus.COMPLETE.value
             payload["result"] = {"goal": goal, "repos": repos, "results": result}
@@ -52,4 +54,5 @@ class TaskAdapter:
             payload["status"] = MessageStatus.FAILED.value
             payload["result"] = None
             payload["error"] = str(exc)
+
         return BusMessage.from_dict(payload)
