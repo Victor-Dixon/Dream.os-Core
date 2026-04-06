@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Any, Dict, List, Optional
+from typing import Dict, List, Optional
 
 from src.core.execution_guard import assert_execution_entrypoint, require_bus_message
 from src.execution.agent_engine import AgentEngine
@@ -31,14 +31,7 @@ class SwarmController:
         self.settings = settings or SETTINGS
         self.veto = VetoEngine()
         self.agent_engine = agent_engine or AgentEngine()
-        self._results: List[Dict[str, Any]] = []
-
-    def _negotiate(self, tool: str, repo: str) -> Optional[Any]:
-        capable = [a for a in self.agents if a.can_handle(tool)]
-        if not capable:
-            log.warning(f"No agent can handle tool: {tool}")
-            return None
-        return max(capable, key=lambda a: a.bid(tool, repo, self.rag))
+        self._results: List[Dict[str, object]] = []
 
     def route_score(
         self,
@@ -58,7 +51,7 @@ class SwarmController:
             avoid_penalty = 0.5
         return (goal_aff * 0.5) + (repo_aff * 0.5) + capability_bonus - avoid_penalty
 
-    def advise_route(self, message: Dict[str, Any], nodes: List[Any]) -> RoutingDecision:
+    def advise_route(self, message: Dict[str, object], nodes: List[object]) -> RoutingDecision:
         policy = RoutingPolicy(swarm=self, nodes=nodes)
         return policy.route(message)
 
@@ -68,7 +61,7 @@ class SwarmController:
         *,
         goal: str | None = None,
         repos: Optional[List[str]] = None,
-    ) -> List[Dict[str, Any]]:
+    ) -> List[Dict[str, object]]:
         validated = require_bus_message(message)
         final_goal = goal or validated.meta.get("goal") or validated.body or "status"
         final_repos = repos or validated.meta.get("repos") or []
@@ -76,7 +69,7 @@ class SwarmController:
             final_repos = [validated.meta["repo"]]
         return self.run(final_goal, final_repos, _internal=True)
 
-    def _run_repo(self, goal: str, repo: str) -> Optional[Dict[str, Any]]:
+    def _run_repo(self, goal: str, repo: str) -> Optional[Dict[str, object]]:
         repo_label = os.path.basename(repo)
 
         if not self.settings.repo_is_safe(repo):
@@ -92,7 +85,7 @@ class SwarmController:
             self.veto.record_failure("execute", repo)
         return result
 
-    def run(self, goal: str, repos: List[str], *, _internal: bool = False) -> List[Dict[str, Any]]:
+    def run(self, goal: str, repos: List[str], *, _internal: bool = False) -> List[Dict[str, object]]:
         assert_execution_entrypoint(
             source="SwarmController.run",
             internal_only=True,

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from src.core.execution_guard import InvalidExecutionPathError
 from src.core.message import BusMessage
 from src.core.types import MessageStatus
 from src.relay.claim_logic import claim_message, mark_complete, mark_failed, mark_running
@@ -34,7 +35,10 @@ class DeviceRelay:
         self.event_log.append(f"claimed:{claimed.id}")
 
         running = mark_running(claimed)
-        handled = self._handle(running)
+        try:
+            handled = self._handle(running)
+        except Exception as exc:
+            handled = mark_failed(running, str(exc))
         is_task_execution = running.msg_type == "task" and self.task_adapter is not None
         if handled is None:
             final_message = mark_complete(running)
@@ -60,11 +64,16 @@ class DeviceRelay:
         return 1
 
     def _handle(self, message: BusMessage) -> BusMessage | None:
-        if self.task_adapter and self.task_adapter.can_handle(message):
-            try:
-                return self.task_adapter.execute(message)
-            except Exception as exc:
-                return mark_failed(message, str(exc))
+        if message.msg_type == "task":
+            if self.task_adapter and self.task_adapter.can_handle(message):
+                try:
+                    return self.task_adapter.execute(message)
+                except Exception as exc:
+                    return mark_failed(message, str(exc))
+            raise InvalidExecutionPathError(
+                "Task execution rejected: TaskAdapter is required for task messages."
+            )
+
         handler = self.handlers.get(message.msg_type)
         if handler is None:
             return None

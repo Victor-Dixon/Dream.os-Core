@@ -40,14 +40,6 @@ class TestSwarmController:
             agent_engine=StubAgentEngine(),
         )
 
-    def test_negotiate_finds_capable_agent(self):
-        agent = self.swarm._negotiate("pull", "/repo/x")
-        assert agent is self.agent
-
-    def test_negotiate_returns_none_for_unknown_tool(self):
-        agent = self.swarm._negotiate("lint", "/repo/x")
-        assert agent is None
-
     def test_run_returns_results(self):
         results = self.swarm.run("status", ["/repo/x"], _internal=True)
         assert isinstance(results, list)

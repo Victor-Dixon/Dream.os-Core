@@ -1,5 +1,12 @@
 # SSOT Update Log
 
+## 2026-04-06 — execution path enforcement hardening
+- Status: Completed
+- Changes: removed vestigial swarm negotiation path, enforced TaskAdapter-only handling for task messages in relay, migrated laptop relay script to TaskAdapter/SwarmController wiring, and added enforcement tests for adapter requirement and orchestrator-import scoping.
+- Artifacts: `dreamos/core/swarm.py`, `src/relay/device_relay.py`, `scripts/start_laptop_relay.py`, `tests/test_execution_path_enforcement.py`
+
+---
+
 ## 2026-04-06 — dreamos_agent execution-engine integration
 - Status: Completed
 - Changes: added `AgentEngine` wrapper for `dreamos_agent` orchestrator, routed task execution through Message → Adapter → Swarm → AgentEngine, and added full-flow relay test coverage.
