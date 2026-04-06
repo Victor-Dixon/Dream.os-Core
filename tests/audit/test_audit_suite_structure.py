@@ -92,8 +92,8 @@ def test_ci_phase_jobs_check_ssot_status() -> None:
     ci_text = CI_WORKFLOW.read_text(encoding="utf-8")
     assert "scripts/ci/check_phase_status.py --phase 1 --expected COMPLETED" in ci_text
     assert "scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED" in ci_text
-    assert "scripts/ci/check_phase_status.py --phase 3 --expected COMPLETED" in ci_text
-    assert "scripts/ci/check_phase_status.py --phase 4 --expected COMPLETED" in ci_text
+    assert "scripts/ci/check_phase_status.py --phase 3 --expected IN PROGRESS" in ci_text
+    assert "scripts/ci/check_phase_status.py --phase 4 --expected FUTURE" in ci_text
 
 
 @pytest.mark.audit

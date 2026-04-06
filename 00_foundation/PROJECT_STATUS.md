@@ -1,5 +1,12 @@
 # SSOT Update Log
 
+## 2026-04-06 — Phase 2 closure implemented (listener/router/pipeline)
+- Status: Completed
+- Changes: implemented normalized Phase 2 runtime contracts, message pipeline (priority queue + retries + dead-letter recovery), command router (resume/sync/restart + custom handlers), and inbox listener (OCR normalization + file tailing + filtering).
+- Verification commands: `pytest -q tests/test_phase2_runtime.py`, `pytest -q`, `python scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED`
+
+---
+
 ## 2026-04-06 — Regression lock + phase prerequisite enforcement in CI
 - Status: Completed
 - Changes: added a completed-phase regression lock job (`enforce_completed_phases`) and chained phase prerequisites in CI so later phase gates only execute after earlier phase success, while still surfacing incomplete phases via SSOT status checks.
@@ -117,26 +124,26 @@ Agent_CellPhone/
     └── devlog.md           # Message logs
 ```
 
-## 🔄 Phase 2: Full Listener Loop - IN PROGRESS
+## ✅ Phase 2: Full Listener Loop - COMPLETED
 
 ### Planned Components:
 
 1. **InboxListener Implementation**
-   - [ ] OCR-based message detection
-   - [ ] File tailing for message monitoring
-   - [ ] Real-time message filtering
+   - [x] OCR-based message detection
+   - [x] File tailing for message monitoring
+   - [x] Real-time message filtering
 
 2. **Command Router**
-   - [ ] Internal command handlers
-   - [ ] Resume/sync/restart commands
-   - [ ] Custom command registration
+   - [x] Internal command handlers
+   - [x] Resume/sync/restart commands
+   - [x] Custom command registration
 
 3. **Message Processing Pipeline**
-   - [ ] Message queue management
-   - [ ] Priority-based message handling
-   - [ ] Error recovery mechanisms
+   - [x] Message queue management
+   - [x] Priority-based message handling
+   - [x] Error recovery mechanisms
 
-## 🔮 Phase 3: Robustness - FUTURE
+## 🔄 Phase 3: Robustness - IN PROGRESS
 
 ### Planned Features:
 
