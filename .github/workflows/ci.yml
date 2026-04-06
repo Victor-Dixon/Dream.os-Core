@@ -1,0 +1,171 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - work
+
+jobs:
+  phase1_mvp_comm_layer:
+    name: "Phase#1: MVP Comm Layer"
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Validate Phase 1 status in SSOT
+        run: python scripts/ci/check_phase_status.py --phase 1 --expected COMPLETED
+
+      - name: Run phase 1 test coverage
+        run: pytest -q -m phase1
+
+      - name: Run full suite
+        run: pytest -q
+
+  phase2_full_listener_loop:
+    name: "Phase#2: Full Listener Loop"
+    runs-on: ubuntu-latest
+    needs: [phase1_mvp_comm_layer]
+    if: ${{ needs.phase1_mvp_comm_layer.result == 'success' }}
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Validate Phase 2 completion status in SSOT
+        run: python scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED
+
+      - name: Run audit suite
+        run: pytest --audit -q
+
+  phase3_robustness:
+    name: "Phase#3: Robustness"
+    runs-on: ubuntu-latest
+    needs: [phase2_full_listener_loop]
+    if: ${{ always() && needs.phase2_full_listener_loop.result == 'success' }}
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Validate Phase 3 completion status in SSOT
+        run: python scripts/ci/check_phase_status.py --phase 3 --expected COMPLETED
+
+      - name: Run execution integrity checks
+        run: pytest -q tests/test_execution_guard.py tests/test_message_only_execution.py
+
+  phase4_logging_debug_panel:
+    name: "Phase#4: Logging & Debug Panel"
+    runs-on: ubuntu-latest
+    needs: [phase3_robustness]
+    if: ${{ always() && needs.phase3_robustness.result == 'success' }}
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Validate Phase 4 completion status in SSOT
+        run: python scripts/ci/check_phase_status.py --phase 4 --expected COMPLETED
+
+      - name: Run audit suite
+        run: pytest --audit -q
+
+  enforce_completed_phases:
+    name: "Completed Phase Regression Lock"
+    runs-on: ubuntu-latest
+    needs:
+      - phase1_mvp_comm_layer
+      - phase2_full_listener_loop
+      - phase3_robustness
+      - phase4_logging_debug_panel
+    if: ${{ always() }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Verify completed phases are not regressing
+        run: |
+          python scripts/ci/check_phase_regression.py \
+            --phase-result 1=${{ needs.phase1_mvp_comm_layer.result }} \
+            --phase-result 2=${{ needs.phase2_full_listener_loop.result }} \
+            --phase-result 3=${{ needs.phase3_robustness.result }} \
+            --phase-result 4=${{ needs.phase4_logging_debug_panel.result }}
+
+  audit_gate:
+    name: "Audit Gate"
+    runs-on: ubuntu-latest
+    needs: [phase1_mvp_comm_layer]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Run audit suite
+        run: pytest --audit -q

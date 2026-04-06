@@ -1,5 +1,33 @@
 # SSOT Update Log
 
+## 2026-04-06 — Regression lock + phase prerequisite enforcement in CI
+- Status: Completed
+- Changes: added a completed-phase regression lock job (`enforce_completed_phases`) and chained phase prerequisites in CI so later phase gates only execute after earlier phase success, while still surfacing incomplete phases via SSOT status checks.
+- Verification commands: `pytest -q`, `pytest --audit -q`, `python scripts/ci/check_phase_regression.py --phase-result 1=success --phase-result 2=skipped --phase-result 3=skipped --phase-result 4=skipped`
+
+---
+
+## 2026-04-06 — Phase-labeled CI gates tied to SSOT status
+- Status: Completed
+- Changes: CI now exposes phase-labeled jobs (`Phase#1..Phase#4`) with SSOT status checks, phase-focused test gates, and an explicit audit gate so completion/lack-of-completion is visible directly from CI pass/fail states.
+- Verification commands: `pytest -q`, `pytest -q -m phase1`, `pytest --audit -q`
+
+---
+
+## 2026-04-06 — CI/CD test enforcement + goal-aligned audit suite
+- Status: Completed
+- Changes: added GitHub Actions CI workflow (`pytest -q` + `pytest --audit -q`) and expanded audit tests to verify project-goal evidence coverage across transport, bridge, runtime, and execution-integrity areas.
+- Verification commands: `pytest -q`, `pytest --audit -q`
+
+---
+
+## 2026-04-06 — Audit-aligned test structure and quality gates
+- Status: Completed
+- Changes: added repository-level pytest configuration, deterministic audit/contract/integration markers, `--audit` mode, and audit-structure verification tests.
+- Verification command: `pytest --audit`
+
+---
+
 ## 2026-04-06 — Systems Audit (Dream.OS swarm architecture)
 - Status: Completed
 - Scope audited: transport layer, swarm runtime, bridge layer, routing/capabilities, structure, docs, tests, execution integrity, CI/CD.
