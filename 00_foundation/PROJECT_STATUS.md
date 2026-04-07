@@ -1,5 +1,20 @@
 # SSOT Update Log
 
+## 2026-04-07 — SSOT phase status recalibration
+
+- Status: Completed
+- Decision: `00_foundation/PROJECT_STATUS.md` is the canonical SSOT for phase status.
+- Verification outcome:
+  - Phase 3 reliability enhancements: implemented (`enforce_completed_phases` regression lock + chained prerequisites in CI).
+  - Phase 3 error handling: implemented (schema validation + execution-guard failure boundaries).
+  - True phase states: Phase 1 = COMPLETED, Phase 2 = COMPLETED, Phase 3 = COMPLETED, Phase 4 = COMPLETED.
+- Reconciliation:
+  - CI phase checks aligned to SSOT statuses.
+  - Audit tests changed to derive expectations from SSOT headings (no hardcoded phase state literals).
+  - Added SSOT agent rules (`AGENT_AUDIT.md`) and `pytest --ssot-mode` validation mode.
+
+---
+
 ## 2026-04-06 — Multiple updates
 
 ### Phase 2 runtime implementation

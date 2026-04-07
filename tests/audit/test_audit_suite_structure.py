@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 import pytest
 
@@ -89,11 +90,19 @@ def test_ci_has_phase_labeled_jobs() -> None:
 @pytest.mark.contract
 @pytest.mark.phase1
 def test_ci_phase_jobs_check_ssot_status() -> None:
+    status_text = SSOT_PATH.read_text(encoding="utf-8")
     ci_text = CI_WORKFLOW.read_text(encoding="utf-8")
-    assert "scripts/ci/check_phase_status.py --phase 1 --expected COMPLETED" in ci_text
-    assert "scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED" in ci_text
-    assert "scripts/ci/check_phase_status.py --phase 3 --expected IN PROGRESS" in ci_text
-    assert "scripts/ci/check_phase_status.py --phase 4 --expected FUTURE" in ci_text
+    for phase in (1, 2, 3, 4):
+        status = re.search(
+            rf"^## .*Phase\s+{phase}:.*-\s+(COMPLETED|IN PROGRESS|FUTURE)\s*$",
+            status_text,
+            flags=re.MULTILINE,
+        )
+        assert status, f"Could not find phase {phase} status in SSOT."
+        expected = status.group(1)
+        assert (
+            f"scripts/ci/check_phase_status.py --phase {phase} --expected {expected}" in ci_text
+        ), f"CI check for phase {phase} does not match SSOT."
 
 
 @pytest.mark.audit

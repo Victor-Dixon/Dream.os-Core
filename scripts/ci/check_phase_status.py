@@ -14,7 +14,7 @@ def parse_args() -> argparse.Namespace:
         "--expected",
         type=str,
         required=True,
-        choices=["COMPLETED", "IN PROGRESS", "FUTURE"],
+        help="Expected status (COMPLETED, IN_PROGRESS/IN PROGRESS, FUTURE).",
     )
     parser.add_argument(
         "--status-file",
@@ -32,8 +32,26 @@ def extract_phase_status(text: str, phase: int) -> str | None:
     return match.group(1)
 
 
+def normalize_phase_status(value: str) -> str:
+    normalized = value.strip().upper().replace(" ", "_")
+    aliases = {
+        "IN_PROGRESS": "IN PROGRESS",
+        "COMPLETED": "COMPLETED",
+        "FUTURE": "FUTURE",
+    }
+    if normalized not in aliases:
+        raise ValueError(f"Unsupported phase status '{value}'")
+    return aliases[normalized]
+
+
 def main() -> int:
     args = parse_args()
+    try:
+        expected = normalize_phase_status(args.expected)
+    except ValueError as exc:
+        print(f"ERROR: {exc}")
+        return 2
+
     status_text = args.status_file.read_text(encoding="utf-8")
     current = extract_phase_status(status_text, args.phase)
 
@@ -42,8 +60,8 @@ def main() -> int:
         return 2
 
     print(f"Phase {args.phase} status in SSOT: {current}")
-    if current != args.expected:
-        print(f"ERROR: Expected '{args.expected}' but found '{current}'")
+    if current != expected:
+        print(f"ERROR: Expected '{expected}' but found '{current}'")
         return 1
 
     print("Status check passed")
