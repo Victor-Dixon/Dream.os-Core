@@ -59,6 +59,12 @@ def pytest_addoption(parser: pytest.Parser) -> None:
         default=False,
         help="Run only audit-focused tests.",
     )
+    parser.addoption(
+        "--ssot-mode",
+        action="store_true",
+        default=False,
+        help="Run only tests that validate SSOT/documentation alignment.",
+    )
 
 
 def _path_name(item: pytest.Item) -> str:
@@ -88,17 +94,20 @@ def _add_default_markers(item: pytest.Item) -> None:
 
 def pytest_collection_modifyitems(config: pytest.Config, items: list[pytest.Item]) -> None:
     audit_only = config.getoption("--audit")
+    ssot_mode = config.getoption("--ssot-mode")
 
     for item in items:
         _add_default_markers(item)
 
-    if not audit_only:
+    if not audit_only and not ssot_mode:
         return
 
     selected: list[pytest.Item] = []
     deselected: list[pytest.Item] = []
     for item in items:
-        if item.get_closest_marker("audit"):
+        if ssot_mode and (item.get_closest_marker("audit") or item.get_closest_marker("contract")):
+            selected.append(item)
+        elif audit_only and item.get_closest_marker("audit"):
             selected.append(item)
         else:
             deselected.append(item)
