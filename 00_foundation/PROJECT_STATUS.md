@@ -1,17 +1,20 @@
 # SSOT Update Log
 
-## 2026-04-07 — Documentation pruning candidate audit report
-- Status: Completed
-- Changes: produced a repository-wide documentation pruning candidate report with exact-duplicate evidence and a safe consolidation plan; no deletions performed in this pass.
-- Artifact: `03_execution/DOCS_PRUNING_CANDIDATES_2026-04-07.md`
-- Verification command: `pytest -q`
+## 2026-04-06 — Multiple updates
 
----
-
-## 2026-04-06 — SSOT phase-state reconciliation to completed CI gates
+### Phase 2 runtime implementation
 - Status: Completed
-- Changes: reconciled legacy phase sections to match current CI gate expectations, marked Phases 2-4 as `COMPLETED`, and aligned next-step guidance to maintenance/regression-lock operations.
-- Verification commands: `python scripts/ci/check_phase_status.py --phase 1 --expected COMPLETED`, `python scripts/ci/check_phase_status.py --phase 2 --expected COMPLETED`, `python scripts/ci/check_phase_status.py --phase 3 --expected COMPLETED`, `python scripts/ci/check_phase_status.py --phase 4 --expected COMPLETED`, `pytest -q`, `pytest --audit -q`
+- Changes: normalized Phase 2 runtime contracts, message pipeline, command router, inbox listener
+- Verification: pytest tests/test_phase2_runtime.py
+
+### Documentation pruning candidate audit  
+- Status: Completed
+- Changes: repository-wide documentation pruning candidate report
+- Artifact: 03_execution/DOCS_PRUNING_CANDIDATES_2026-04-07.md
+
+### SSOT phase-state reconciliation
+- Status: Completed
+- Changes: reconciled legacy phase sections, marked Phases 2-4 as COMPLETED
 
 ---
 
@@ -132,7 +135,7 @@ Agent_CellPhone/
     └── devlog.md           # Message logs
 ```
 
-## 🔄 Phase 2: Full Listener Loop - COMPLETED
+## ✅ Phase 2: Full Listener Loop - COMPLETED
 
 ### Completed Components:
 
