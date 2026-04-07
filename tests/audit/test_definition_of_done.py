@@ -36,3 +36,26 @@ def test_ci_runs_dod_validation_script() -> None:
 
 def test_required_dod_ids_are_stable() -> None:
     assert REQUIRED_DOD_IDS == ("DOD-1", "DOD-2", "DOD-3", "DOD-4")
+
+
+def test_dod_validator_rejects_partial_identifier_matches() -> None:
+    section = """
+- [x] `DOD-10` — Placeholder criterion.
+- [x] `DOD-20` — Placeholder criterion.
+- [x] `DOD-30` — Placeholder criterion.
+- [x] `DOD-40` — Placeholder criterion.
+""".strip()
+    errors = validate_dod_section(section)
+    assert len(errors) == 4
+    for dod_id in REQUIRED_DOD_IDS:
+        assert any(dod_id in error for error in errors)
+
+
+def test_dod_validator_accepts_exact_identifier_matches() -> None:
+    section = """
+- [x] `DOD-1` — Full suite passes.
+- [x] `DOD-2` — Audit suite passes.
+- [x] `DOD-3` — SSOT mode passes.
+- [x] `DOD-4` — CI DoD check passes.
+""".strip()
+    assert validate_dod_section(section) == []

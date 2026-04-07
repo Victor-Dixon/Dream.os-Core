@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 
@@ -32,7 +33,8 @@ def extract_dod_section(status_text: str) -> str | None:
 def validate_dod_section(section_text: str) -> list[str]:
     errors: list[str] = []
     for dod_id in REQUIRED_DOD_IDS:
-        if dod_id not in section_text:
+        pattern = rf"\b{re.escape(dod_id)}\b"
+        if not re.search(pattern, section_text):
             errors.append(f"Missing required DoD criteria identifier: {dod_id}")
     return errors
 
