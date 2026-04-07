@@ -34,6 +34,9 @@ jobs:
       - name: Validate Phase 1 status in SSOT
         run: python scripts/ci/check_phase_status.py --phase 1 --expected COMPLETED
 
+      - name: Validate Definition of Done in SSOT
+        run: python scripts/ci/check_definition_of_done.py
+
       - name: Run phase 1 test coverage
         run: pytest -q -m phase1
 

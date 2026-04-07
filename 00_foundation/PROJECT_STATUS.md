@@ -1,5 +1,32 @@
 # SSOT Update Log
 
+## 2026-04-07 — Definition of Done (DoD) established + CI encoded
+
+- Status: Completed
+- Decision: The project now has an explicit SSOT Definition of Done with machine-checked gates.
+- DoD criteria (all required for "done"):
+  - `DOD-1`: `pytest -q` passes.
+  - `DOD-2`: `pytest --audit -q` passes.
+  - `DOD-3`: `pytest --ssot-mode -q` passes.
+  - `DOD-4`: CI executes `scripts/ci/check_definition_of_done.py` to verify the SSOT DoD section is present and criteria IDs are intact.
+- Verification commands:
+  - `python scripts/ci/check_definition_of_done.py`
+  - `pytest -q tests/audit/test_definition_of_done.py`
+  - `pytest --audit -q`
+  - `pytest --ssot-mode -q`
+  - `pytest -q`
+
+## Definition of Done (SSOT-Enforced)
+
+The work is considered **Done** only when every required criterion below remains true.
+
+- [x] `DOD-1` — Full automated test suite passes (`pytest -q`).
+- [x] `DOD-2` — Audit suite passes (`pytest --audit -q`).
+- [x] `DOD-3` — SSOT alignment suite passes (`pytest --ssot-mode -q`).
+- [x] `DOD-4` — CI includes and passes `python scripts/ci/check_definition_of_done.py`.
+
+---
+
 ## 2026-04-07 — SSOT phase status recalibration
 
 - Status: Completed
