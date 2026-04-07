@@ -1,5 +1,13 @@
 # SSOT Update Log
 
+## 2026-04-07 — Documentation pruning candidate audit report
+- Status: Completed
+- Changes: produced a repository-wide documentation pruning candidate report with exact-duplicate evidence and a safe consolidation plan; no deletions performed in this pass.
+- Artifact: `03_execution/DOCS_PRUNING_CANDIDATES_2026-04-07.md`
+- Verification command: `pytest -q`
+
+---
+
 ## 2026-04-06 — SSOT phase-state reconciliation to completed CI gates
 - Status: Completed
 - Changes: reconciled legacy phase sections to match current CI gate expectations, marked Phases 2-4 as `COMPLETED`, and aligned next-step guidance to maintenance/regression-lock operations.
