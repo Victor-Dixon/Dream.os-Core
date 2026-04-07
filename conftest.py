@@ -16,6 +16,7 @@ AUDIT_TEST_FILES = {
     "test_git_transport.py",
     "test_audit_suite_structure.py",
     "test_phase_regression_gate.py",
+    "test_definition_of_done.py",
 }
 
 CONTRACT_TEST_FILES = {
@@ -24,6 +25,7 @@ CONTRACT_TEST_FILES = {
     "test_message_only_execution.py",
     "test_audit_suite_structure.py",
     "test_phase_regression_gate.py",
+    "test_definition_of_done.py",
 }
 
 INTEGRATION_TEST_FILES = {
@@ -48,6 +50,7 @@ PHASE_TEST_FILES = {
         "test_tools.py",
         "test_audit_suite_structure.py",
         "test_phase_regression_gate.py",
+        "test_definition_of_done.py",
     }
 }
 
