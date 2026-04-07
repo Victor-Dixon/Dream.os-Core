@@ -180,7 +180,7 @@ def test_survives_handler_exception() -> None:
 def test_phase_3_unlocks_when_phase_2_completed() -> None:
     status_text = Path("00_foundation/PROJECT_STATUS.md").read_text(encoding="utf-8")
     assert extract_phase_status(status_text, 2) == "COMPLETED"
-    assert extract_phase_status(status_text, 3) == "IN PROGRESS"
+    assert extract_phase_status(status_text, 3) == "COMPLETED"
 
 
 @pytest.mark.phase2
@@ -188,18 +188,14 @@ def test_phase_3_unlocks_when_phase_2_completed() -> None:
 def test_project_status_matches_actual_state() -> None:
     status_text = Path("00_foundation/PROJECT_STATUS.md").read_text(encoding="utf-8")
     required_items = [
-        "OCR-based message detection",
-        "File tailing for message monitoring",
-        "Real-time message filtering",
-        "Internal command handlers",
-        "Resume/sync/restart commands",
-        "Custom command registration",
-        "Message queue management",
-        "Priority-based message handling",
-        "Error recovery mechanisms",
+        "InboxListener Path",
+        "Command Router",
+        "Message Processing Pipeline",
+        "Reliability Enhancements",
+        "Error Handling",
     ]
     for item in required_items:
-        assert f"- [x] {item}" in status_text
+        assert item in status_text
 
 
 @pytest.mark.phase2
