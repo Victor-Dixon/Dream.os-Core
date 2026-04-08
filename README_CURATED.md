@@ -1,43 +1,43 @@
-# Agent Cellphone — Curated Docs Pack
+# Dream.os-Core — Grounded Repository README
+**Last Audited:** 2026-04-08 (UTC)  
+**SSOT Status File:** `00_foundation/PROJECT_STATUS.md`
 
-This package contains only the documents with direct value for extracting a clean Dream.OS / Agent Cellphone v2 core.
+## What this repository provably is
+This repository currently implements a **Python message-driven swarm execution runtime** composed of:
+- `dreamos/`: swarm orchestration, agents, routing, tools, memory abstractions, and CLI.
+- `src/`: bus message contracts, relay lifecycle (claim/run/ack), transport adapters, and execution guards.
+- `tests/` + `dreamos/tests/`: passing test suites including audit and SSOT modes.
 
-## Included
+## What runs today (verified)
+- Full test suite:
+  - `pytest -q`
+  - `pytest --audit -q`
+  - `pytest --ssot-mode -q`
+- Runtime demo:
+  - `python runtime_demo/main.py`
+- CLI info modes:
+  - `python -m dreamos.cli.main --list-goals`
+  - `python -m dreamos.cli.main --list-tools`
 
-### 00_foundation
-- `README.md` — Repo entrypoint and highest-level system framing.
-- `PRODUCT_REQUIREMENTS_DOCUMENT.md` — Primary product intent, scope, features, and operating model.
-- `TECHNICAL_SPECIFICATIONS.md` — Most concrete technical design doc; stronger than summary variants.
-- `IMPLEMENTATION_ROADMAP.md` — Sequenced build order for reconstructing the system cleanly.
-- `PROJECT_REQUIREMENTS_ANALYSIS.md` — Requirements decomposition that can inform v2 extraction decisions.
-- `PROJECT_STATUS.md` — Snapshot of what was claimed complete vs pending in v1.
+## Installation status
+- Packaging metadata exists in `dreamos/pyproject.toml`.
+- In this audit environment, `pip install -e ./dreamos` failed due inability to fetch build dependency `setuptools>=68` through configured proxy/network.
 
-### 01_runtime_core
-- `INTER_AGENT_COMMUNICATION_GUIDE.md` — Core communication protocol concepts for agent-to-agent routing.
-- `INTER_AGENT_FRAMEWORK_SUMMARY.md` — Compact framing of the inter-agent framework; useful as companion context.
-- `FSM_STRUCTURE.md` — Closest thing to an execution-state contract; high-value for runtime rebuild.
-- `AutonomousModes.md` — Operational mode model for task progression and autonomy behavior.
-- `AGENT_RESCUE_SYSTEM.md` — Recovery and anti-stall concepts worth preserving.
-- `CONFIG_STRUCTURE.md` — Canonical configuration structure after cleanup; useful for v2 settings design.
-- `PROJECT_FOCUS_CONFIGURATION.md` — Useful if preserving dynamic project routing without hardcoding.
-- `AGENT_README.md` — Practical communication/self-prompting behavior guide tied to ACP workflows.
+## Entrypoints
+- Console script: `dreamos` → `dreamos.cli.main:main`
+- Module execution: `python -m dreamos.cli.main`
+- Demo execution: `python runtime_demo/main.py`
 
-### 02_onboarding_ops
-- `ONBOARDING_SYSTEM_IMPROVEMENTS.md` — Best single onboarding doc; replaces multiple overlapping onboarding summaries.
+## Audit package (generated)
+- `audit_report.md`
+- `run_log.md`
+- `architecture_map.md`
+- `domain_model.md`
+- `test_assessment.md`
+- `prioritized_fix_plan.md`
+- `repo_inventory.md`
+- `truth_matrix.md`
 
-### 99_reference
-- `FINAL_PROJECT_STRUCTURE.md` — Reference-only snapshot of intended organized layout.
-- `PROJECT_STRUCTURE.md` — Reference-only snapshot of earlier 'cursor bridge' structure/claims.
+## Documentation policy
+If a documentation claim conflicts with executable code/tests, treat code/tests as source of truth and reconcile docs to SSOT.
 
-## Excluded on Purpose
-
-- **GUI docs:** Deferred until a stable backend/runtime exists.
-- **Resume/interview docs:** Not relevant to Dream.OS v2 extraction.
-- **Branding/update summaries:** Low engineering value for rebuild.
-- **Duplicate onboarding summaries:** Superseded by ONBOARDING_SYSTEM_IMPROVEMENTS.md.
-- **Spec/summary duplicates:** Kept full specs, dropped summaries.
-
-## Packaging Notes
-
-- Foldered by rebuild function, not original repo layout.
-- `99_reference/` is context-only and should not drive implementation contracts.

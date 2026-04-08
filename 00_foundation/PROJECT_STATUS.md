@@ -1,5 +1,27 @@
 # SSOT Update Log
 
+## 2026-04-08 — Grounded repository audit package + README truth-alignment
+
+- Status: Completed
+- Decision: Completed a file/command/output-grounded audit and produced reusable audit artifacts with explicit verdicts.
+- Verdicts:
+  - Runtime: partially_runnable
+  - Tests: test_credible
+  - Domain clarity: domain_partial
+- Artifacts:
+  - `audit_report.md`
+  - `run_log.md`
+  - `architecture_map.md`
+  - `domain_model.md`
+  - `test_assessment.md`
+  - `prioritized_fix_plan.md`
+  - `repo_inventory.md`
+  - `truth_matrix.md`
+- Reconciliation:
+  - Updated `README_CURATED.md` to reflect verified implementation/runtime truth rather than legacy ACP claims.
+
+---
+
 ## 2026-04-07 — Definition of Done (DoD) established + CI encoded
 
 - Status: Completed
