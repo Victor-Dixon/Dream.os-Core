@@ -7,6 +7,14 @@ from pathlib import Path
 import pytest
 
 
+@pytest.fixture(autouse=True)
+def _clear_fsm_transition_audit() -> None:
+    from src.core.execution_guard import clear_transition_audit
+
+    clear_transition_audit()
+    yield
+
+
 AUDIT_TEST_FILES = {
     "test_message_schema.py",
     "test_execution_guard.py",
@@ -14,6 +22,7 @@ AUDIT_TEST_FILES = {
     "test_message_to_swarm_execution.py",
     "test_claim_and_ack.py",
     "test_git_transport.py",
+    "test_transport_envelope.py",
     "test_audit_suite_structure.py",
     "test_phase_regression_gate.py",
     "test_definition_of_done.py",
@@ -23,6 +32,7 @@ CONTRACT_TEST_FILES = {
     "test_message_schema.py",
     "test_execution_guard.py",
     "test_message_only_execution.py",
+    "test_transport_envelope.py",
     "test_audit_suite_structure.py",
     "test_phase_regression_gate.py",
     "test_definition_of_done.py",
@@ -32,6 +42,7 @@ INTEGRATION_TEST_FILES = {
     "test_message_to_swarm_execution.py",
     "test_claim_and_ack.py",
     "test_git_transport.py",
+    "test_transport_envelope.py",
 }
 
 
@@ -43,6 +54,7 @@ PHASE_TEST_FILES = {
         "test_message_to_swarm_execution.py",
         "test_claim_and_ack.py",
         "test_git_transport.py",
+        "test_transport_envelope.py",
         "test_agent.py",
         "test_memory.py",
         "test_routing.py",

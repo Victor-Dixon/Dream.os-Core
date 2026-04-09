@@ -5,6 +5,7 @@ from pathlib import Path
 from src.core.message import BusMessage, load_message
 from src.core.types import CLAIMED_DIR, COMPLETE_DIR, INBOX_DIR, ensure_bus_layout
 from src.transports.base import Transport
+from src.transports.envelope_middleware import assert_pre_routing_envelope
 
 
 class FileTransport(Transport):
@@ -13,6 +14,7 @@ class FileTransport(Transport):
         ensure_bus_layout(self.bus_root, nodes)
 
     def send(self, message: BusMessage) -> str:
+        assert_pre_routing_envelope(message)
         target = self.bus_root / INBOX_DIR / message.to_agent / f"{message.id}.json"
         message.write_json(target)
         return str(target)

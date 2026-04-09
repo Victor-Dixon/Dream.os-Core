@@ -1,5 +1,11 @@
 # SSOT Update Log
 
+## 2026-04-09 — Repo discovery restore + transport hardening
+
+- Status: Completed
+- Repo discovery: optional repo-root `.env.dreamos` (and `DREAMOS_ENV_FILE`); `find_repos` matches `discover_git_repo_roots` (immediate children or single repo root); goal phrase containing `projectscanner` maps to the `scan` tool.
+- Transport: JSON Schema for bus message envelopes, pre-send validation on `FileTransport`, FSM transition audit records on every allowed `validate_transition` call.
+
 ## 2026-04-08 — Grounded repository audit package + README truth-alignment
 
 - Status: Completed
@@ -133,253 +139,41 @@ The work is considered **Done** only when every required criterion below remains
 
 ---
 
-# 📱 Agent Cell Phone - Project Status
+## 2026-04-08 — Repository scope clarification (Agent Cell Phone / SSOT integrity)
 
-## ✅ Phase 1: MVP Comm Layer - COMPLETED
-
-### Completed Components:
-
-1. **Core AgentCellPhone Class** (`agent_cell_phone.py`)
-   - ✅ PyAutoGUI messaging system
-   - ✅ Coordinate management via LayoutManager
-   - ✅ Message protocol parsing (`@agent-x <COMMAND> <ARGS>`)
-   - ✅ Individual and broadcast messaging
-   - ✅ Comprehensive logging to devlog files
-
-2. **Layout Management System**
-   - ✅ JSON-based coordinate layouts (2, 4, 8 agent modes)
-   - ✅ Coordinate validation and error handling
-   - ✅ Hot-reload support for layout changes
-
-3. **Message Protocol**
-   - ✅ Regex-based message parsing
-   - ✅ Support for agent IDs with hyphens (`agent-2`)
-   - ✅ Command and argument extraction
-   - ✅ Reserved prefixes: `@all`, `@self`, `@agent-x`
-
-4. **CLI Test Harness** (`test_harness.py`)
-   - ✅ Comprehensive testing framework
-   - ✅ Demo mode with full system test
-   - ✅ Interactive mode for manual testing
-   - ✅ Individual function testing (send, broadcast, parse, layout)
-
-5. **Supporting Tools**
-   - ✅ Coordinate finder utility (`coordinate_finder.py`)
-   - ✅ Example usage script (`example_usage.py`)
-   - ✅ Requirements file with dependencies
-   - ✅ Comprehensive README with documentation
-
-6. **GUI Development** (`simple_gui.py`, `agent_resume_web_gui.html`)
-   - ✅ Modern Tkinter-based desktop GUI
-   - ✅ Web-based interface with HTML/CSS/JavaScript
-   - ✅ Agent selection and individual controls
-   - ✅ Broadcast functionality for all agents
-   - ✅ Real-time status monitoring and logging
-   - ✅ Custom message sending capabilities
-   - ✅ Color-coded interface with intuitive controls
-
-### Files Created:
-```
-Agent_CellPhone/
-├── agent_cell_phone.py      # Core messaging system
-├── simple_gui.py            # ✅ Working desktop GUI
-├── agent_resume_web_gui.html # ✅ Web-based interface
-├── test_harness.py          # CLI test harness
-├── coordinate_finder.py     # Coordinate mapping utility
-├── example_usage.py         # Basic usage example
-├── diagnostic_test.py       # Diagnostic testing tools
-├── test_8_agent_coordinates.py # 8-agent coordinate testing
-├── requirements.txt         # Dependencies
-├── README.md               # Documentation
-├── PROJECT_STATUS.md       # This file
-├── GUI_DEVELOPMENT_SUMMARY.md # GUI development documentation
-├── runtime/config/         # Configuration files
-│   └── cursor_agent_coords.json  # Cursor agent coordinates
-└── agent-*/                # Agent-specific logs
-    └── devlog.md           # Message logs
-```
-
-## ✅ Phase 2: Full Listener Loop - COMPLETED
-
-### Completed Components:
-
-1. **InboxListener Path**
-   - ✅ Bus message ingestion through typed message objects
-   - ✅ Relay synchronization loop and claim/ack lifecycle coverage
-   - ✅ Real-time message validation with schema-based parsing
-
-2. **Command Router**
-   - ✅ Explicit command routing across swarm/planner/tool paths
-   - ✅ Deterministic routing tests for guardrail behavior
-   - ✅ Coverage for message-only execution expectations
-
-3. **Message Processing Pipeline**
-   - ✅ Queue-safe transport adapters for file and git channels
-   - ✅ Deterministic command execution guard in runtime core
-   - ✅ Recovery path enforcement via contract and audit checks
-
-## 🔮 Phase 3: Robustness - COMPLETED
-
-### Completed Features:
-
-1. **Reliability Enhancements**
-   - ✅ Completed-phase regression lock in CI
-   - ✅ Cross-phase prerequisite enforcement in workflow orchestration
-   - ✅ Execution guard enforcement against direct bypass paths
-
-2. **Error Handling**
-   - ✅ Contract-level schema validation and strict input typing
-   - ✅ Regression tests for failed/success result interpretation
-   - ✅ Protected execution boundaries with failure-mode assertions
-
-## 📊 Phase 4: Logging & Debug Panel - COMPLETED
-
-### Completed Features:
-
-1. **Enhanced Logging + Audit Visibility**
-   - ✅ SSOT-driven phase status validation in CI
-   - ✅ Phase-labeled pipeline jobs for explicit completion state
-   - ✅ Repository audit suite with deterministic markers and gates
-
-2. **Debug + Operations Controls**
-   - ✅ Structured system audits captured in dated artifacts
-   - ✅ Project-goal evidence tests for transport/runtime/bridge integrity
-   - ✅ Lockdown documentation for bus-only execution integrity
-
-## 🧪 Testing Status
-
-### Completed Tests:
-- ✅ Layout loading and validation
-- ✅ Message parsing (all formats)
-- ✅ Individual message sending
-- ✅ Broadcast messaging
-- ✅ Coordinate management
-- ✅ Logging system
-- ✅ GUI functionality and integration
-- ✅ 8-agent coordinate testing
-- ✅ Diagnostic testing
-
-### Test Coverage:
-- Core functionality: 100%
-- Error handling: 90%
-- Edge cases: 85%
-- GUI integration: 95%
-
-## 🚀 Usage Examples
-
-### Basic Usage:
-```python
-from agent_cell_phone import AgentCellPhone
-
-# Initialize and send message
-acp = AgentCellPhone("agent-1")
-acp.load_layout("4")
-acp.send("agent-2", "Hello!")
-```
-
-### GUI Usage:
-```bash
-# Launch desktop GUI
-python simple_gui.py
-
-# Open web GUI in browser
-# Open agent_resume_web_gui.html
-```
-
-### CLI Testing:
-```bash
-# Run full demo
-python test_harness.py --mode demo
-
-# Interactive mode
-python test_harness.py --mode interactive --agent agent-1
-
-# Test specific functions
-python test_harness.py --mode send --agent agent-1 --target agent-2 --message "Test"
-```
-
-### Coordinate Mapping:
-```bash
-# Find coordinates interactively
-python coordinate_finder.py --mode find
-
-# Track mouse position
-python coordinate_finder.py --mode track
-```
-
-## 📈 Performance Metrics
-
-### Current Performance:
-- Message sending: ~200ms per message
-- Layout loading: ~50ms
-- Message parsing: ~1ms
-- Logging overhead: ~10ms
-- GUI initialization: < 2 seconds
-- GUI response time: < 1 second
-
-### Scalability:
-- Supports 2, 4, 8 agent configurations
-- Extensible to custom layouts
-- Memory efficient (minimal overhead)
-- GUI supports unlimited agent scaling
-
-## 🔧 Configuration
-
-### Current Settings:
-- PyAutoGUI failsafe: Disabled
-- PyAutoGUI pause: 0.1s
-- Message timeout: None (future enhancement)
-- Log level: INFO
-- GUI theme: Modern with color coding
-
-### Customizable Options:
-- Layout file locations
-- Logging directories
-- Message formats
-- Coordinate precision
-- GUI appearance and layout
-
-## 🎯 Next Steps
-
-### Immediate:
-1. Keep CI gates and audit checks green on every commit.
-2. Maintain SSOT status accuracy whenever scope changes.
-3. Expand evidence tests only when new capabilities are added.
-4. Continue phase-regression lock discipline for all completed phases.
-
-## 📞 Support & Documentation
-
-### Available Resources:
-- Comprehensive README.md
-- Example usage scripts
-- CLI test harness
-- Coordinate finder utility
-- GUI development documentation
-- Diagnostic testing tools
-
-### Getting Help:
-- Check GUI_DEVELOPMENT_SUMMARY.md for GUI usage
-- Review test_harness.py for CLI examples
-- Examine devlog files for debugging
-- Use diagnostic_test.py for system validation
-
-## 🏆 Project Achievements
-
-### Phase 1 Milestones:
-- ✅ Core messaging system operational
-- ✅ 8-agent layout fully functional
-- ✅ Comprehensive testing framework
-- ✅ Modern GUI interface completed
-- ✅ Web-based interface created
-- ✅ Full documentation and examples
-- ✅ Diagnostic and testing tools
-- ✅ Production-ready foundation
-
-### Current Readiness:
-The project has completed Phases 1-4 with CI-enforced SSOT checks, regression locks, and audit coverage. The current focus is maintaining operational stability and evidence-backed progress updates.
+- Status: Completed
+- Decision: Legacy **Agent Cell Phone** material (PyAutoGUI, coordinate-based GUI layouts, `Agent_CellPhone/`-style file lists) was incorrectly merged into this SSOT. It is **not** part of the verified **Dream.os-Core** tree and must not be read as shipping functionality here. Authoritative scope remains the message-driven swarm runtime under `dreamos/`, `src/`, and `tests/`, consistent with grounded audit verdicts (for example `partially_runnable` / `domain_partial` where applicable).
+- Action: Preserved the removed block as archival read-only text in `archive/agent_cell_phone/PROJECT_STATUS_AGENT_CELL_PHONE_ARCHIVED.md` (banner + verbatim body). The **only** phase status headings below are the machine-checked set for this repository (`scripts/ci/check_phase_status.py`, audit tests).
+- Pointer: Any future revival of Agent Cell Phone as a product should live in its **own** repo or a clearly named subtree with its own SSOT — not appended to this file.
 
 ---
 
-**Last Updated:** 2026-04-06  
-**Current Phase:** Phases 1-4 Completed  
-**Status:** ✅ **PRODUCTION READY + REGRESSION LOCKED** 
+## Phase 1: MVP Comm Layer - COMPLETED
+
+Dream.os-Core: bus message contracts, file/git transport adapters, send/claim/ack lifecycle, and CLI/runtime alignment. This phase is **not** PyAutoGUI or desktop GUI coordinate automation.
+
+---
+
+## Phase 2: Full Listener Loop - COMPLETED
+
+- **InboxListener Path** — typed bus ingestion, relay poll/claim/ack coverage, schema-aware validation.
+- **Command Router** — routing across swarm/tool paths with deterministic guardrail tests.
+- **Message Processing Pipeline** — queue-safe transports, execution guard, bus-only execution expectations.
+
+---
+
+## Phase 3: Robustness - COMPLETED
+
+- **Reliability Enhancements** — completed-phase regression lock in CI, chained workflow prerequisites, execution-integrity gates.
+- **Error Handling** — contract/schema validation, failure and dead-letter visibility in pipeline and audit tests.
+
+---
+
+## Phase 4: Logging & Debug Panel - COMPLETED
+
+SSOT-driven phase validation in CI, audit modes (`pytest --audit`, `pytest --ssot-mode`), dated artifacts under `03_execution/`, and `docs/execution_lockdown.md`. Operational visibility here means **logs, audits, and CI** — not a PyAutoGUI or coordinate-GUI “debug panel.”
+
+---
+
+**Last Updated:** 2026-04-08  
+**Archival (historical, non-SSOT):** `archive/agent_cell_phone/PROJECT_STATUS_AGENT_CELL_PHONE_ARCHIVED.md`

@@ -4,8 +4,12 @@ cli/main.py — dream.os v7 entry point.
 
 Usage:
   python -m dreamos.cli.main "update all repos"
+  python -m dreamos.cli.main run "fix my repo"
   python -m dreamos.cli.main "fix lint" --dry-run
   python -m dreamos.cli.main --list-repos
+  python -m dreamos.cli.main repos sync --owner YOU --target D:\\GitHub
+  python -m dreamos.cli.main scan all --root D:\\GitHub
+  python -m dreamos.cli.main bootstrap run --owner YOU --target D:\\GitHub
 """
 
 import argparse
@@ -16,7 +20,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from dreamos.config.settings import SETTINGS
+from dreamos.config.task_context import require_task_id_or_exit
 from dreamos.config.goals import GOAL_PLANS
+from dreamos.scan.local_scanner import discover_git_repo_roots
 from dreamos.tools import build_default_registry
 from dreamos.core.agent import CognitiveAgent
 from dreamos.core.memory import Memory, VectorMemory, KnowledgeGraph, RAGEngine
@@ -29,10 +35,11 @@ from src.transports.file_transport import FileTransport
 
 
 def find_repos():
-    github_dir = Path(SETTINGS.github_dir)
-    if not github_dir.exists():
+    """Immediate git children of github_dir (or github_dir itself if it is a repo)."""
+    github_dir = Path(SETTINGS.github_dir).expanduser().resolve()
+    if not github_dir.is_dir():
         return []
-    repos = [str(p.parent) for p in github_dir.rglob(".git")]
+    repos = [str(p) for p in discover_git_repo_roots(github_dir)]
     if SETTINGS.safe_repos:
         repos = [r for r in repos if SETTINGS.repo_is_safe(r)]
     return sorted(repos)
@@ -52,7 +59,7 @@ def build_swarm(verbose: bool = False):
         CognitiveAgent("GitMaster",  ["pull", "push", "commit", "status", "diff", "branch"], registry, rag),
         CognitiveAgent("LintLord",   ["lint", "fix", "format"],                               registry, rag),
         CognitiveAgent("TestRunner", ["test"],                                                 registry, rag),
-        CognitiveAgent("MetaAgent",  ["status", "diff"],                                       registry, rag),
+        CognitiveAgent("MetaAgent",  ["status", "diff", "scan"],                              registry, rag),
     ]
 
     swarm = SwarmController(agents=agents, rag=rag, tool_registry=registry)
@@ -66,7 +73,107 @@ def print_help_goals():
     print()
 
 
+def execute_swarm_goal(goal: str, *, verbose: bool = False) -> None:
+    """Run a single swarm goal via file-transport relay (shared by `main` and `dreamos run`)."""
+    require_task_id_or_exit()
+    repos = find_repos()
+    if not repos:
+        print(f"⚠️  No repos found in {SETTINGS.github_dir}")
+        print("   Set DREAMOS_GITHUB_DIR or DREAMOS_SAFE_REPOS env vars.")
+        sys.exit(1)
+
+    swarm, agents, registry = build_swarm(verbose=verbose)
+
+    print(f"\n  🔧 Tools  : {registry.names()}")
+    print(f"  👥 Agents : {[a.name for a in agents]}")
+    print(f"  📝 Log    : {SETTINGS.log_file}")
+
+    bus_root = Path(SETTINGS.github_dir).expanduser() / ".dreamos_bus"
+    worker_node = "dreamos-worker"
+    cli_node = "dreamos-cli"
+    transport = FileTransport(bus_root=bus_root, nodes=[worker_node, cli_node])
+    relay = DeviceRelay(
+        node_id=worker_node,
+        transport=transport,
+        task_adapter=TaskAdapter(swarm),
+    )
+    message = BusMessage(
+        from_agent=cli_node,
+        to_agent=worker_node,
+        msg_type="task",
+        body=goal,
+        device_hint=worker_node,
+        meta={"goal": goal, "repos": repos},
+    )
+    transport.send(message)
+    relay.poll_once()
+    complete_path = bus_root / "complete" / f"{worker_node}__{message.id}.json"
+    final_message = load_message(complete_path)
+    if final_message.result:
+        print(f"\n  ✅ Message execution complete: {final_message.id}")
+    if final_message.error:
+        print(f"\n  ❌ Message execution failed: {final_message.error}")
+
+
 def main():
+    argv = sys.argv[1:]
+    if argv and argv[0] == "repos":
+        from dreamos.cli.repos_sync import main as repos_main
+
+        repos_main(argv[1:])
+        return
+
+    if argv and argv[0] == "scan":
+        from dreamos.cli.scan_cmd import main as scan_main
+
+        scan_main(argv[1:])
+        return
+
+    if argv and argv[0] == "bootstrap":
+        from dreamos.cli.bootstrap_cmd import main as bootstrap_main
+
+        bootstrap_main(argv[1:])
+        return
+
+    if argv and argv[0] == "headers":
+        from dreamos.cli.headers_cmd import main as headers_main
+
+        headers_main(argv[1:])
+        return
+
+    if argv and argv[0] == "run":
+        from dreamos.cli.command_router import resolve_phrase, run_route
+
+        i = 1
+        verbose = False
+        while i < len(argv):
+            a = argv[i]
+            if a in ("-v", "--verbose"):
+                verbose = True
+                i += 1
+                continue
+            if a == "--dry-run":
+                SETTINGS.dry_run = True
+                i += 1
+                continue
+            if a == "--live":
+                SETTINGS.dry_run = False
+                i += 1
+                continue
+            if a.startswith("-"):
+                print(f"Unknown flag: {a}", file=sys.stderr)
+                sys.exit(2)
+            break
+        phrase = " ".join(argv[i:]).strip()
+        if not phrase:
+            print(
+                "Usage: dreamos run [--verbose] [--dry-run] [--live] <phrase>",
+                file=sys.stderr,
+            )
+            sys.exit(2)
+        route = resolve_phrase(phrase)
+        raise SystemExit(run_route(route, verbose=verbose))
+
     parser = argparse.ArgumentParser(
         prog="dreamos",
         description="dream.os v7 — Modular Cognitive Swarm",
@@ -115,43 +222,7 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    repos = find_repos()
-    if not repos:
-        print(f"⚠️  No repos found in {SETTINGS.github_dir}")
-        print(f"   Set DREAMOS_GITHUB_DIR or DREAMOS_SAFE_REPOS env vars.")
-        sys.exit(1)
-
-    swarm, agents, registry = build_swarm(verbose=args.verbose)
-
-    print(f"\n  🔧 Tools  : {registry.names()}")
-    print(f"  👥 Agents : {[a.name for a in agents]}")
-    print(f"  📝 Log    : {SETTINGS.log_file}")
-
-    bus_root = Path(SETTINGS.github_dir).expanduser() / ".dreamos_bus"
-    worker_node = "dreamos-worker"
-    cli_node = "dreamos-cli"
-    transport = FileTransport(bus_root=bus_root, nodes=[worker_node, cli_node])
-    relay = DeviceRelay(
-        node_id=worker_node,
-        transport=transport,
-        task_adapter=TaskAdapter(swarm),
-    )
-    message = BusMessage(
-        from_agent=cli_node,
-        to_agent=worker_node,
-        msg_type="task",
-        body=goal,
-        device_hint=worker_node,
-        meta={"goal": goal, "repos": repos},
-    )
-    transport.send(message)
-    relay.poll_once()
-    complete_path = bus_root / "complete" / f"{worker_node}__{message.id}.json"
-    final_message = load_message(complete_path)
-    if final_message.result:
-        print(f"\n  ✅ Message execution complete: {final_message.id}")
-    if final_message.error:
-        print(f"\n  ❌ Message execution failed: {final_message.error}")
+    execute_swarm_goal(goal, verbose=args.verbose)
 
 
 if __name__ == "__main__":

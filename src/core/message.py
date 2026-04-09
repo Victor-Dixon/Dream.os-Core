@@ -8,6 +8,25 @@ import uuid
 
 from src.core.types import JsonDict, MessageStatus, TransportName
 
+_SCHEMA_PATH = Path(__file__).resolve().parent / "schemas" / "bus_message.schema.json"
+_SCHEMA_CACHE: JsonDict | None = None
+
+
+def _load_bus_message_schema() -> JsonDict:
+    global _SCHEMA_CACHE
+    if _SCHEMA_CACHE is None:
+        _SCHEMA_CACHE = json.loads(_SCHEMA_PATH.read_text(encoding="utf-8"))
+    return _SCHEMA_CACHE
+
+
+def _validate_envelope_json_schema(data: JsonDict) -> None:
+    import jsonschema
+
+    try:
+        jsonschema.validate(instance=data, schema=_load_bus_message_schema())
+    except jsonschema.ValidationError as exc:
+        raise MessageValidationError(f"envelope schema: {exc.message}") from exc
+
 
 REQUIRED_FIELDS = (
     "id",
@@ -153,6 +172,7 @@ class BusMessage:
             raise MessageValidationError("invalid status")
         if data["transport"] not in {t.value for t in TransportName}:
             raise MessageValidationError("invalid transport")
+        _validate_envelope_json_schema(data)
 
 
 def load_message(path: Path) -> BusMessage:

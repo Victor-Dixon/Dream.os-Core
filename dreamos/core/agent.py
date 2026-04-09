@@ -92,7 +92,8 @@ class BaseAgent:
         repo_label = repo.split("/")[-1]
         log.info(f"🤖 {self.name}: {tool} → {repo_label}")
 
-        if dry_run:
+        # Scan is read-only artifact generation; run even when dry_run is on.
+        if dry_run and tool != "scan":
             result = ToolResult(ok=True, output="[dry run]", metadata={"dry": True})
         else:
             result = self.registry.run(tool, repo, **kwargs)

@@ -5,6 +5,13 @@ from typing import Any
 from src.core.message import BusMessage
 
 
+TRANSITION_AUDIT: list[dict[str, Any]] = []
+
+
+def clear_transition_audit() -> None:
+    TRANSITION_AUDIT.clear()
+
+
 class InvalidExecutionPathError(ValueError):
     """Raised when execution bypasses the message-bus boundary."""
 
@@ -31,12 +38,26 @@ def require_bus_message(payload: Any) -> BusMessage:
     return payload
 
 
-def validate_transition(current_state: str, next_state: str) -> bool:
+def validate_transition(
+    current_state: str,
+    next_state: str,
+    *,
+    message_id: str | None = None,
+    source: str | None = None,
+) -> bool:
     allowed = ALLOWED_TRANSITIONS.get(current_state, set())
     if next_state not in allowed:
         raise InvalidMessageTransitionError(
             f"Invalid message transition: {current_state} -> {next_state}"
         )
+    TRANSITION_AUDIT.append(
+        {
+            "from": current_state,
+            "to": next_state,
+            "message_id": message_id,
+            "source": source,
+        }
+    )
     return True
 
 

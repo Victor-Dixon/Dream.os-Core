@@ -43,12 +43,22 @@ class TaskAdapter:
             repos = [message.meta["repo"]]
         try:
             result = self.swarm.execute_message(message)
-            validate_transition(message.status.value, MessageStatus.COMPLETE.value)
+            validate_transition(
+                message.status.value,
+                MessageStatus.COMPLETE.value,
+                message_id=message.id,
+                source="task_adapter",
+            )
             payload["status"] = MessageStatus.COMPLETE.value
             payload["result"] = {"goal": goal, "repos": repos, "results": result}
             payload["error"] = None
         except Exception as exc:
-            validate_transition(message.status.value, MessageStatus.FAILED.value)
+            validate_transition(
+                message.status.value,
+                MessageStatus.FAILED.value,
+                message_id=message.id,
+                source="task_adapter",
+            )
             payload["status"] = MessageStatus.FAILED.value
             payload["result"] = None
             payload["error"] = str(exc)

@@ -10,6 +10,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.core.execution_guard import (
+    TRANSITION_AUDIT,
     InvalidExecutionPathError,
     InvalidMessageTransitionError,
     require_bus_message,
@@ -41,3 +42,23 @@ def test_validate_transition_rejects_invalid_jump() -> None:
 
 def test_validate_transition_accepts_valid_jump() -> None:
     assert validate_transition("running", "complete") is True
+
+
+def test_invalid_transition_is_not_audited() -> None:
+    n = len(TRANSITION_AUDIT)
+    with pytest.raises(InvalidMessageTransitionError):
+        validate_transition("new", "complete")
+    assert len(TRANSITION_AUDIT) == n
+
+
+def test_valid_transition_appends_audit_record() -> None:
+    validate_transition(
+        "new",
+        "claimed",
+        message_id="00000000-0000-4000-8000-000000000001",
+        source="unit_test",
+    )
+    assert TRANSITION_AUDIT[-1]["from"] == "new"
+    assert TRANSITION_AUDIT[-1]["to"] == "claimed"
+    assert TRANSITION_AUDIT[-1]["message_id"] == "00000000-0000-4000-8000-000000000001"
+    assert TRANSITION_AUDIT[-1]["source"] == "unit_test"

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://dream.os/schema/bus_message.envelope.v1.json",
+  "title": "Dream.OS BusMessage envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "from",
+    "to",
+    "type",
+    "body",
+    "created_at",
+    "status",
+    "lease_owner",
+    "lease_expires_at",
+    "reply_to",
+    "device_hint",
+    "transport",
+    "required_capabilities",
+    "routing_hints",
+    "assigned_to",
+    "result",
+    "error"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+    },
+    "from": { "type": "string", "minLength": 1 },
+    "to": { "type": "string", "minLength": 1 },
+    "type": { "type": "string", "minLength": 1 },
+    "body": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["new", "claimed", "running", "complete", "failed", "expired"]
+    },
+    "lease_owner": { "type": ["string", "null"] },
+    "lease_expires_at": { "type": ["string", "null"] },
+    "reply_to": { "type": ["string", "null"] },
+    "device_hint": { "type": "string", "minLength": 1 },
+    "transport": {
+      "type": "string",
+      "enum": ["filesystem", "git", "manual_clipboard"]
+    },
+    "required_capabilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "routing_hints": { "type": "object" },
+    "assigned_to": { "type": ["string", "null"] },
+    "result": { "type": ["object", "null"] },
+    "error": { "type": ["string", "null"] },
+    "meta": { "type": "object" }
+  }
+}
