@@ -3,8 +3,25 @@
 ## 2026-04-09 — Repo discovery restore + transport hardening
 
 - Status: Completed
-- Repo discovery: optional repo-root `.env.dreamos` (and `DREAMOS_ENV_FILE`); `find_repos` matches `discover_git_repo_roots` (immediate children or single repo root); goal phrase containing `projectscanner` maps to the `scan` tool.
-- Transport: JSON Schema for bus message envelopes, pre-send validation on `FileTransport`, FSM transition audit records on every allowed `validate_transition` call.
+- Git: `main` includes `fix: restore repo discovery and add transport validation guard` (confirm current tip with `git log -1 --oneline`).
+
+### Repo discovery and scan goal
+- **Configuration:** Optional repo-root `.env.dreamos`, or path override via `DREAMOS_ENV_FILE`. Keys are applied only when not already set in the process environment (see `dreamos/config/settings.py`). Template: `.env.dreamos.example`. Local overrides: copy the example to `.env.dreamos` (gitignored).
+- **Discovery semantics:** `find_repos()` in `dreamos/cli/main.py` (and REPL) uses `discover_git_repo_roots` — the configured root is either a single git repo or **immediate child directories** that contain `.git` (aligned with `dreamos scan all --root`, no whole-tree `rglob`).
+- **Swarm goal:** Any goal string whose lowercase form contains `projectscanner` decomposes to the `scan` tool (`dreamos/config/goals.py`). Tool implementation: `dreamos/tools/scan_tools.py` → `write_scan_artifacts`. **MetaAgent** carries `scan`; **scan** runs even under default dry-run because it is read-only (`dreamos/core/agent.py`).
+- **Verification (local):** `python main.py --list-repos` → expect a positive repo count when `DREAMOS_GITHUB_DIR` points at the directory that contains those repos; `python main.py "run projectscanner on all repos"` → expect matched plan `scan` without decomposer fallback warning.
+
+### Transport kernel hardening
+- **Envelope contract:** `src/core/schemas/bus_message.schema.json` (JSON Schema draft-07, `additionalProperties: false` on the root envelope).
+- **Validation:** `BusMessage.validate_dict` applies `jsonschema` after existing field checks (`src/core/message.py`). Runtime dependency: `jsonschema` (declared in `dreamos/pyproject.toml`).
+- **Pre-routing:** `src/transports/envelope_middleware.py` → `assert_pre_routing_envelope`; invoked from `FileTransport.send` before writing inbox JSON (`src/transports/file_transport.py`).
+- **FSM traceability:** `TRANSITION_AUDIT` and `clear_transition_audit()` in `src/core/execution_guard.py`; each allowed `validate_transition` records `from`, `to`, optional `message_id`, optional `source`. Claim/complete/fail paths pass message id and stage name (`src/relay/claim_logic.py`, `dreamos/core/task_adapter.py`).
+- **Tests:** `tests/test_execution_guard.py`, `tests/test_message_schema.py`, `tests/test_transport_envelope.py`; autouse audit reset in root `conftest.py`. **pytest:** root `pytest.ini` `minversion` set to `7.4` for compatibility with pytest 7.4.x environments.
+- **Verification:** `pytest -q tests dreamos/tests` (or full `pytest -q` per DoD).
+
+### Phase mapping (SSOT)
+- **Phase 1 (Comm layer):** Extended with envelope schema enforcement, pre-send transport validation, and FSM transition audit trail (lifecycle still `new → claimed → running → complete|failed`; illegal transitions rejected).
+- **Phase 3 (Robustness):** Reinforced by schema + audit + tests above; complements existing execution guard and contract tests.
 
 ## 2026-04-08 — Grounded repository audit package + README truth-alignment
 
@@ -150,7 +167,7 @@ The work is considered **Done** only when every required criterion below remains
 
 ## Phase 1: MVP Comm Layer - COMPLETED
 
-Dream.os-Core: bus message contracts, file/git transport adapters, send/claim/ack lifecycle, and CLI/runtime alignment. This phase is **not** PyAutoGUI or desktop GUI coordinate automation.
+Dream.os-Core: bus message contracts, file/git transport adapters, send/claim/ack lifecycle, and CLI/runtime alignment. **2026-04-09:** JSON Schema for on-disk message envelopes, validation before `FileTransport.send`, and an append-only FSM transition audit on every legal state change. This phase is **not** PyAutoGUI or desktop GUI coordinate automation.
 
 ---
 
@@ -166,6 +183,7 @@ Dream.os-Core: bus message contracts, file/git transport adapters, send/claim/ac
 
 - **Reliability Enhancements** — completed-phase regression lock in CI, chained workflow prerequisites, execution-integrity gates.
 - **Error Handling** — contract/schema validation, failure and dead-letter visibility in pipeline and audit tests.
+- **2026-04-09** — Bus envelope `jsonschema` validation, illegal transition rejection with `InvalidMessageTransitionError`, and deterministic tests for envelope and FSM audit behavior.
 
 ---
 
@@ -175,5 +193,9 @@ SSOT-driven phase validation in CI, audit modes (`pytest --audit`, `pytest --sso
 
 ---
 
-**Last Updated:** 2026-04-08  
+**Last Updated:** 2026-04-09  
 **Archival (historical, non-SSOT):** `archive/agent_cell_phone/PROJECT_STATUS_AGENT_CELL_PHONE_ARCHIVED.md`
+
+### Next up (process; see also `AGENTS.md`)
+- Keep tests green before and after changes (`pytest -q`, `pytest --audit -q`, `pytest --ssot-mode -q` per DoD).
+- When GitHub API limits allow, confirm there are no open PRs needing merge; merge or close as appropriate and re-push `main` if needed.
