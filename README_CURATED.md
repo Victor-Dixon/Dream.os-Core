@@ -13,6 +13,8 @@ This repository currently implements a **Python message-driven swarm execution r
   - `pytest -q`
   - `pytest --audit -q`
   - `pytest --ssot-mode -q`
+- Minimal closed-loop pipeline (hard contract + retries):
+  - `python run.py --task "demo" --fail-attempts 1 --max-retries 3`
 - Runtime demo:
   - `python runtime_demo/main.py`
 - CLI info modes:

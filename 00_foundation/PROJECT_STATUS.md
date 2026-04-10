@@ -1,5 +1,22 @@
 # SSOT Update Log
 
+## 2026-04-09 — Minimal closed-loop runtime spine (hard pipeline)
+
+- Status: Completed
+- Decision: Added a single executable pipeline entrypoint (`python run.py`) that enforces deterministic output contracts and retry-on-fail validation.
+- Guarantees:
+  - Input task -> agent output generation -> JSON contract write -> strict validation -> pass/fail result.
+  - Binary validation checks (`file exists`, `valid JSON`, `required keys`, `status == success`, `result object`).
+  - Closed retry loop with explicit failure exit after retry budget exhaustion.
+- Artifacts:
+  - `run.py`
+  - `tests/test_closed_loop_pipeline.py`
+- Verification commands:
+  - `pytest -q tests/test_closed_loop_pipeline.py`
+  - `python run.py --task "demo" --fail-attempts 1 --max-retries 3`
+
+---
+
 ## 2026-04-08 — Grounded repository audit package + README truth-alignment
 
 - Status: Completed
