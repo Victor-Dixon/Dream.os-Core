@@ -1,0 +1,6258 @@
+{
+  "generated_at": "2026-05-03T17:52:56Z",
+  "root": "/data/data/com.termux/files/home/projects/Agent_Cellphone",
+  "file_count": 1034,
+  "lane_counts": {
+    "REFERENCE_DOCS": 190,
+    "UNCLASSIFIED": 64,
+    "MIGRATE_AS_ARCHIVE_EVIDENCE": 528,
+    "INSPECT_BEFORE_PROMOTE": 228,
+    "PROMOTE_CORE_CANDIDATE": 11,
+    "REJECT_OR_QUARANTINE": 13
+  },
+  "lanes": {
+    "PROMOTE_CORE_CANDIDATE": [
+      "CORE/SECURE_COMMUNICATION_HUB.py",
+      "CORE/COLLABORATIVE_EXECUTION_SYSTEM.py",
+      "CORE/inter_agent_framework.py",
+      "CORE/enhanced_agent_coordination_framework.py",
+      "CORE/fixed_stall_detection_system.py",
+      "CORE/unified_stall_detection_system.py",
+      "CORE/collaborative_knowledge_management_system.py",
+      "CORE/enhanced_collaborative_knowledge_system.py",
+      "advanced_workflows/workflow_engine.py",
+      "advanced_workflows/multi_agent_dev.py",
+      "advanced_workflows/autonomous_pm.py"
+    ],
+    "REFERENCE_DOCS": [
+      "DOCUMENTATION",
+      "PRDs",
+      "README.md",
+      "ROADMAP.md",
+      "MASTER_COORDINATION_PLAN.md",
+      "ORGANIZATION_SUMMARY.md",
+      "REPOSITORY_CLEANUP_STRATEGY.md",
+      "VICTOR_CAMPAIGN_EXECUTION_PLAN.md"
+    ],
+    "MIGRATE_AS_ARCHIVE_EVIDENCE": [
+      "CONTRACTS",
+      "FSM_UPDATES",
+      "agent_workspaces",
+      "DEMOS"
+    ],
+    "REJECT_OR_QUARANTINE": [
+      "CORE/debug_import.py",
+      "CORE/enter_press_calibration.py",
+      "CORE/improved_calibration.py",
+      "CORE/calibrate_5_agent_coordinates.py",
+      "CORE/restore_coordinate_backup.py",
+      "LAUNCHERS"
+    ]
+  },
+  "files": [
+    {
+      "path": ".github/profile/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 290,
+      "suffix": ".md"
+    },
+    {
+      "path": ".github/workflows/overnight.yml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 836,
+      "suffix": ".yml"
+    },
+    {
+      "path": ".github/workflows/smoke-tests.yml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 526,
+      "suffix": ".yml"
+    },
+    {
+      "path": ".gitignore",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2276,
+      "suffix": ""
+    },
+    {
+      "path": "AGENT_5_CAPTAIN_COORDINATION_REPORT.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11232,
+      "suffix": ".md"
+    },
+    {
+      "path": "AGENT_QUICK_START_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6178,
+      "suffix": ".md"
+    },
+    {
+      "path": "CAPTAIN_COLLABORATIVE_DIRECTIVE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6143,
+      "suffix": ".md"
+    },
+    {
+      "path": "COLLABORATIVE_DIRECTIVE_EXECUTION_STATUS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7147,
+      "suffix": ".md"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2163,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_Current.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2473,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_Final.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2473,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_New.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2473,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_Updated.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2473,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Agent-3_to_Agent-5_DreamVault.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1939,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_Dream_os_Agent-2_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2331,
+      "suffix": ".json"
+    },
+    {
+      "path": "CONTRACTS/contract_update_NewSims4ModProject_Agent-2_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3665,
+      "suffix": ".json"
+    },
+    {
+      "path": "CORE/AUTO_MODE_IMPLEMENTATION.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 15196,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/COLLABORATIVE_EXECUTION_SYSTEM.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 17878,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/COMPREHENSIVE_AUTO_MODE_SYSTEM.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 27151,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/SECURE_COMMUNICATION_HUB.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 17855,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/agent_cell_phone.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 374,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/calibrate_5_agent_coordinates.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 8931,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/cli_test_harness.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2866,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/collaborative_knowledge_management_system.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 22432,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/comprehensive_prd_analysis.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6023,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/comprehensive_prd_analysis_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 25020,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/configure_project_focus.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5182,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/continuous_agents_1_4.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16872,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/coordination_framework_implementation.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14070,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/debug_import.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 1174,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/discord_integration_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 24175,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/enhanced_agent_coordination_framework.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 38501,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/enhanced_collaborative_knowledge_system.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 71206,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/enter_press_calibration.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 13286,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/fixed_stall_detection_system.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 11397,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/improved_calibration.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 13074,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/inter_agent_framework.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 127,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/main.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 334,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/proper_onboarding_sequence.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 11033,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/restore_coordinate_backup.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 5719,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/send_prd_instructions.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5900,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/send_prd_instructions_direct.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6666,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/send_prd_instructions_simple.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5930,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/setup_discord_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8600,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/sustainable_transformation_model.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16856,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/systematic_beta_analysis.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8719,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/unified_discord_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 21458,
+      "suffix": ".py"
+    },
+    {
+      "path": "CORE/unified_stall_detection_system.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 26479,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/advanced_workflows_demo_report_20250815_045459.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8571,
+      "suffix": ".json"
+    },
+    {
+      "path": "DEMOS/agent_cellphone_effectiveness_demo_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5348,
+      "suffix": ".json"
+    },
+    {
+      "path": "DEMOS/agent_cellphone_effectiveness_demonstration.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 14068,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/automated_campaign_demo.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5582,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/campaign_demo.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8708,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/demo_configurable_paths.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6847,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/demo_enhanced_gui.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 10743,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/demo_progressive_escalation.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6197,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/democratic_coordination_demo_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2189,
+      "suffix": ".json"
+    },
+    {
+      "path": "DEMOS/democratic_coordination_demonstration.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 14229,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/discord_agent_updates_demo.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 10983,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/repository_analysis_beta_criteria_demo.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 11842,
+      "suffix": ".py"
+    },
+    {
+      "path": "DEMOS/stall_mitigation_demo_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 4692,
+      "suffix": ".json"
+    },
+    {
+      "path": "DEMOS/stalling_mitigation_demonstration.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 15715,
+      "suffix": ".py"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT-4_TASK_COMPLETION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2415,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT_1_COLLABORATIVE_KNOWLEDGE_MANAGEMENT_COMPLETION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11678,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT_1_REPOSITORY_DEVELOPMENT_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 12202,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT_2_ENHANCED_COLLABORATIVE_SYSTEM_COMPLETION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9174,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT_PRD_PROTOCOL.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2394,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/AGENT_RESCUE_IMPLEMENTATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5170,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/BETA_WORKFLOW_CONFIG.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7233,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/BREAKTHROUGH_v1.0.0_CURSOR_BRIDGE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10247,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CAMPAIGN_SYSTEM_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10056,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CAPTURE_IMPLEMENTATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5271,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CLEANUP_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5025,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COLLABORATIVE_AGENTS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2260,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COLLABORATIVE_DASHBOARD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9570,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COLLABORATIVE_TASKS_STATUS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6847,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COLLABORATIVE_TASK_COMPLETION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9861,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COLLABORATIVE_TASK_FRAMEWORK.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8981,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COMPREHENSIVE_CLEANUP_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5967,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CONFIGURABLE_PATHS_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8082,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CONFIGURATION_SYSTEM_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6210,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CONTINUOUS_AGENTS_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 3955,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/COORDINATE_CALIBRATION_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7136,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CORE_PROTOCOLS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 283,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/CURSOR_CAPTURE_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8755,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEBUG_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5577,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEMOCRATIC_COORDINATION_FORUM_TRANSITION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9303,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEPLOYMENT_CHECKLIST.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6524,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEPLOYMENT_WORKFLOW_STANDARDS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 589,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEVELOPMENT_STANDARDS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9880,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEV_STANDARDS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 257,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DEV_STANDARDS_NEW.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 313,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/DISCORD_SETUP_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6829,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ENHANCED_FSM_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5965,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ENHANCED_GUI_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 12076,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ENHANCED_SYSTEMS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9520,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ENHANCEMENT_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11174,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/EXPANDED_COLLABORATIVE_TASKS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4110,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/FSM_INTEGRATION_CONTRACT_COMPLETION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5770,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/FSM_INTEGRATION_TESTING_CONTRACT_COMPLETION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6901,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ONGOING_COLLABORATION_INSTRUCTIONS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6277,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/OPEN_DEBATE_PHASE_COMPLETION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7665,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/OVERNIGHT_EXECUTION_PLAN.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6776,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/PRD_CREATION_SUMMARY_20250815.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6311,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/PRODUCTION_MONITOR_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7404,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/PROGRESSIVE_ESCALATION_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9323,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/PROJECT_ORGANIZATION_FIXES.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4831,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/RELEASE_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11715,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/RELEASE_v1.0.0.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 12006,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/REPOSITORY_ANALYSIS_BETA_CRITERIA_OPEN_DEBATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8169,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/REPOSITORY_IMPROVEMENTS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11962,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/REPO_IMPROVEMENTS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10113,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/SECURE_COMMUNICATION_HUB_IMPLEMENTATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9006,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/STALL_DETECTION_FIXES_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5431,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/TASK_LIST.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8719,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/ULTIMATE_COMMAND_CENTER_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11852,
+      "suffix": ".md"
+    },
+    {
+      "path": "DOCUMENTATION/WORKFLOW_STANDARDS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6196,
+      "suffix": ".md"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-1_to_Agent-5_Collaborative_Knowledge_Management_Complete.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3379,
+      "suffix": ".json"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-1_to_Agent-5_Secure_Communication_Hub_Complete.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2602,
+      "suffix": ".json"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-1_to_Agent-5_VSCode_Extension_Status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1905,
+      "suffix": ".json"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-2_to_Agent-5_Enhanced_Collaborative_System_Complete.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1751,
+      "suffix": ".json"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-2_to_Agent-5_Repository_Analysis_Complete.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1926,
+      "suffix": ".json"
+    },
+    {
+      "path": "FSM_UPDATES/fsm_update_Agent-3_to_Agent-5_Comprehensive_Analysis.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2116,
+      "suffix": ".json"
+    },
+    {
+      "path": "LAUNCHERS/activate_captain.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 8034,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/activate_integrated_captain.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 12969,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/captain_followup.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 4046,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/launch_enhanced_gui.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 923,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/launch_ultimate_command_center.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 5186,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/start_continuous_agents.ps1",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 1760,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "LAUNCHERS/start_stall_monitor.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 1018,
+      "suffix": ".py"
+    },
+    {
+      "path": "LAUNCHERS/startup.py",
+      "lane": "REJECT_OR_QUARANTINE",
+      "size_bytes": 894,
+      "suffix": ".py"
+    },
+    {
+      "path": "LICENSE",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1065,
+      "suffix": ""
+    },
+    {
+      "path": "MASTER_COORDINATION_PLAN.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10056,
+      "suffix": ".md"
+    },
+    {
+      "path": "Makefile",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 235,
+      "suffix": ""
+    },
+    {
+      "path": "ORGANIZATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7325,
+      "suffix": ".md"
+    },
+    {
+      "path": "ORPHAN_ANALYSIS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5837,
+      "suffix": ".md"
+    },
+    {
+      "path": "ORPHAN_CLEANUP_COMPLETION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5487,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4976,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/SmartStock-pro_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6485,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/agent_cellphone_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2215,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/ai-task-organizer_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6978,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/automation_framework_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7062,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/automation_workflow_templates.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 21223,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/gpt_automation_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6661,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/machinelearningmodelmaker_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6834,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/project_management_framework_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7616,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/project_management_framework_implementation_guide.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 12409,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/stock_portfolio_manager_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7032,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/trading-leads-bot_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6783,
+      "suffix": ".md"
+    },
+    {
+      "path": "PRDs/utility_management_system_PRD.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7292,
+      "suffix": ".md"
+    },
+    {
+      "path": "README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5241,
+      "suffix": ".md"
+    },
+    {
+      "path": "REPOSITORY_CLEANUP_STRATEGY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11289,
+      "suffix": ".md"
+    },
+    {
+      "path": "ROADMAP.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 635,
+      "suffix": ".md"
+    },
+    {
+      "path": "Utilities/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 290,
+      "suffix": ".py"
+    },
+    {
+      "path": "Utilities/utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4515,
+      "suffix": ".py"
+    },
+    {
+      "path": "VICTOR_CAMPAIGN_EXECUTION_PLAN.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10568,
+      "suffix": ".md"
+    },
+    {
+      "path": "_ops/reports/agent_cellphone_flatten_audit.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 178558,
+      "suffix": ".json"
+    },
+    {
+      "path": "_ops/reports/agent_cellphone_flatten_audit.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 96829,
+      "suffix": ".md"
+    },
+    {
+      "path": "_ops/scripts/flatten_agent_cellphone_audit.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4700,
+      "suffix": ".py"
+    },
+    {
+      "path": "advanced_workflows/ADVANCED_WORKFLOWS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 12375,
+      "suffix": ".md"
+    },
+    {
+      "path": "advanced_workflows/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 3851,
+      "suffix": ".md"
+    },
+    {
+      "path": "advanced_workflows/ai_code_review.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 11098,
+      "suffix": ".py"
+    },
+    {
+      "path": "advanced_workflows/autonomous_pm.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 14209,
+      "suffix": ".py"
+    },
+    {
+      "path": "advanced_workflows/demo_advanced_workflows.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16713,
+      "suffix": ".py"
+    },
+    {
+      "path": "advanced_workflows/multi_agent_dev.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 13271,
+      "suffix": ".py"
+    },
+    {
+      "path": "advanced_workflows/workflow_engine.py",
+      "lane": "PROMOTE_CORE_CANDIDATE",
+      "size_bytes": 20829,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent5_coordination_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14246,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T07-50-01_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 456,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T07-50-02_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 441,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T07-51-14_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 482,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T07-51-18_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 497,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T07-51-22_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 488,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T21-33-32_system_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 672,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T21-33-35_system_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 701,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T21-33-38_system_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 544,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T21-33-41_system_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 580,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/2025-07-02T21-35-41_system_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1402,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/messages/msg_20250812_094703_Agent-4_sync_contract.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1675,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104104_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 801,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104105_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 730,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104106_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 630,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104107_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 614,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104108_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104109_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 542,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104110_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104111_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 530,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104112_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 530,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104113_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 510,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104114_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 570,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104115_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 570,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104116_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104117_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104119_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 570,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104120_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104123_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 562,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104124_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104125_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 514,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104126_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104127_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 586,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_104128_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 610,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_112830_Captain_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250811_113500_Captain_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250812_044811_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 801,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250812_044812_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 669,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250812_045017_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 685,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/msg_20250812_045018_Agent-5_to_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 669,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/task_20250812_093416_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 616,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 726,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/2025-07-02T07-51-16_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 200,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/2025-07-02T07-51-20_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 256,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/2025-07-02T07-51-26_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/2025-07-02T07-51-31_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 200,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/outbox/update_20250811_repos_status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 946,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2141,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-1/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 59,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/2025-07-02T07-50-03_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 448,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/2025-07-02T07-51-16_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 477,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/2025-07-02T07-51-20_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 533,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/2025-07-02T07-51-26_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 478,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/2025-07-02T07-51-31_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 477,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104104_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 685,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104105_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 801,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104106_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 622,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104107_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 634,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104108_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104109_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104110_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 574,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104111_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 518,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104112_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 542,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104113_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 510,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104114_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104115_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 590,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104116_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104117_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104118_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 538,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104119_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104120_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104121_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 586,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104123_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104124_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 574,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104125_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 514,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104126_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 594,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104127_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 598,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_104128_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 610,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_112830_Captain_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250811_113500_Captain_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250812_044811_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 685,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250812_044812_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 801,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250812_045017_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 737,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/msg_20250812_045018_Agent-5_to_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 801,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/task_20250812_093423_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 624,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 266,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/2025-07-02T07-51-14_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 205,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/2025-07-02T07-51-18_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 220,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/2025-07-02T07-51-22_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 211,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/VERIFY_20250812_092401_basic-bot-minimal-cli-and-test.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 712,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/VERIFY_20250812_093245_content-add-unit-test-skeleton-and-ci.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 533,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/VERIFY_20250812_093632_content-add-unit-test-skeleton-and-ci.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 579,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/sprint_plan.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 13512,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2214,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 59,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-2/task_list.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 304,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/captain_overnight_trading_platform.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 497,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_081500_Agent1_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1007,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_095217_Agent-4_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 309,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_101350_Agent-1_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 328,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_103923_Agent-1_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 358,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104003_Agent-1_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 382,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104104_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 765,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104105_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 729,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104106_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 626,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104107_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104108_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 574,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104109_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 542,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104110_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104111_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 518,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104112_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 574,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104113_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 534,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104114_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104115_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104116_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 554,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104117_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104119_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 562,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104120_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104121_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 634,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104123_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104124_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104125_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 538,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104126_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 598,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104127_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 590,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_104128_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 634,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_111500_Agent-3_status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 686,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_112000_Agent-3_status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 436,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_112830_Captain_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250811_113500_Captain_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250812_044811_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 765,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250812_044812_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 729,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250812_045017_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 789,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/msg_20250812_045018_Agent-5_to_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 729,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_075422.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 206,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_075852.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 206,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_080201_agent1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 715,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_081700_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 436,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_084354.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 206,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/sync_20250811_201753_verify_broadcast.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 681,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/task_20250812_093542_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 560,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/inbox/verify_20250811_080350.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 219,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1421,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-3/task_state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 388,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/messages/msg_20250812_085740_Agent-4_validate_gpt-automation.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 551,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/messages/msg_20250812_085910_Agent-4_validate_gpt-automation.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 609,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104104_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 653,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104105_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 853,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104106_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 598,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104107_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 618,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104108_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 550,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104109_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 518,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104110_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104111_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 542,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104112_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 530,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104113_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 522,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104114_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 594,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104115_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 538,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104116_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 574,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104117_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 526,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104119_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104120_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 566,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104123_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104124_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 538,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104125_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 526,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104126_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 606,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104127_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 598,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_104128_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 618,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_112830_Captain_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250811_113500_Captain_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250812_044812_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 853,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250812_045017_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 721,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/msg_20250812_045018_Agent-5_to_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 853,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/task_20250812_093631_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 570,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/evidence_gpt-automation_validate_20250812_085550.txt",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 58,
+      "suffix": ".txt"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/evidence_trading-platform_validate_20250812_092950.txt",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 107,
+      "suffix": ".txt"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/evidence_trading-platform_validate_20250812_093059.txt",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 178,
+      "suffix": ".txt"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/inbox_update_20250812_085550_gpt-automation_validate.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 387,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/inbox_update_20250812_093156_trading-platform_validate.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 639,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1408,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-4/task_state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 582,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/inbox/messages/fsm_update_1755013131_Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 515,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/inbox/messages/msg_20250812_094228_Agent-4_to_Agent-5_contract_update.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 955,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_093716.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_093854.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_094226.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_094736.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_095246.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_095754.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_100302.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_100810.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_100931.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_101323.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_101438.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_101832.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_102339.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_102848.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_102905.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_103356.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_103412.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_103906.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_103923.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_104415.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_104432.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_104927.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 193,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_104942.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_110741.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_150903.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_151424.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_151932.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_152442.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_152951.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_153502.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_154013.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_154521.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_155031.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_155540.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_160047.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250811_160556.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_045036.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_090226.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_090739.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_091018.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_092746.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_092902.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 164,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_093305.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_093409.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_093825.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_094342.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_094856.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_095349.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_095410.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_101956.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_102508.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_102924.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_103031.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_103545.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_103953.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_request_20250812_104101.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 208,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_update_20250812_094225.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 440,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/fsm_update_20250812_094240.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 440,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_103101_Agent-1_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 349,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_103101_Agent-2_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 349,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_103101_Agent-3_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 349,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_103101_Agent-4_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 349,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_112830_Captain_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_113500_Captain_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250811_ContractUpdate_Agent-3_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 558,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250812_094218_Agent-2_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 716,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/msg_20250812_094701_Agent-2_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1573,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/processed_index.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 14846,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 924,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1421,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-5/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/inbox/msg_20250811_112830_Captain_to_Agent-6.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/inbox/msg_20250811_113500_Captain_to_Agent-6.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1421,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-6/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/inbox/msg_20250811_112830_Captain_to_Agent-7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/inbox/msg_20250811_113500_Captain_to_Agent-7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1421,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-7/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/inbox/messages/welcome.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 221,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/inbox/msg_20250811_112830_Captain_to_Agent-8.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 202,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/inbox/msg_20250811_113500_Captain_to_Agent-8.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 156,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/inbox/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/inbox/tasks/sample_task.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 201,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/notes.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 21,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/outbox/sample_result.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 106,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1421,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/Agent-8/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/agents.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 60,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/communications/README.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 411,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/communications/captain_agent.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 524,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/communications/orders/overnight_orders_trading_platform.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 642,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/AGENT_STATUS_FEEDBACK_PROTOCOL.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8863,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/BEST_PRACTICES.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8685,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/CORE_PROTOCOLS.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7512,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/DEVELOPMENT_STANDARDS.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 9135,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/FINAL_SUMMARY.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 10034,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/ONBOARDING_GUIDE.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7560,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/ONBOARDING_REVIEW.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7759,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/ONBOARDING_SUMMARY.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 12595,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/QUICK_START.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6948,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/README.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8453,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/UPDATE_STATUS_GUIDE.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2234,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/onboarding_manager.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 12494,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent_workspaces/onboarding/onboarding_verifier.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 14334,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent_workspaces/onboarding/protocols/RESUME_INTEGRATION_PROTOCOL.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7245,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/protocols/ROLE_ASSIGNMENT_PROTOCOL.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1771,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/protocols/command_reference.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 10508,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/protocols/workflow_protocols.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6408,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/status_manager.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 11517,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent_workspaces/onboarding/status_standardizer.py",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 12494,
+      "suffix": ".py"
+    },
+    {
+      "path": "agent_workspaces/onboarding/status_template.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1783,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/onboarding/training_documents/agent_roles_and_responsibilities.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 9638,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/training_documents/system_overview.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 12062,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/training_documents/tools_and_technologies.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 9592,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/onboarding/training_documents/troubleshooting.md",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 10041,
+      "suffix": ".md"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-50-01_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 456,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-50-02_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 441,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-50-03_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 448,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-14_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 482,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-16_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 477,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-18_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 497,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-20_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 533,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-22_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 488,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-26_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 478,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/completed/2025-07-02T07-51-31_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 477,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-28-346615_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 378,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-30-352438_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 372,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-34-361082_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 378,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-36-374912_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 385,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-38-381243_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 380,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-697349_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 340,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-699351_agent-1_to_agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 368,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-795438_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-811452_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-834474_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-848486_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-863500_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-876513_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-889524_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-913545_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-926558_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-939569_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 337,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-953583_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 338,
+      "suffix": ".json"
+    },
+    {
+      "path": "agent_workspaces/queue/persistent/2025-07-02T08-39-40-967595_agent-2_to_agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 338,
+      "suffix": ".json"
+    },
+    {
+      "path": "artifacts/osrsAI_docs_evidence.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 402,
+      "suffix": ".json"
+    },
+    {
+      "path": "backup/runtime_configs/gui_cursor_coords.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 378,
+      "suffix": ".json"
+    },
+    {
+      "path": "backup/runtime_configs/runtime_cursor_coords.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1314,
+      "suffix": ".json"
+    },
+    {
+      "path": "batch_cleanup_script.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 13247,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "captain_submissions/Victor-Dixon_campaign.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 17284,
+      "suffix": ".md"
+    },
+    {
+      "path": "config/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4147,
+      "suffix": ".md"
+    },
+    {
+      "path": "config/agents/agent_coordinates.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2401,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/agents/agent_roles.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1689,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/agents/project_focus.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 4189,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/auto_mode_config.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2702,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/comprehensive_auto_mode_config.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8370,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/config.ini",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2452,
+      "suffix": ".ini"
+    },
+    {
+      "path": "config/contract_update_Agent-1_to_Agent-5_FreeRideInvestor.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3673,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/coordination_framework_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6538,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/discord_config.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1484,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/fsm.yml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1239,
+      "suffix": ".yml"
+    },
+    {
+      "path": "config/fsm_update_Agent-3_to_Agent-5_PRD_Completion.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1282,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/proper_onboarding_sequence_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2902,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/pytest.ini",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 243,
+      "suffix": ".ini"
+    },
+    {
+      "path": "config/repository_analysis_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3283,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/requirements.txt",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 216,
+      "suffix": ".txt"
+    },
+    {
+      "path": "config/requirements_capture.txt",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 239,
+      "suffix": ".txt"
+    },
+    {
+      "path": "config/requirements_rescue.txt",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 465,
+      "suffix": ".txt"
+    },
+    {
+      "path": "config/secure_hub_config.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1732,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/settings.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 315,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/settings.prod.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 123,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/sustainable_transformation_model_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 8377,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/system/system_config.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 465,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/systematic_beta_analysis_results.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 4750,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/agent_modes.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 528,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/change_contract.schema.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1734,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/message_templates.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1148,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/prd.schema.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 663,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/task_list.schema.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 809,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/workspace_template/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 781,
+      "suffix": ".md"
+    },
+    {
+      "path": "config/templates/workspace_template/notes.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 80,
+      "suffix": ".md"
+    },
+    {
+      "path": "config/templates/workspace_template/status.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 149,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/templates/workspace_template/task_list.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3,
+      "suffix": ".json"
+    },
+    {
+      "path": "config/term_watch.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 122,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "data/vision/vision_demo_output.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 123807,
+      "suffix": ".json"
+    },
+    {
+      "path": "docs/AGENT_MESSENGER_INTEGRATION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7645,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/AGENT_MESSENGER_REVIEW.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6461,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/AGENT_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5344,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/AGENT_RESCUE_SYSTEM.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6253,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/AUTONOMOUS_AGENT_RESUME_TEMPLATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9124,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/AutonomousModes.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1141,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/COMPREHENSIVE_ONBOARDING_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9037,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/COMPREHENSIVE_RESUME_TEMPLATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10203,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/CONFIG_STRUCTURE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 3444,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/DATA_ENGINEER_RESUME_TEMPLATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9513,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/DEVELOPMENT_AUTOMATION_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9136,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/DREAM_OS_BRANDING_UPDATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2623,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/DUAL_BUTTON_SENDING_APPROACH.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9529,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/FINAL_ONBOARDING_IMPROVEMENT_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10608,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/FINAL_PROJECT_STRUCTURE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8630,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/FSM_STRUCTURE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4902,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/GUI_CONSOLIDATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4271,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/GUI_DEVELOPMENT_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5205,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/GUI_V2_DESIGN_DOCUMENT.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8497,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/GUI_V2_USER_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8727,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/HARDCODING_SOLUTION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6196,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_ROADMAP.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 17426,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/IMPROVED_ONBOARDING_APPROACH.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10671,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/INTERVIEW_PREPARATION_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11733,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/INTER_AGENT_COMMUNICATION_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9956,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/INTER_AGENT_FRAMEWORK_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 15110,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/ONBOARDING_IMPROVEMENT_COMPLETE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10920,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/ONBOARDING_IMPROVEMENT_SUCCESS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11535,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8333,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/ORGANIZATION_PLAN.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1269,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PHASE_1_GUI_CONSOLIDATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7066,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PRACTICAL_CONVERSION_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11209,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PRODUCT_REQUIREMENTS_DOCUMENT.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9386,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_FOCUS_CONFIGURATION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8048,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_REORGANIZATION_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5791,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_REQUIREMENTS_ANALYSIS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 15722,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_ROADMAP.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11972,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7457,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PROJECT_STRUCTURE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7585,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/PUSH_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6014,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 19286,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/RESUME_EXAMPLE_CONVERSION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10345,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/RESUME_TEMPLATES_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7972,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/RESUME_TEMPLATE_USAGE_GUIDE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10269,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/ROLE_SPECIFIC_RESUME_PROMPTS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10848,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/SKILL_MAPPING_REFERENCE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 11380,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/SYSTEM_ARCHITECT_RESUME_TEMPLATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9761,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/TECHNICAL_SPECIFICATIONS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 16890,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/TECHNICAL_SPECIFICATIONS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 17115,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/TWO_AGENT_HORIZONTAL_GUI.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 6123,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/VISION_SYSTEM_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 8174,
+      "suffix": ".md"
+    },
+    {
+      "path": "docs/changes/2025-08-10-phase2-contract.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1564,
+      "suffix": ".json"
+    },
+    {
+      "path": "dreamos/core/fsm_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13629,
+      "suffix": ".py"
+    },
+    {
+      "path": "env.example",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2022,
+      "suffix": ".example"
+    },
+    {
+      "path": "examples/agent_conversation_demo.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5691,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_autonomous_captain.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1881,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_autonomous_standardization.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3579,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_collaborative_framework.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 9951,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_collaborative_tasks.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7532,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_cursor_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8351,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_enhanced_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7152,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_enhanced_fsm.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2189,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/demo_fsm_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6531,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/dev_automation_demo.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6668,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/project_focus_example.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7340,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/real_agent_messages.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6313,
+      "suffix": ".py"
+    },
+    {
+      "path": "examples/vision/vision_demo.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4831,
+      "suffix": ".py"
+    },
+    {
+      "path": "fsm_data/projects/bc7a70be-b3bb-4600-9dca-f3148d8373f0.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 738,
+      "suffix": ".json"
+    },
+    {
+      "path": "fsm_data/tasks/3ec1ae78-6abb-4077-a3e9-34be67a446b8.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 824,
+      "suffix": ".json"
+    },
+    {
+      "path": "fsm_data/tasks/Agent-4_FSM_Update.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 292,
+      "suffix": ".json"
+    },
+    {
+      "path": "fsm_data/tasks/Agent-4_Secure_Communication_Hub_Complete.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 205,
+      "suffix": ".json"
+    },
+    {
+      "path": "fsm_data/tasks/task-001.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 134,
+      "suffix": ".json"
+    },
+    {
+      "path": "fsm_data/tasks/task-002.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 144,
+      "suffix": ".json"
+    },
+    {
+      "path": "identify_orphans.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12379,
+      "suffix": ".py"
+    },
+    {
+      "path": "orphan_analysis_report.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 921,
+      "suffix": ".json"
+    },
+    {
+      "path": "overnight_runner/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 10966,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 35,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/enhanced_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 34909,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/enhanced_runner.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5982,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/fsm_bridge.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12125,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8373,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/inbox_consumer.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2859,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/listener.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13595,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/onboarding/00_INDEX.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2232,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/01_GETTING_STARTED.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1016,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/02_CALIBRATION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 952,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/03_MESSAGING_CHANNELS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1485,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/04_OVERNIGHT_RUNNER.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2951,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/05_FILE_INBOX_LISTENER.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1460,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/06_PLAYBOOKS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1157,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/07_TROUBLESHOOTING.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 483,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/08_FAQ.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 370,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/09_CHECKLISTS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 560,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/10_NEW_AGENT_QUICKSTART.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2087,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/11_AGENT_ONBOARDING_SEQUENCE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2476,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/11_SECRETS_ENV.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1100,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/12_REPO_INDEX.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 744,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/13_MESSAGING_SCHEMAS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 2255,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/14_VALIDATION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 480,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/15_CI_TESTING.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 787,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/16_GIT_WORKFLOW.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1349,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/17_CODE_STANDARDS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1332,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/18_OPS_RUNBOOKS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 476,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/20_V2_BI_DIRECTIONAL_ONBOARDING.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 9129,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/21_V2_QUICK_REFERENCE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4481,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/ONBOARDING_IMPROVEMENTS_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7926,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/onboarding/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 3257,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/COLLECT_LOGS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 264,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/DEVLOG_BROADCASTER.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1937,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/PSREADLINE_BUFFER_BUG.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 477,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/PUSH_COMMITS.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1315,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 786,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/RUN_VALIDATE_ALL.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 290,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/TASK_STATE.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1086,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/TRIGGER_RUNNER.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 734,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/protocol_scan_tasklists.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 485,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/protocol_send_sync.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 490,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/protocols/protocol_validate_repo.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 500,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/runner.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 51668,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/small_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 11628,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/COORDINATE_CAPTURE_README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 5486,
+      "suffix": ".md"
+    },
+    {
+      "path": "overnight_runner/tools/capture_coords.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 9473,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/collect_logs.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 542,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/devlog_after_validate.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 918,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/devlog_notify_from_repo.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1565,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/enhanced_capture_coords.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 11247,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/generate-contracts.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2996,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/git_commit_push.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1791,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/github_clone_tool.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2855,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/notify_discord.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 841,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/onboard_via_acp.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1637,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/ps_invoke.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 253,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/push_helper.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1461,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/run_validate_all.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1017,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/scan-tasklists.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 831,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/send-sync.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3277,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/send-visible.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 539,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/send_inbox_message.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1441,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/send_visible.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 680,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/standardize_repos.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2162,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/standardize_task_lists.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4975,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/tools/stop_overnight.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 614,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/task_state_manager.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2547,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/trigger_runner.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2189,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/tools/validate-repo.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1350,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "overnight_runner/ultimate_agent5_command_center.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 55254,
+      "suffix": ".py"
+    },
+    {
+      "path": "overnight_runner/ultimate_agent5_command_center_fixed.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 40636,
+      "suffix": ".py"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_1_Real_Time_Chatbot_Microservice.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5282,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_2_Mobile_Task_Tracker_App.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6187,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_3_Data_Ingestion_Pipeline.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 6511,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_4_Auto_Scaling_Simulation_Engine.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7115,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_5_Knowledge_Base_Portal.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 7177,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_data_pipeline.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2071,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_discord_bot.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2182,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_fastapi_api.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1991,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_mmorpg_engine.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2158,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/PRD_web_scraper.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2196,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 4503,
+      "suffix": ".md"
+    },
+    {
+      "path": "project_repository/PRDs/ai_chatbot_assistant.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1867,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/autonomous_platform.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 962,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/blockchain_supply_chain.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2036,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/data_analytics_dashboard.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1958,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/ecommerce_platform.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1744,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/PRDs/mobile_fitness_app.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1901,
+      "suffix": ".json"
+    },
+    {
+      "path": "project_repository/orchestrator/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 167,
+      "suffix": ".py"
+    },
+    {
+      "path": "project_repository/orchestrator/orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4870,
+      "suffix": ".py"
+    },
+    {
+      "path": "project_repository/orchestrator/prd_watcher.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4087,
+      "suffix": ".py"
+    },
+    {
+      "path": "project_repository/orchestrator/task_router.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5665,
+      "suffix": ".py"
+    },
+    {
+      "path": "reports/digest_template.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 281,
+      "suffix": ".md"
+    },
+    {
+      "path": "repository_cleanup_script.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 11588,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "runtime/agent_comms/cursor_agent_coords.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3255,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/cursor_agent_coords.json.backup",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 5074,
+      "suffix": ".backup"
+    },
+    {
+      "path": "runtime/agent_comms/cursor_agent_coords_backup.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3250,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/contract_update_1755303000_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1915,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/contract_update_1755305000_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2543,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1827,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_New.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2472,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DreamVault.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1938,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755248908737_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 844,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755254008649_Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 404,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755254998648_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5795,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755255056370_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5891,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755255063158_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 361,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755255064648_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 249,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755255066711_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 381,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755255068901_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 267,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755294600713_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 903,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755300711740_Agent-5.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 404,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755301784321_Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 301,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_comms/inbox/response_1755343361038_Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 0,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_monitors/agent5/activity.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1125,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_monitors/agent5/health.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 116,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/agent_monitors/agent5/metrics.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 489,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/050ee057-7bc6-4431-9e4d-549b7868cc15.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1282,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/0b14db1b-af9b-4a56-b1a2-59d53df881da.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1402,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/2a683c8b-c0d3-4c14-84f0-aa54415e605f.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1399,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/3a3030c3-1d5f-46ce-96fd-9cc77cd2e5af.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1384,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/4510f744-a333-4bf3-856a-6fe6e5691a12.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1285,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/644f912e-4cc8-42e1-bfde-466480f04e29.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1273,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/6cf4e251-7421-4dc8-b9b4-eba9be20a670.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1267,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/7823e83b-fdd6-4328-9b69-0d713a975701.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1371,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/7a3ca711-b461-4dbe-b31f-23150ed55a42.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1282,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/82c4a019-f42d-4ee7-91e0-c8ad0ab99047.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1390,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/8aee1ab7-529f-44f8-9e7c-06cf4587bef2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1267,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/a0ace16e-5dbe-4e69-b462-4c9cac026405.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1254,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/a0ad2e6d-267b-4183-8f21-5bd3a67e4038.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1372,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/d9066534-e425-4a63-96c9-a363548b657b.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1273,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/ddd9e7cd-7cbe-4e88-b1ab-16555ac3fc98.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1255,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/collaborative_tasks/e6e2e260-62f6-4818-bdc2-c1761e118eb7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1254,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-1_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 640,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-2_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 653,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-3_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-4_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 614,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-5_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 626,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-1_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 640,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-2_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 653,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-3_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-4_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 614,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-5_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 626,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-1_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 640,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-2_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 653,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-3_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 602,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-4_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 614,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-5_1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 626,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/collaborative_tasks/reports/collaboration_report_20250816_141740.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 0,
+      "suffix": ".md"
+    },
+    {
+      "path": "runtime/collaborative_tasks/reports/collaboration_report_20250816_141953.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1495,
+      "suffix": ".md"
+    },
+    {
+      "path": "runtime/collaborative_tasks/reports/collaboration_report_20250816_143638.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 1741,
+      "suffix": ".md"
+    },
+    {
+      "path": "runtime/config/agent_capture.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 377,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "runtime/config/agent_onboarding_templates.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 12225,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "runtime/config/autonomous_workflow_onboarding.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7558,
+      "suffix": ".md"
+    },
+    {
+      "path": "runtime/config/autonomous_workflow_runner_config.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 9108,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "runtime/config/enhanced_capture.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3178,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "runtime/config/modes_runtime.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1006,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/fsm/captain_state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2302,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/fsm/enhanced_fsm_state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 55372,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/fsm/standardization_state.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 12964,
+      "suffix": ".json"
+    },
+    {
+      "path": "runtime/fsm_bridge/inbox_consumer.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3427,
+      "suffix": ".py"
+    },
+    {
+      "path": "runtime/tasks/example.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 172,
+      "suffix": ".json"
+    },
+    {
+      "path": "scripts/AGENT_MESSENGER_INTEGRATION.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7645,
+      "suffix": ".md"
+    },
+    {
+      "path": "scripts/README_ONBOARDING.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7818,
+      "suffix": ".md"
+    },
+    {
+      "path": "scripts/SCRIPTS_CLEANUP_SUMMARY.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 3290,
+      "suffix": ".md"
+    },
+    {
+      "path": "scripts/Standardize-PRDs.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3794,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/agent_messenger.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7176,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/agent_prd_master_tracker.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1985,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/agent_project_master_tracker.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 4948,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/agent_task_master_tracker.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2325,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/calibrate_coords.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8160,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/clone_all_repos.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3756,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/commit_changes.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3941,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/consolidated_onboarding.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6452,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/full_featured_2_agent_demo.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 9284,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/manage_project_focus.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12991,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/onboarding_utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 27832,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/overnight_runner.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 863,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/post_digest.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 789,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/quick_setup.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13017,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/run_agent5_monitor.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 843,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/run_agent5_monitor.sh",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 859,
+      "suffix": ".sh"
+    },
+    {
+      "path": "scripts/run_autonomous_workflow.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 5409,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/run_listener_forever.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 528,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/run_runner_forever.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1265,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/start_agent_rescue.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 842,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/start_agent_rescue.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1835,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/start_auto_mode.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 583,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/start_auto_mode.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 991,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/start_comprehensive_auto_mode.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 779,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/start_continuous_agents.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 493,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/start_continuous_agents.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1760,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "scripts/start_inbox_listener.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 714,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/term_watch.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10611,
+      "suffix": ".py"
+    },
+    {
+      "path": "scripts/\ud83d\ude80_START_AGENTS_HERE.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3990,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/\ud83d\ude80_START_COLLABORATIVE_AGENTS.bat",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1445,
+      "suffix": ".bat"
+    },
+    {
+      "path": "scripts/\ud83d\ude80_START_COLLABORATIVE_AGENTS.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 3335,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "setup.sh",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 743,
+      "suffix": ".sh"
+    },
+    {
+      "path": "src/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 369,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/agent_cell_phone/enhanced_response_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14721,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/agent_cell_phone/response_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6413,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/agent_monitors/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7597,
+      "suffix": ".md"
+    },
+    {
+      "path": "src/agent_monitors/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 287,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/agent_monitors/agent5_monitor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 17465,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/agent_rescue_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4788,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/communication_hub/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/communication_hub/communication_hub.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 33056,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/communication_hub/secure_hub.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 0,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/knowledge_base/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 920,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/knowledge_base/collaborative_knowledge_manager.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16490,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/synergy_optimizer/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 956,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/synergy_optimizer/synergy_optimizer.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 28474,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/t2a_kc_collaborative_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 19697,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 959,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/collaborative_task_manager.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 23652,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_enhanced_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 17843,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/agent_capabilities/Agent-1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 322,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/agent_capabilities/Agent-2.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 316,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/agent_capabilities/Agent-3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 319,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/agent_capabilities/Agent-4.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 317,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/optimization_results/f60cca45-de80-473d-a3cf-c99cbe7f7149.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 433,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/sessions/0732e72f-63af-4702-b5b3-c5b62020ced7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 588,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/sessions/652501ea-b7b6-4017-a2ba-3b6533fe16b1.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1138,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/system_metrics/0f9b992c-29db-45b7-ac5d-a648729731b6.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 274,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/system_metrics/3a385a55-870d-429f-99b5-368cb9390b70.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 270,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/system_metrics/41c52db9-bad2-4781-afcd-7d9d7ced42fa.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 269,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/system_metrics/c574a023-ecd8-4e75-990c-fa54a56ff788.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 277,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/0e6ea8b5-53fe-48e1-9a39-5a42a6fae276.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3575,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/4cf8e0c5-8db0-4cef-afde-6b218ddc0966.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2886,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/5878ea33-bd92-46d0-a51f-000d89c947bb.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3575,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/a0dc60bb-95c0-4130-b974-4e89905babf0.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 2846,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/a6c01056-0190-44ec-99f7-3a7b3c4687d7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5249,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/task_breakdowns/dea6f86a-5b93-4bb7-ad2a-879a7a450b17.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 5272,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/7c4d99e2-face-4fb8-a4d5-57362ec52da7.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1236,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/8839a920-7792-407f-a949-b07c46e370b3.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3271,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/8ae22532-18cb-4c6c-a9fa-9b04dce5fe59.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1236,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/8d998fd5-e399-4106-bce2-b9708cc2c56c.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1225,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/a8bd6723-3a32-488b-8312-5b10cfd3db39.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 3271,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/demo_output/workflows/aeeb06fd-227d-43d3-80a2-c34e24289c63.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1222,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/collaborative/task_manager/enhanced_collaborative_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 24176,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/enhanced_task_breakdown.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 21449,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/test_enhanced_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 21716,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative/task_manager/workflow_optimizer.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 23281,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative_tasks/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 551,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative_tasks/collaborative_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14854,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/collaborative_tasks/collaborative_task_manager.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10102,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/config_validator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1706,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 49,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/agent_monitor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6428,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/autonomy_guard.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1058,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/command_router.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1964,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/config.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 9089,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/config_loader.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1638,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/continuous_worker.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8480,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/dev_automation_agent.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14124,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/discord_router.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1192,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/framework/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 230,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/framework/agent_autonomy_framework.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12881,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/fsm_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 15845,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/inbox_listener.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6231,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/lifecycle_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2766,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/message_pipeline.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 606,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/project_focus_manager.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14009,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/runtime/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 43,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/runtime/config/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 566,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/runtime/config/agent_capture.yaml",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1478,
+      "suffix": ".yaml"
+    },
+    {
+      "path": "src/core/runtime/config/agent_workspace_map.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 437,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/core/runtime/config/cursor_agent_coords.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 4069,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/core/runtime/config/templates/agent_modes.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 528,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/core/utils/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 485,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/utils/coordinate_finder.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10802,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/utils/retry.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1438,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/utils/watchdog.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1537,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/core/watchdog_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1690,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/cursor_capture/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 321,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/cursor_capture/db_reader.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5529,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/cursor_capture/export_consumer.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7230,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/cursor_capture/watcher.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4571,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/fsm/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 727,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/fsm/autonomous_captain.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14804,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/fsm/autonomous_standardization.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 23651,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/fsm/enhanced_fsm.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13165,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/fsm/repository_activity_monitor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 11575,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/1logo.png",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1837630,
+      "suffix": ".png"
+    },
+    {
+      "path": "src/gui/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 289,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/README.md",
+      "lane": "REFERENCE_DOCS",
+      "size_bytes": 7285,
+      "suffix": ".md"
+    },
+    {
+      "path": "src/gui/components/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2085,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/agent_panel.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 22375,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/custom_message_widget.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3131,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/custom_message_widget_qt.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5108,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/onboarding_components.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13519,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/onboarding_components_qt.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 19655,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/onboarding_dashboard.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16583,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/onboarding_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8281,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/components/splash_screen.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4644,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/dream_os_gui_v2.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 20572,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/dream_os_splash_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10793,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/five_agent_grid_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 25213,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/four_agent_horizontal_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 22687,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/logo.png",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1366513,
+      "suffix": ".png"
+    },
+    {
+      "path": "src/gui/run_two_agent_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1089,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/tabs/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 376,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/tabs/agent_messenger_tab.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 17163,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/tabs/coordinator_tab.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 22897,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/tabs/onboarding_tab.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13748,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/two_agent_horizontal_gui.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 21940,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 29,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/base_gui_controller.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13025,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/coordination_utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 15069,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/messaging_utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6281,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/onboarding_utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 16502,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/shared_classes.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5462,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/shared_operations.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 20110,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/gui/utils/unified_broadcast_service.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 23655,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/main.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6007,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/orchestrators/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 748,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/orchestrators/lifecycle_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3238,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/orchestrators/overnight_runner.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6784,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/runtime/config/agent_workspace_map.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 1202,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/runtime/config/cursor_agent_coords.json",
+      "lane": "MIGRATE_AS_ARCHIVE_EVIDENCE",
+      "size_bytes": 849,
+      "suffix": ".json"
+    },
+    {
+      "path": "src/services/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 662,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/agent_cell_phone.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 42625,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/agent_service.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7115,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/api.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2660,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/browser_manager.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2141,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/browser_utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5671,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/chatgpt_navigator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2853,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/conversation_extractor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4582,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/conversation_logger.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5107,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/discord_service.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4059,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/discord_webhook.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1858,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/enhanced_response_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14906,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/event_bus.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1994,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/inter_agent_framework.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 15300,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/prompt_interactor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5524,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/services/session_authenticator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3984,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/utils.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 544,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/vision/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 351,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/vision/agent_vision_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10925,
+      "suffix": ".py"
+    },
+    {
+      "path": "src/vision/vision_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7191,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 341,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/agent_monitors/__init__.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 90,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/agent_monitors/test_agent5_monitor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10866,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/conftest.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 373,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/diagnostic_test.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1283,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/fixtures/ocr_sample.pgm",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 14286,
+      "suffix": ".pgm"
+    },
+    {
+      "path": "tests/harness_cli.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 10106,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/run_smoke.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 1458,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "tests/smoke/test_fsm_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 14634,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_fsm_runner_integration.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7051,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_gui_buttons.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12918,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_gui_file_structure.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4137,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_gui_happy_path.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4225,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_gui_loads.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3401,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_runner_invocation.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2566,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_save_log_button.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5811,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_send_fsm_request.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2673,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/smoke/test_smoke.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1663,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/technical_indicators/tests.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 197,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_8_agent_coordinates.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 5899,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_agent_cell_phone.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2941,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_agent_cell_phone_enhanced_response_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1939,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_agent_cell_phone_inbox.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1074,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_autonomy_guard.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 517,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_button_functionality.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3670,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_calibrated_coordinates.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 8074,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_collaborative_knowledge_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 13945,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_config.ini",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 208,
+      "suffix": ".ini"
+    },
+    {
+      "path": "tests/test_config_validator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 590,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_conversation_logger.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 782,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_cursor_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 6847,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_enhanced_response_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2867,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_inter_agent_framework.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2250,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_lifecycle_orchestrator.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1064,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_ml_robot_utils.py.disabled",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 5224,
+      "suffix": ".disabled"
+    },
+    {
+      "path": "tests/test_ocr_capture.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1323,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_phase2_scaffolds.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2101,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_rescue_system.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 2754,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_retry.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 593,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_secure_communication_hub.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 12451,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_special_chars.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 737,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_standardization.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 7314,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/test_watchdog.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 397,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/unit/test_fsm_bridge.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 4220,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/unit/test_overnight_runner_guards.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1214,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/unit/test_prompt_interactor.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 3345,
+      "suffix": ".py"
+    },
+    {
+      "path": "tests/unit/test_task_router.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 1636,
+      "suffix": ".py"
+    },
+    {
+      "path": "tools/apply_env.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 962,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "tools/clone_all.ps1",
+      "lane": "UNCLASSIFIED",
+      "size_bytes": 2279,
+      "suffix": ".ps1"
+    },
+    {
+      "path": "victor_developer_readiness_campaign.py",
+      "lane": "INSPECT_BEFORE_PROMOTE",
+      "size_bytes": 9221,
+      "suffix": ".py"
+    }
+  ]
+}
