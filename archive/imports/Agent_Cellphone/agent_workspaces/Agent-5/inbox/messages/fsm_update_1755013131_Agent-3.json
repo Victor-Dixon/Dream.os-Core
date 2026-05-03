@@ -1,0 +1,11 @@
+{
+  "task_id": "docs-implement-a-runelite-plugin-for-capturing-screen-regions-and-sending-input",
+  "state": "in_progress",
+  "summary": "Created RUNELITE_PLUGIN_SPEC.md in workspace at Dadudekc/osrsAIagent/docs. Next: commit in repo clone and run validator; then cross-link from PRD/ROADMAP.",
+  "evidence": {
+    "workspace_path": "Dadudekc/osrsAIagent/docs/RUNELITE_PLUGIN_SPEC.md",
+    "links": [],
+    "notes": "Spec content added with implementable details and safety policies."
+  },
+  "timestamp": "${NOW}"
+}

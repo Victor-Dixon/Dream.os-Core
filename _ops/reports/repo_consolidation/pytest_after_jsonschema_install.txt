@@ -1,0 +1,148 @@
+============================= test session starts ==============================
+platform android -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0
+rootdir: /data/data/com.termux/files/home/projects/DreamOS
+configfile: pytest.ini
+testpaths: tests, dreamos/tests
+plugins: cov-7.1.0
+collected 127 items
+
+tests/audit/test_audit_suite_structure.py .............                  [ 10%]
+tests/audit/test_definition_of_done.py ......                            [ 14%]
+tests/audit/test_phase_regression_gate.py ....                           [ 18%]
+tests/test_claim_and_ack.py FF                                           [ 19%]
+tests/test_execution_guard.py ......                                     [ 24%]
+tests/test_git_transport.py F                                            [ 25%]
+tests/test_message_only_execution.py .F.                                 [ 27%]
+tests/test_message_schema.py F..F                                        [ 30%]
+tests/test_message_to_swarm_execution.py F                               [ 31%]
+tests/test_phase2_runtime.py ...............                             [ 43%]
+tests/test_transport_envelope.py F                                       [ 44%]
+dreamos/tests/test_agent.py ................                             [ 56%]
+dreamos/tests/test_memory.py ......................                      [ 74%]
+dreamos/tests/test_routing.py ...                                        [ 76%]
+dreamos/tests/test_swarm.py .............                                [ 86%]
+dreamos/tests/test_tools.py .................                            [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_claim_then_ack_moves_files ________________________
+tests/test_claim_and_ack.py:20: in test_claim_then_ack_moves_files
+    transport.send(incoming)
+src/transports/file_transport.py:17: in send
+    assert_pre_routing_envelope(message)
+src/transports/envelope_middleware.py:10: in assert_pre_routing_envelope
+    BusMessage.validate_dict(message.to_dict())
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+_________________________ test_handler_emits_response __________________________
+tests/test_claim_and_ack.py:39: in test_handler_emits_response
+    transport.send(incoming)
+src/transports/file_transport.py:17: in send
+    assert_pre_routing_envelope(message)
+src/transports/envelope_middleware.py:10: in assert_pre_routing_envelope
+    BusMessage.validate_dict(message.to_dict())
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+____________________ test_git_transport_send_triggers_sync _____________________
+tests/test_git_transport.py:30: in test_git_transport_send_triggers_sync
+    transport.send(msg)
+src/transports/git_transport.py:35: in send
+    stored = super().send(message)
+             ^^^^^^^^^^^^^^^^^^^^^
+src/transports/file_transport.py:17: in send
+    assert_pre_routing_envelope(message)
+src/transports/envelope_middleware.py:10: in assert_pre_routing_envelope
+    BusMessage.validate_dict(message.to_dict())
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+_______________________ test_accepts_bus_message_payload _______________________
+tests/test_message_only_execution.py:41: in test_accepts_bus_message_payload
+    result = adapter.execute(message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+dreamos/core/task_adapter.py:32: in execute
+    return self.execute_bus_message(validated)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dreamos/core/task_adapter.py:65: in execute_bus_message
+    return BusMessage.from_dict(payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/core/message.py:109: in from_dict
+    cls.validate_dict(data)
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+___________________________ test_message_round_trip ____________________________
+tests/test_message_schema.py:19: in test_message_round_trip
+    restored = BusMessage.from_json(msg.to_json())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/core/message.py:136: in from_json
+    return cls.from_dict(parsed)
+           ^^^^^^^^^^^^^^^^^^^^^
+src/core/message.py:109: in from_dict
+    cls.validate_dict(data)
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+___________ test_envelope_schema_rejects_extra_top_level_properties ____________
+tests/test_message_schema.py:52: in test_envelope_schema_rejects_extra_top_level_properties
+    BusMessage.validate_dict(payload)
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+_____________________ test_message_to_swarm_execution_flow _____________________
+tests/test_message_to_swarm_execution.py:34: in test_message_to_swarm_execution_flow
+    transport.send(incoming)
+src/transports/file_transport.py:17: in send
+    assert_pre_routing_envelope(message)
+src/transports/envelope_middleware.py:10: in assert_pre_routing_envelope
+    BusMessage.validate_dict(message.to_dict())
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+______________ test_file_transport_send_rejects_invalid_envelope _______________
+tests/test_transport_envelope.py:31: in test_file_transport_send_rejects_invalid_envelope
+    transport.send(msg)
+src/transports/file_transport.py:17: in send
+    assert_pre_routing_envelope(message)
+src/transports/envelope_middleware.py:10: in assert_pre_routing_envelope
+    BusMessage.validate_dict(message.to_dict())
+src/core/message.py:175: in validate_dict
+    _validate_envelope_json_schema(data)
+src/core/message.py:23: in _validate_envelope_json_schema
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+=============================== warnings summary ===============================
+dreamos/tests/test_memory.py: 27 warnings
+  /data/data/com.termux/files/home/projects/DreamOS/dreamos/core/memory.py:57: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "ts": datetime.utcnow().isoformat(),
+
+dreamos/tests/test_tools.py::TestGitCommitTool::test_default_message_contains_timestamp
+  /data/data/com.termux/files/home/projects/DreamOS/dreamos/tools/git_tools.py:80: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_claim_and_ack.py::test_claim_then_ack_moves_files - ModuleN...
+FAILED tests/test_claim_and_ack.py::test_handler_emits_response - ModuleNotFo...
+FAILED tests/test_git_transport.py::test_git_transport_send_triggers_sync - M...
+FAILED tests/test_message_only_execution.py::test_accepts_bus_message_payload
+FAILED tests/test_message_schema.py::test_message_round_trip - ModuleNotFound...
+FAILED tests/test_message_schema.py::test_envelope_schema_rejects_extra_top_level_properties
+FAILED tests/test_message_to_swarm_execution.py::test_message_to_swarm_execution_flow
+FAILED tests/test_transport_envelope.py::test_file_transport_send_rejects_invalid_envelope
+================== 8 failed, 119 passed, 28 warnings in 1.39s ==================

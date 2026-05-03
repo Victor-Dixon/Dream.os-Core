@@ -1,0 +1,51 @@
+{
+  "agent_id": "Agent-4",
+  "status": "ready",
+  "current_task": "none",
+  "message": "FSM update sent for gpt-automation retry-exhaustion regression; tests green.",
+  "last_updated": "2025-08-12T00:00:00Z",
+  "workspace_path": "D:/Agent_Cellphone/agent_workspaces/Agent-4",
+  "repo_root": "D:/Agent_Cellphone",
+  "shared_tools": "D:/Agent_Cellphone/agent_workspaces/shared_tools",
+  "onboarding": {
+    "status": "pending",
+    "started_at": null,
+    "completed_at": null,
+    "progress": 0.0,
+    "checklist": {
+      "welcome_message": false,
+      "system_overview": false,
+      "communication_protocol": false,
+      "roles_and_responsibilities": false,
+      "best_practices": false,
+      "getting_started": false,
+      "troubleshooting": false,
+      "quick_start": false,
+      "status_update": true,
+      "repository_push": false
+    },
+    "documents_read": [],
+    "verification_passed": false,
+    "notes": "status restored"
+  },
+  "capabilities": {
+    "autonomous_mode": false,
+    "communication_enabled": true,
+    "file_operations": true,
+    "task_execution": true,
+    "status_reporting": true
+  },
+  "performance": {
+    "tasks_completed": 1,
+    "messages_sent": 1,
+    "messages_received": 0,
+    "uptime_hours": 0.0,
+    "last_activity": "2025-08-12T00:00:00Z"
+  },
+  "health": {
+    "status": "healthy",
+    "last_health_check": null,
+    "errors": [],
+    "warnings": []
+  }
+}
