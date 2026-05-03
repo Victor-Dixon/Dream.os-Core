@@ -1,7 +1,0 @@
-{
-  "task_id": "sample_001",
-  "title": "Sample Task",
-  "description": "This is a sample task for demonstration",
-  "priority": "medium",
-  "status": "pending"
-}

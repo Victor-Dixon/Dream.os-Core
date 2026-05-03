@@ -1,2 +1,0 @@
-==> gpt-automation validation start
-Validation succeeded.

@@ -1,3 +1,0 @@
-==> trading-platform validation start
-==> running pytest
-Validation failed: pytest failed with exit code 1
