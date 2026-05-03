@@ -20,12 +20,84 @@ def _load_bus_message_schema() -> JsonDict:
 
 
 def _validate_envelope_json_schema(data: JsonDict) -> None:
-    import jsonschema
+    schema = _load_bus_message_schema()
 
     try:
-        jsonschema.validate(instance=data, schema=_load_bus_message_schema())
+        import jsonschema  # type: ignore
+    except ModuleNotFoundError:
+        _validate_envelope_schema_minimal(data, schema)
+        return
+
+    try:
+        jsonschema.validate(instance=data, schema=schema)
     except jsonschema.ValidationError as exc:
         raise MessageValidationError(f"envelope schema: {exc.message}") from exc
+
+
+def _validate_envelope_schema_minimal(data: JsonDict, schema: JsonDict) -> None:
+    """Minimal local validator for DreamOS bus envelope schema."""
+    if not isinstance(data, dict):
+        raise MessageValidationError("envelope schema: message must be an object")
+
+    required = schema.get("required", [])
+    for key in required:
+        if key not in data:
+            raise MessageValidationError(f"envelope schema: missing required field {key!r}")
+
+    properties = schema.get("properties", {})
+    allowed = set(properties.keys())
+
+    if schema.get("additionalProperties") is False:
+        extras = set(data.keys()) - allowed
+        if extras:
+            raise MessageValidationError(
+                f"envelope schema: additional properties are not allowed: {sorted(extras)!r}"
+            )
+
+    for key, rules in properties.items():
+        if key not in data or not isinstance(rules, dict):
+            continue
+
+        value = data[key]
+        expected = rules.get("type")
+
+        if expected == "string" and not isinstance(value, str):
+            raise MessageValidationError(f"envelope schema: {key!r} must be a string")
+        if expected == "object" and not isinstance(value, dict):
+            raise MessageValidationError(f"envelope schema: {key!r} must be an object")
+        if expected == "array" and not isinstance(value, list):
+            raise MessageValidationError(f"envelope schema: {key!r} must be an array")
+        if expected == "null" and value is not None:
+            raise MessageValidationError(f"envelope schema: {key!r} must be null")
+
+        if isinstance(expected, list):
+            if not any(_schema_type_match(value, item) for item in expected):
+                raise MessageValidationError(
+                    f"envelope schema: {key!r} must match one of {expected!r}"
+                )
+
+        if "enum" in rules and value not in rules["enum"]:
+            raise MessageValidationError(
+                f"envelope schema: {key!r} must be one of {rules['enum']!r}"
+            )
+
+
+def _schema_type_match(value: object, expected: str) -> bool:
+    if expected == "string":
+        return isinstance(value, str)
+    if expected == "object":
+        return isinstance(value, dict)
+    if expected == "array":
+        return isinstance(value, list)
+    if expected == "null":
+        return value is None
+    if expected == "boolean":
+        return isinstance(value, bool)
+    if expected == "integer":
+        return isinstance(value, int) and not isinstance(value, bool)
+    if expected == "number":
+        return isinstance(value, (int, float)) and not isinstance(value, bool)
+    return True
 
 
 REQUIRED_FIELDS = (
