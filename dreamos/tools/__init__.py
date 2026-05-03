@@ -1,15 +1,23 @@
-from .base import BaseTool, ToolResult, ToolRegistry
-from . import git_tools, lint_tools, scan_tools, test_tools
+"""DreamOS tools package.
+
+Keep package import side effects minimal. Tool implementations should be loaded
+by explicit module import or registry discovery, not by importing this package.
+"""
+
+__all__ = [
+    "ToolRegistry",
+    "ToolResult",
+]
 
 
-def build_default_registry() -> ToolRegistry:
-    """Create and return a registry pre-loaded with all built-in tools."""
-    registry = ToolRegistry()
-    git_tools.register_all(registry)
-    lint_tools.register_all(registry)
-    test_tools.register_all(registry)
-    scan_tools.register_all(registry)
-    return registry
+def __getattr__(name: str):
+    if name in __all__:
+        from .base import ToolRegistry, ToolResult
 
+        values = {
+            "ToolRegistry": ToolRegistry,
+            "ToolResult": ToolResult,
+        }
+        return values[name]
 
-__all__ = ["BaseTool", "ToolResult", "ToolRegistry", "build_default_registry"]
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
