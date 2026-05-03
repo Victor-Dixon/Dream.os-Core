@@ -1,72 +1,39 @@
-# Dream.OS Repo Boundaries
+# DreamOS Repo Boundaries
 
-## Purpose
+## Decision
 
-This document prevents Dream.OS repo drift.
+This repository is the canonical DreamOS repo.
 
-No repo import, flatten, archive, promotion, or salvage operation is allowed until the target repo role is declared here.
+Former name:
 
-## Canonical Repos
+- `Dream.os-Core`
+
+Canonical name:
+
+- `DreamOS`
+
+## Repo Roles
 
 | Repo | Role | Owns | Does Not Own |
 |---|---|---|---|
-| `DreamOS` | Active runtime / execution loop | problem runs, local orchestration experiments, Termux runner, active loop behavior | canonical schemas, long-term contracts, external toolbelt |
-| `Dream.os-Core` | Core kernel / contract authority | message schema, FSM lifecycle, transition guards, transport validation, runtime invariants | legacy mailboxes, GUI coordinate automation, random workflow experiments |
-| `AgentTools` | Toolbelt / adapters / external control plane | MCP adapters, tools_v2, repo tools, web/API control surfaces, operator UX | canonical message schema, core FSM ownership |
-| `Agent_Cellphone` | Legacy salvage source | historical coordination patterns, stall detection ideas, old agent workspace evidence | live runtime state, canonical schema, direct imports |
+| `DreamOS` | Canonical kernel + active runtime spine | message schema, FSM lifecycle, transport guard, deterministic runtime primitives, problem execution model, migration decisions | raw legacy mailboxes, GUI coordinate automation, random untested imports |
+| `AgentTools` | Toolbelt / adapters / control plane | MCP adapters, safe tool execution, tools_v2, repo tools, web/API adapters, operator UX | canonical DreamOS schema/FSM ownership |
+| `Agent_Cellphone` | Legacy salvage source | historical coordination patterns and evidence | live runtime state, direct imports |
+| legacy `~/DreamOS` | Prototype source | old runtime loop material for audit/import | canonical repo identity |
 
 ## Import Rules
 
-1. Every external repo import must declare:
-   - source repo
-   - target repo
-   - import type
-   - promotion lane
-   - rejection/quarantine lane
+1. No blind folder flattening.
+2. Every import declares source, target lane, and rejection lane.
+3. Runtime state is never imported as live state.
+4. Historical inbox/outbox files remain archive evidence only.
+5. Runtime code lands behind tests.
+6. Core contracts remain canonical in this repo.
+7. Adapter/control-plane features go to AgentTools.
+8. GUI coordinate automation is quarantined unless explicitly isolated as an adapter.
 
-2. Runtime state is never imported directly.
-   - No historical inboxes.
-   - No old outboxes.
-   - No processed queues.
-   - No stale agent workspaces.
+## Current Migration
 
-3. Dream.os-Core only accepts:
-   - schemas
-   - FSM/transport guards
-   - deterministic runtime primitives
-   - tests
-   - architectural decisions
-   - archived evidence clearly marked non-runtime
-
-4. DreamOS accepts:
-   - active loop experiments
-   - problem JSON examples
-   - local runner improvements
-   - execution flow experiments
-
-5. AgentTools accepts:
-   - adapters
-   - CLI tools
-   - MCP/API bridges
-   - safe execution wrappers
-   - dashboard/control-plane features
-
-6. Agent_Cellphone remains source-only unless explicitly retired.
-
-## Current Decision
-
-Agent_Cellphone flatten is paused.
-
-Before continuing, classify whether each salvage item belongs in:
-
-- `DreamOS`
-- `Dream.os-Core`
-- `AgentTools`
-- archive only
-- quarantine
-
-## Active Risk
-
-The current risk is repo identity collapse.
-
-Do not continue importing Agent_Cellphone into Dream.os-Core until the target boundary decision is committed.
+- `Dream.os-Core` has been renamed to `DreamOS`.
+- Legacy `~/DreamOS` must be audited before import.
+- Agent_Cellphone remains source-only until each salvage lane is assigned.
