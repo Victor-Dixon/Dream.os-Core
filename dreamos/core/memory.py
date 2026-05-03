@@ -8,7 +8,7 @@ ChromaDB / FAISS when you're ready for semantic retrieval.
 import json
 import threading
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -54,7 +54,7 @@ class Memory:
             "ok": result.get("ok", False),
             "worker": worker,
             "node_id": node_id,
-            "ts": datetime.utcnow().isoformat(),
+            "ts": datetime.now(timezone.utc).isoformat(),
         }
         with self._lock:
             self._log.append(entry)

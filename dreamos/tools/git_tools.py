@@ -3,7 +3,7 @@ tools/git_tools.py — All git operations.
 """
 
 import subprocess
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List
 
 from .base import BaseTool, ToolResult
@@ -77,7 +77,7 @@ class GitCommitTool(BaseTool):
 
     def execute(self, repo: str, message: str = "", **kwargs) -> ToolResult:
         if not message:
-            ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+            ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
             message = f"auto: dream.os v7 @ {ts}"
         _git(["add", "."], repo)
         return _git(["commit", "-m", message], repo)
