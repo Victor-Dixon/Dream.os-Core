@@ -1,6 +1,6 @@
 # DreamOS-Only Variant Cleanup Census
 
-Generated: 2026-05-04T04:02:12-05:00
+Generated: 2026-05-04T04:03:05-05:00
 Root: /data/data/com.termux/files/home/projects
 
 Excluded: AgentTools, because it is a toolbelt repo, not a Dream.OS variant.
@@ -10,19 +10,19 @@ Excluded: AgentTools, because it is a toolbelt repo, not a Dream.OS variant.
 ```text
 repo                     branch                   dirty    files    dirs     pyc      json     md       yaml     js      
 ----                     ------                   -----    -----    ----     ---      ----     --       ----     --      
-DreamOS                  main                     6        159      44       0        8        55       8        0       
+DreamOS                  main                     4        156      41       0        8        55       9        0       
 Dream.os                 main                     0        1033     207      0        93       51       19       0       
-Victor.os                agent-1-agent-leader     0        405      127      17       10       30       10       0       
+Victor.os                agent-1-agent-leader     0        385      116      0        10       30       11       0       
 ```
 
 ## Top Directories
 
 ### DreamOS
 ```text
-     12 _ops/reports
+     13 _ops/reports
       8 tests
       8 src/core
-      7 runtime/tasks
+      8 runtime/tasks
       7 dreamos/core
       6 dreamos/tools
       6 dreamos/tests
@@ -70,8 +70,8 @@ Victor.os                agent-1-agent-leader     0        405      127      17 
      36 src/dreamos/tools
      15 src/dreamos/core
      13 scripts
+     13 _ops/reports
      12 tests
-     12 _ops/reports
      11 src/dreamos/integrations/social
      10 src/dreamos/tools/scanner
       8 tests/runtime
@@ -80,13 +80,13 @@ Victor.os                agent-1-agent-leader     0        405      127      17 
       7 src/dreamos/agents
       6 tests/integration
       6 src/dreamos/utils
-      6 src/dreamos/tools/agent_resume/__pycache__
       6 src/dreamos/tools/agent_resume
       6 src/dreamos/governance
       6 src/dreamos/feedback
       6 src/dreamos/bridge
       6 src/dreamos/agents/agent3
       6 dreamos_clean
+      6 dreamos/skills/lifecycle
 ```
 
 ## Next Rule
