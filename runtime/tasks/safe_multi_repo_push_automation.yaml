@@ -1,0 +1,13 @@
+task: "Automate safe pushing across Dream.OS project repos"
+actions_taken:
+  - "Add dry-run-first multi-repo push controller"
+  - "Require explicit repo allowlist"
+  - "Block dirty repos"
+  - "Block repos with no upstream"
+  - "Block branches behind upstream"
+  - "Push only clean allowlisted repos with commits ahead"
+verify:
+  - "bash _ops/scripts/push_projects_safe.sh ~/projects dry-run"
+  - "cat ~/projects/.dreamos_push_allowlist"
+commit_message: "chore: add safe multi-repo push automation"
+status: "pending"
