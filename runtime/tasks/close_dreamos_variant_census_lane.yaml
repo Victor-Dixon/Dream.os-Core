@@ -1,0 +1,13 @@
+task: "Close DreamOS-only variant census lane"
+actions_taken:
+  - "Exclude AgentTools from Dream.OS flattening cleanup decisions"
+  - "Inventory DreamOS, Dream.os, and Victor.os only"
+  - "Identify Dream.os as clean enough for promote classification"
+  - "Identify Victor.os tracked pyc cleanup as next lane"
+  - "Remove generated pytest cache from canonical DreamOS"
+verify:
+  - "git status --short"
+  - "test -f _ops/scripts/variant_cleanup_census_dreamos_only.sh"
+  - "ls _ops/reports/variant_cleanup_census_dreamos_only_*.md"
+commit_message: "chore: add DreamOS-only variant census"
+status: "pending"

@@ -1,0 +1,10 @@
+task: "Run DreamOS-only variant cleanup census"
+actions_taken:
+  - "Exclude AgentTools from Dream.OS variant cleanup"
+  - "Inventory canonical DreamOS and Dream.OS source variants"
+  - "Report dirty status and file-type counts"
+  - "Prepare decision point for cleanup stop vs promote-manifest phase"
+verify:
+  - "bash _ops/scripts/variant_cleanup_census_dreamos_only.sh ~/projects"
+commit_message: "chore: add DreamOS-only variant cleanup census"
+status: "pending"
