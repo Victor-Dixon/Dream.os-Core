@@ -1,0 +1,18 @@
+task: "Quarantine root-level ~/projects junk artifacts"
+actions_taken:
+  - "Move loose root-level runtime/cache/test artifacts into _JUNK_REVIEW"
+  - "Avoid touching git repos"
+  - "Preserve moved artifacts for review before deletion"
+verify:
+  - "test ! -e ~/projects/0"
+  - "test ! -e ~/projects/4RE"
+  - "test ! -e ~/projects/="
+  - "test ! -e ~/projects/cache"
+  - "test ! -e ~/projects/chrome_profile"
+  - "test ! -e ~/projects/cookies"
+  - "test ! -e ~/projects/drivers"
+  - "test ! -e ~/projects/memory"
+  - "test ! -e ~/projects/outputs"
+  - "test ! -e ~/projects/tests"
+commit_message: "chore: document root junk quarantine"
+status: "pending"
