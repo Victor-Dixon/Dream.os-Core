@@ -1,0 +1,10 @@
+task: "Generate Dream.OS variant promotion manifests"
+actions_taken:
+  - "Compare Dream.os and Victor.os against canonical DreamOS"
+  - "Classify unique variant files into PROMOTE_CONTRACT, PROMOTE_TEST, PROMOTE_REVIEW, REFERENCE, DELETE, and DEFER"
+  - "Generate markdown and TSV manifests"
+  - "Prevent bulk merge before promotion review"
+verify:
+  - "bash _ops/scripts/generate_variant_promotion_manifests.sh ~/projects/DreamOS ~/projects/Dream.os ~/projects/Victor.os"
+commit_message: "chore: generate variant promotion manifests"
+status: "pending"
