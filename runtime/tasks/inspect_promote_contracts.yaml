@@ -1,0 +1,11 @@
+task: "Inspect PROMOTE_CONTRACT candidates before merge"
+actions_taken:
+  - "Inspect Dream.os merit chain schema"
+  - "Inspect Victor.os product output schema"
+  - "Inspect Victor.os cursor feedback schema"
+  - "Inspect Victor.os GPT command schema"
+  - "Avoid copying files before ownership/path decision"
+verify:
+  - "bash _ops/scripts/inspect_promote_contracts.sh"
+commit_message: "chore: inspect promotion contract candidates"
+status: "pending"
