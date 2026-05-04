@@ -1,0 +1,88 @@
+{
+  "deleted_count": 15,
+  "moved_count": 8,
+  "empty_removed_count": 29,
+  "external_quarantine": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544",
+  "deleted": [
+    "tests/audit/__pycache__",
+    "tests/__pycache__",
+    "src/transports/__pycache__",
+    "src/relay/__pycache__",
+    "src/core/__pycache__",
+    "src/__pycache__",
+    "scripts/ci/__pycache__",
+    "dreamos/tools/__pycache__",
+    "dreamos/tests/__pycache__",
+    "dreamos/plans/__pycache__",
+    "dreamos/logging/__pycache__",
+    "dreamos/core/__pycache__",
+    "dreamos/config/__pycache__",
+    "dreamos/__pycache__",
+    "__pycache__"
+  ],
+  "moved": [
+    {
+      "from": "_ops/quarantine",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/_ops/quarantine"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/DOCUMENTATION"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/PRDs"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/agent_workspaces"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/fsm_data"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/runtime/collaborative_tasks"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs",
+      "to": "/data/data/com.termux/files/home/projects/DreamOS_quarantine_20260504_014544/archive/imports/Agent_Cellphone/project_repository/PRDs"
+    }
+  ],
+  "empty_removed": [
+    "archive/imports/agent_cellphone",
+    "archive/imports/Agent_Cellphone/src/runtime/config",
+    "archive/imports/Agent_Cellphone/src/runtime",
+    "archive/imports/Agent_Cellphone/src/core/runtime/config/templates",
+    "archive/imports/Agent_Cellphone/runtime/tasks",
+    "archive/imports/Agent_Cellphone/runtime/fsm",
+    "archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5",
+    "archive/imports/Agent_Cellphone/runtime/agent_monitors",
+    "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox",
+    "archive/imports/Agent_Cellphone/reports",
+    "archive/imports/Agent_Cellphone/overnight_runner/protocols",
+    "archive/imports/Agent_Cellphone/overnight_runner/onboarding",
+    "archive/imports/Agent_Cellphone/docs/changes",
+    "archive/imports/Agent_Cellphone/docs",
+    "archive/imports/Agent_Cellphone/data/vision",
+    "archive/imports/Agent_Cellphone/data",
+    "archive/imports/Agent_Cellphone/config/templates/workspace_template",
+    "archive/imports/Agent_Cellphone/config/templates",
+    "archive/imports/Agent_Cellphone/config/system",
+    "archive/imports/Agent_Cellphone/config/agents",
+    "archive/imports/Agent_Cellphone/captain_submissions",
+    "archive/imports/Agent_Cellphone/backup/runtime_configs",
+    "archive/imports/Agent_Cellphone/backup",
+    "archive/imports/Agent_Cellphone/artifacts",
+    "archive/imports/Agent_Cellphone/_ops/reports",
+    "archive/imports/Agent_Cellphone/.github/profile",
+    "99_reference",
+    "04_onboarding",
+    "02_onboarding_ops"
+  ]
+}

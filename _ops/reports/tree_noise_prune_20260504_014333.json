@@ -1,0 +1,1630 @@
+{
+  "mode": "apply",
+  "delete_count": 61,
+  "quarantine_count": 375,
+  "kept_md_count": 48,
+  "kept_json_count": 6,
+  "delete": [
+    ".pytest_cache",
+    "__pycache__/conftest.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/.pytest_cache",
+    "dreamos/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/config/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/config/__pycache__/goals.cpython-313.pyc",
+    "dreamos/config/__pycache__/settings.cpython-313.pyc",
+    "dreamos/core/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/core/__pycache__/agent.cpython-313.pyc",
+    "dreamos/core/__pycache__/memory.cpython-313.pyc",
+    "dreamos/core/__pycache__/message_router.cpython-313.pyc",
+    "dreamos/core/__pycache__/routing.cpython-313.pyc",
+    "dreamos/core/__pycache__/swarm.cpython-313.pyc",
+    "dreamos/core/__pycache__/task_adapter.cpython-313.pyc",
+    "dreamos/logging/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/logging/__pycache__/logger.cpython-313.pyc",
+    "dreamos/plans/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/plans/__pycache__/decomposer.cpython-313.pyc",
+    "dreamos/plans/__pycache__/veto.cpython-313.pyc",
+    "dreamos/tests/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/tests/__pycache__/test_agent.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/tests/__pycache__/test_memory.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/tests/__pycache__/test_routing.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/tests/__pycache__/test_swarm.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/tests/__pycache__/test_tools.cpython-313-pytest-9.0.3.pyc",
+    "dreamos/tools/__pycache__/__init__.cpython-313.pyc",
+    "dreamos/tools/__pycache__/base.cpython-313.pyc",
+    "dreamos/tools/__pycache__/git_tools.cpython-313.pyc",
+    "dreamos/tools/__pycache__/lint_tools.cpython-313.pyc",
+    "dreamos/tools/__pycache__/scan_tools.cpython-313.pyc",
+    "scripts/ci/__pycache__/check_definition_of_done.cpython-313.pyc",
+    "scripts/ci/__pycache__/check_phase_regression.cpython-313.pyc",
+    "scripts/ci/__pycache__/check_phase_status.cpython-313.pyc",
+    "src/__pycache__/__init__.cpython-313.pyc",
+    "src/core/__pycache__/__init__.cpython-313.pyc",
+    "src/core/__pycache__/command_router_phase2.cpython-313.pyc",
+    "src/core/__pycache__/execution_guard.cpython-313.pyc",
+    "src/core/__pycache__/inbox_listener.cpython-313.pyc",
+    "src/core/__pycache__/message.cpython-313.pyc",
+    "src/core/__pycache__/message_pipeline.cpython-313.pyc",
+    "src/core/__pycache__/phase2_contracts.cpython-313.pyc",
+    "src/core/__pycache__/types.cpython-313.pyc",
+    "src/relay/__pycache__/__init__.cpython-313.pyc",
+    "src/relay/__pycache__/claim_logic.cpython-313.pyc",
+    "src/relay/__pycache__/device_relay.cpython-313.pyc",
+    "src/transports/__pycache__/__init__.cpython-313.pyc",
+    "src/transports/__pycache__/base.cpython-313.pyc",
+    "src/transports/__pycache__/envelope_middleware.cpython-313.pyc",
+    "src/transports/__pycache__/file_transport.cpython-313.pyc",
+    "src/transports/__pycache__/git_transport.cpython-313.pyc",
+    "tests/__pycache__/test_claim_and_ack.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_execution_guard.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_git_transport.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_message_only_execution.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_message_schema.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_message_to_swarm_execution.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_phase2_runtime.cpython-313-pytest-9.0.3.pyc",
+    "tests/__pycache__/test_transport_envelope.cpython-313-pytest-9.0.3.pyc",
+    "tests/audit/__pycache__/test_audit_suite_structure.cpython-313-pytest-9.0.3.pyc",
+    "tests/audit/__pycache__/test_definition_of_done.cpython-313-pytest-9.0.3.pyc",
+    "tests/audit/__pycache__/test_phase_regression_gate.cpython-313-pytest-9.0.3.pyc"
+  ],
+  "quarantine": [
+    {
+      "from": "01_runtime_core/INTER_AGENT_COMMUNICATION_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/01_runtime_core/INTER_AGENT_COMMUNICATION_GUIDE.md"
+    },
+    {
+      "from": "01_runtime_core/INTER_AGENT_FRAMEWORK_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/01_runtime_core/INTER_AGENT_FRAMEWORK_SUMMARY.md"
+    },
+    {
+      "from": "02_onboarding_ops/ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/02_onboarding_ops/ONBOARDING_SYSTEM_IMPROVEMENTS.md"
+    },
+    {
+      "from": "03_execution/SWARM_SYSTEM_AUDIT_2026-04-05.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/03_execution/SWARM_SYSTEM_AUDIT_2026-04-05.md"
+    },
+    {
+      "from": "03_execution/SWARM_SYSTEM_AUDIT_2026-04-06.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/03_execution/SWARM_SYSTEM_AUDIT_2026-04-06.md"
+    },
+    {
+      "from": "04_onboarding/COMPREHENSIVE_ONBOARDING_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/04_onboarding/COMPREHENSIVE_ONBOARDING_SUMMARY.md"
+    },
+    {
+      "from": "04_onboarding/ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/04_onboarding/ONBOARDING_SYSTEM_IMPROVEMENTS.md"
+    },
+    {
+      "from": "99_reference/FINAL_PROJECT_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/99_reference/FINAL_PROJECT_STRUCTURE.md"
+    },
+    {
+      "from": "99_reference/PROJECT_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/99_reference/PROJECT_STRUCTURE.md"
+    },
+    {
+      "from": "AGENT_AUDIT.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/AGENT_AUDIT.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/.github/profile/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/.github/profile/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/AGENT_5_CAPTAIN_COORDINATION_REPORT.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/AGENT_5_CAPTAIN_COORDINATION_REPORT.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/AGENT_QUICK_START_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/AGENT_QUICK_START_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/CAPTAIN_COLLABORATIVE_DIRECTIVE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/CAPTAIN_COLLABORATIVE_DIRECTIVE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/COLLABORATIVE_DIRECTIVE_EXECUTION_STATUS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/COLLABORATIVE_DIRECTIVE_EXECUTION_STATUS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT-4_TASK_COMPLETION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT-4_TASK_COMPLETION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_1_COLLABORATIVE_KNOWLEDGE_MANAGEMENT_COMPLETION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_1_COLLABORATIVE_KNOWLEDGE_MANAGEMENT_COMPLETION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_1_REPOSITORY_DEVELOPMENT_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_1_REPOSITORY_DEVELOPMENT_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_2_ENHANCED_COLLABORATIVE_SYSTEM_COMPLETION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_2_ENHANCED_COLLABORATIVE_SYSTEM_COMPLETION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_PRD_PROTOCOL.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_PRD_PROTOCOL.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_RESCUE_IMPLEMENTATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/AGENT_RESCUE_IMPLEMENTATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/BETA_WORKFLOW_CONFIG.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/BETA_WORKFLOW_CONFIG.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/BREAKTHROUGH_v1.0.0_CURSOR_BRIDGE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/BREAKTHROUGH_v1.0.0_CURSOR_BRIDGE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CAMPAIGN_SYSTEM_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CAMPAIGN_SYSTEM_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CAPTURE_IMPLEMENTATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CAPTURE_IMPLEMENTATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CLEANUP_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CLEANUP_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_AGENTS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_AGENTS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_DASHBOARD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_DASHBOARD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASKS_STATUS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASKS_STATUS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASK_COMPLETION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASK_COMPLETION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASK_FRAMEWORK.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COLLABORATIVE_TASK_FRAMEWORK.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COMPREHENSIVE_CLEANUP_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COMPREHENSIVE_CLEANUP_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CONFIGURABLE_PATHS_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CONFIGURABLE_PATHS_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CONFIGURATION_SYSTEM_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CONFIGURATION_SYSTEM_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CONTINUOUS_AGENTS_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CONTINUOUS_AGENTS_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/COORDINATE_CALIBRATION_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/COORDINATE_CALIBRATION_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CORE_PROTOCOLS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CORE_PROTOCOLS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/CURSOR_CAPTURE_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/CURSOR_CAPTURE_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEBUG_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEBUG_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEMOCRATIC_COORDINATION_FORUM_TRANSITION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEMOCRATIC_COORDINATION_FORUM_TRANSITION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEPLOYMENT_CHECKLIST.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEPLOYMENT_CHECKLIST.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEPLOYMENT_WORKFLOW_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEPLOYMENT_WORKFLOW_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEVELOPMENT_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEVELOPMENT_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEV_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEV_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DEV_STANDARDS_NEW.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DEV_STANDARDS_NEW.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/DISCORD_SETUP_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/DISCORD_SETUP_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_FSM_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_FSM_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_GUI_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_GUI_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_SYSTEMS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCED_SYSTEMS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCEMENT_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ENHANCEMENT_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/EXPANDED_COLLABORATIVE_TASKS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/EXPANDED_COLLABORATIVE_TASKS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/FSM_INTEGRATION_CONTRACT_COMPLETION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/FSM_INTEGRATION_CONTRACT_COMPLETION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/FSM_INTEGRATION_TESTING_CONTRACT_COMPLETION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/FSM_INTEGRATION_TESTING_CONTRACT_COMPLETION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ONGOING_COLLABORATION_INSTRUCTIONS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ONGOING_COLLABORATION_INSTRUCTIONS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/OPEN_DEBATE_PHASE_COMPLETION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/OPEN_DEBATE_PHASE_COMPLETION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/OVERNIGHT_EXECUTION_PLAN.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/OVERNIGHT_EXECUTION_PLAN.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/PRD_CREATION_SUMMARY_20250815.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/PRD_CREATION_SUMMARY_20250815.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/PRODUCTION_MONITOR_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/PRODUCTION_MONITOR_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/PROGRESSIVE_ESCALATION_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/PROGRESSIVE_ESCALATION_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/PROJECT_ORGANIZATION_FIXES.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/PROJECT_ORGANIZATION_FIXES.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/RELEASE_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/RELEASE_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/RELEASE_v1.0.0.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/RELEASE_v1.0.0.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/REPOSITORY_ANALYSIS_BETA_CRITERIA_OPEN_DEBATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/REPOSITORY_ANALYSIS_BETA_CRITERIA_OPEN_DEBATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/REPOSITORY_IMPROVEMENTS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/REPOSITORY_IMPROVEMENTS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/REPO_IMPROVEMENTS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/REPO_IMPROVEMENTS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/SECURE_COMMUNICATION_HUB_IMPLEMENTATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/SECURE_COMMUNICATION_HUB_IMPLEMENTATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/STALL_DETECTION_FIXES_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/STALL_DETECTION_FIXES_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/TASK_LIST.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/TASK_LIST.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/ULTIMATE_COMMAND_CENTER_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/ULTIMATE_COMMAND_CENTER_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/DOCUMENTATION/WORKFLOW_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/DOCUMENTATION/WORKFLOW_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/MASTER_COORDINATION_PLAN.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/MASTER_COORDINATION_PLAN.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/ORGANIZATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/ORGANIZATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/ORPHAN_ANALYSIS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/ORPHAN_ANALYSIS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/ORPHAN_CLEANUP_COMPLETION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/ORPHAN_CLEANUP_COMPLETION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/SmartStock-pro_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/SmartStock-pro_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/agent_cellphone_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/agent_cellphone_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/ai-task-organizer_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/ai-task-organizer_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/automation_framework_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/automation_framework_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/automation_workflow_templates.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/automation_workflow_templates.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/gpt_automation_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/gpt_automation_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/machinelearningmodelmaker_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/machinelearningmodelmaker_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/project_management_framework_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/project_management_framework_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/project_management_framework_implementation_guide.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/project_management_framework_implementation_guide.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/stock_portfolio_manager_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/stock_portfolio_manager_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/trading-leads-bot_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/trading-leads-bot_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/PRDs/utility_management_system_PRD.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/PRDs/utility_management_system_PRD.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/REPOSITORY_CLEANUP_STRATEGY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/REPOSITORY_CLEANUP_STRATEGY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/ROADMAP.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/ROADMAP.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/VICTOR_CAMPAIGN_EXECUTION_PLAN.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/VICTOR_CAMPAIGN_EXECUTION_PLAN.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/_ops/reports/agent_cellphone_flatten_audit.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/_ops/reports/agent_cellphone_flatten_audit.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/_ops/reports/agent_cellphone_flatten_audit.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/_ops/reports/agent_cellphone_flatten_audit.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/advanced_workflows/ADVANCED_WORKFLOWS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/advanced_workflows/ADVANCED_WORKFLOWS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/advanced_workflows/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/advanced_workflows/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-1/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-1/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/sprint_plan.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/sprint_plan.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/task_list.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-2/task_list.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-3/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-3/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-4/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-4/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-5/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-5/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-5/processed_index.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-5/processed_index.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-6/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-6/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-7/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-7/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/Agent-8/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/Agent-8/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/agents.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/agents.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/communications/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/communications/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/communications/captain_agent.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/communications/captain_agent.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/communications/orders/overnight_orders_trading_platform.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/communications/orders/overnight_orders_trading_platform.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/AGENT_STATUS_FEEDBACK_PROTOCOL.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/AGENT_STATUS_FEEDBACK_PROTOCOL.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/BEST_PRACTICES.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/BEST_PRACTICES.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/CORE_PROTOCOLS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/CORE_PROTOCOLS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/DEVELOPMENT_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/DEVELOPMENT_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/FINAL_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/FINAL_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_REVIEW.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_REVIEW.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/ONBOARDING_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/QUICK_START.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/QUICK_START.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/UPDATE_STATUS_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/UPDATE_STATUS_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/RESUME_INTEGRATION_PROTOCOL.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/RESUME_INTEGRATION_PROTOCOL.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/ROLE_ASSIGNMENT_PROTOCOL.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/ROLE_ASSIGNMENT_PROTOCOL.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/command_reference.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/command_reference.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/workflow_protocols.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/protocols/workflow_protocols.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/status_template.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/status_template.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/agent_roles_and_responsibilities.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/agent_roles_and_responsibilities.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/system_overview.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/system_overview.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/tools_and_technologies.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/tools_and_technologies.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/troubleshooting.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/agent_workspaces/onboarding/training_documents/troubleshooting.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/artifacts/osrsAI_docs_evidence.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/artifacts/osrsAI_docs_evidence.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/backup/runtime_configs/gui_cursor_coords.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/backup/runtime_configs/gui_cursor_coords.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/backup/runtime_configs/runtime_cursor_coords.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/backup/runtime_configs/runtime_cursor_coords.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/captain_submissions/Victor-Dixon_campaign.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/captain_submissions/Victor-Dixon_campaign.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/agents/agent_coordinates.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/agents/agent_coordinates.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/agents/agent_roles.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/agents/agent_roles.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/agents/project_focus.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/agents/project_focus.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/auto_mode_config.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/auto_mode_config.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/comprehensive_auto_mode_config.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/comprehensive_auto_mode_config.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/contract_update_Agent-1_to_Agent-5_FreeRideInvestor.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/contract_update_Agent-1_to_Agent-5_FreeRideInvestor.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/coordination_framework_results.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/coordination_framework_results.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/discord_config.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/discord_config.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/fsm_update_Agent-3_to_Agent-5_PRD_Completion.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/fsm_update_Agent-3_to_Agent-5_PRD_Completion.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/proper_onboarding_sequence_results.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/proper_onboarding_sequence_results.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/repository_analysis_results.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/repository_analysis_results.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/secure_hub_config.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/secure_hub_config.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/settings.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/settings.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/settings.prod.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/settings.prod.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/sustainable_transformation_model_results.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/sustainable_transformation_model_results.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/system/system_config.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/system/system_config.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/systematic_beta_analysis_results.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/systematic_beta_analysis_results.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/agent_modes.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/agent_modes.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/change_contract.schema.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/change_contract.schema.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/message_templates.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/message_templates.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/prd.schema.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/prd.schema.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/task_list.schema.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/task_list.schema.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/workspace_template/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/workspace_template/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/workspace_template/notes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/workspace_template/notes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/workspace_template/status.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/workspace_template/status.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/config/templates/workspace_template/task_list.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/config/templates/workspace_template/task_list.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AGENT_MESSENGER_INTEGRATION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AGENT_MESSENGER_INTEGRATION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AGENT_MESSENGER_REVIEW.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AGENT_MESSENGER_REVIEW.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AGENT_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AGENT_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AGENT_RESCUE_SYSTEM.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AGENT_RESCUE_SYSTEM.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AUTONOMOUS_AGENT_RESUME_TEMPLATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AUTONOMOUS_AGENT_RESUME_TEMPLATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/AutonomousModes.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/AutonomousModes.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/COMPREHENSIVE_ONBOARDING_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/COMPREHENSIVE_ONBOARDING_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/COMPREHENSIVE_RESUME_TEMPLATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/COMPREHENSIVE_RESUME_TEMPLATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/CONFIG_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/CONFIG_STRUCTURE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/DATA_ENGINEER_RESUME_TEMPLATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/DATA_ENGINEER_RESUME_TEMPLATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/DEVELOPMENT_AUTOMATION_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/DEVELOPMENT_AUTOMATION_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/DREAM_OS_BRANDING_UPDATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/DREAM_OS_BRANDING_UPDATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/DUAL_BUTTON_SENDING_APPROACH.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/DUAL_BUTTON_SENDING_APPROACH.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/FINAL_ONBOARDING_IMPROVEMENT_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/FINAL_ONBOARDING_IMPROVEMENT_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/FINAL_PROJECT_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/FINAL_PROJECT_STRUCTURE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/FSM_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/FSM_STRUCTURE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/GUI_CONSOLIDATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/GUI_CONSOLIDATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/GUI_DEVELOPMENT_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/GUI_DEVELOPMENT_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/GUI_V2_DESIGN_DOCUMENT.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/GUI_V2_DESIGN_DOCUMENT.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/GUI_V2_USER_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/GUI_V2_USER_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/HARDCODING_SOLUTION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/HARDCODING_SOLUTION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/IMPLEMENTATION_ROADMAP.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/IMPLEMENTATION_ROADMAP.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/IMPROVED_ONBOARDING_APPROACH.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/IMPROVED_ONBOARDING_APPROACH.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/INTERVIEW_PREPARATION_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/INTERVIEW_PREPARATION_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/INTER_AGENT_COMMUNICATION_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/INTER_AGENT_COMMUNICATION_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/INTER_AGENT_FRAMEWORK_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/INTER_AGENT_FRAMEWORK_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/ONBOARDING_IMPROVEMENT_COMPLETE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/ONBOARDING_IMPROVEMENT_COMPLETE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/ONBOARDING_IMPROVEMENT_SUCCESS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/ONBOARDING_IMPROVEMENT_SUCCESS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/ONBOARDING_SYSTEM_IMPROVEMENTS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/ONBOARDING_SYSTEM_IMPROVEMENTS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/ORGANIZATION_PLAN.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/ORGANIZATION_PLAN.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PHASE_1_GUI_CONSOLIDATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PHASE_1_GUI_CONSOLIDATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PRACTICAL_CONVERSION_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PRACTICAL_CONVERSION_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PRODUCT_REQUIREMENTS_DOCUMENT.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PRODUCT_REQUIREMENTS_DOCUMENT.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_FOCUS_CONFIGURATION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_FOCUS_CONFIGURATION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_REORGANIZATION_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_REORGANIZATION_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_REQUIREMENTS_ANALYSIS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_REQUIREMENTS_ANALYSIS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_ROADMAP.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_ROADMAP.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_STATUS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_STATUS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PROJECT_STRUCTURE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PROJECT_STRUCTURE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/PUSH_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/PUSH_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/RESUME_EXAMPLE_CONVERSION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/RESUME_EXAMPLE_CONVERSION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/RESUME_TEMPLATES_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/RESUME_TEMPLATES_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/RESUME_TEMPLATE_USAGE_GUIDE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/RESUME_TEMPLATE_USAGE_GUIDE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/ROLE_SPECIFIC_RESUME_PROMPTS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/ROLE_SPECIFIC_RESUME_PROMPTS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/SKILL_MAPPING_REFERENCE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/SKILL_MAPPING_REFERENCE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/SYSTEM_ARCHITECT_RESUME_TEMPLATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/SYSTEM_ARCHITECT_RESUME_TEMPLATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/TECHNICAL_SPECIFICATIONS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/TECHNICAL_SPECIFICATIONS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/TECHNICAL_SPECIFICATIONS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/TECHNICAL_SPECIFICATIONS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/TWO_AGENT_HORIZONTAL_GUI.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/TWO_AGENT_HORIZONTAL_GUI.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/VISION_SYSTEM_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/VISION_SYSTEM_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/docs/changes/2025-08-10-phase2-contract.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/docs/changes/2025-08-10-phase2-contract.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/projects/bc7a70be-b3bb-4600-9dca-f3148d8373f0.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/projects/bc7a70be-b3bb-4600-9dca-f3148d8373f0.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/tasks/3ec1ae78-6abb-4077-a3e9-34be67a446b8.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/tasks/3ec1ae78-6abb-4077-a3e9-34be67a446b8.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/tasks/Agent-4_FSM_Update.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/tasks/Agent-4_FSM_Update.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/tasks/Agent-4_Secure_Communication_Hub_Complete.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/tasks/Agent-4_Secure_Communication_Hub_Complete.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/tasks/task-001.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/tasks/task-001.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/fsm_data/tasks/task-002.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/fsm_data/tasks/task-002.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/orphan_analysis_report.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/orphan_analysis_report.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/00_INDEX.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/00_INDEX.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/01_GETTING_STARTED.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/01_GETTING_STARTED.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/02_CALIBRATION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/02_CALIBRATION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/03_MESSAGING_CHANNELS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/03_MESSAGING_CHANNELS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/04_OVERNIGHT_RUNNER.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/04_OVERNIGHT_RUNNER.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/05_FILE_INBOX_LISTENER.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/05_FILE_INBOX_LISTENER.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/06_PLAYBOOKS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/06_PLAYBOOKS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/07_TROUBLESHOOTING.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/07_TROUBLESHOOTING.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/08_FAQ.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/08_FAQ.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/09_CHECKLISTS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/09_CHECKLISTS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/10_NEW_AGENT_QUICKSTART.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/10_NEW_AGENT_QUICKSTART.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/11_AGENT_ONBOARDING_SEQUENCE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/11_AGENT_ONBOARDING_SEQUENCE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/11_SECRETS_ENV.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/11_SECRETS_ENV.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/12_REPO_INDEX.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/12_REPO_INDEX.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/13_MESSAGING_SCHEMAS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/13_MESSAGING_SCHEMAS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/14_VALIDATION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/14_VALIDATION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/15_CI_TESTING.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/15_CI_TESTING.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/16_GIT_WORKFLOW.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/16_GIT_WORKFLOW.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/17_CODE_STANDARDS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/17_CODE_STANDARDS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/18_OPS_RUNBOOKS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/18_OPS_RUNBOOKS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/20_V2_BI_DIRECTIONAL_ONBOARDING.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/20_V2_BI_DIRECTIONAL_ONBOARDING.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/21_V2_QUICK_REFERENCE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/21_V2_QUICK_REFERENCE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/ONBOARDING_IMPROVEMENTS_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/ONBOARDING_IMPROVEMENTS_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/onboarding/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/onboarding/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/COLLECT_LOGS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/COLLECT_LOGS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/DEVLOG_BROADCASTER.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/DEVLOG_BROADCASTER.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/PSREADLINE_BUFFER_BUG.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/PSREADLINE_BUFFER_BUG.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/PUSH_COMMITS.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/PUSH_COMMITS.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/RUN_VALIDATE_ALL.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/RUN_VALIDATE_ALL.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/TASK_STATE.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/TASK_STATE.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/TRIGGER_RUNNER.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/TRIGGER_RUNNER.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_scan_tasklists.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_scan_tasklists.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_send_sync.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_send_sync.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_validate_repo.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/protocols/protocol_validate_repo.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/overnight_runner/tools/COORDINATE_CAPTURE_README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/overnight_runner/tools/COORDINATE_CAPTURE_README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_1_Real_Time_Chatbot_Microservice.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_1_Real_Time_Chatbot_Microservice.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_2_Mobile_Task_Tracker_App.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_2_Mobile_Task_Tracker_App.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_3_Data_Ingestion_Pipeline.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_3_Data_Ingestion_Pipeline.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_4_Auto_Scaling_Simulation_Engine.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_4_Auto_Scaling_Simulation_Engine.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_5_Knowledge_Base_Portal.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_5_Knowledge_Base_Portal.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_data_pipeline.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_data_pipeline.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_discord_bot.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_discord_bot.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_fastapi_api.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_fastapi_api.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_mmorpg_engine.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_mmorpg_engine.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_web_scraper.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/PRD_web_scraper.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/ai_chatbot_assistant.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/ai_chatbot_assistant.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/autonomous_platform.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/autonomous_platform.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/blockchain_supply_chain.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/blockchain_supply_chain.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/data_analytics_dashboard.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/data_analytics_dashboard.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/ecommerce_platform.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/ecommerce_platform.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/project_repository/PRDs/mobile_fitness_app.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/project_repository/PRDs/mobile_fitness_app.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/reports/digest_template.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/reports/digest_template.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/cursor_agent_coords.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/cursor_agent_coords.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/cursor_agent_coords_backup.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/cursor_agent_coords_backup.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_1755303000_Agent-1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_1755303000_Agent-1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_1755305000_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_1755305000_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_New.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DaDudeKC-Website_New.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DreamVault.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/contract_update_Agent-3_to_Agent-5_DreamVault.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755248908737_Agent-1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755248908737_Agent-1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755254008649_Agent-4.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755254008649_Agent-4.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755254998648_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755254998648_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255056370_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255056370_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255063158_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255063158_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255064648_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255064648_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255066711_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255066711_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255068901_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755255068901_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755294600713_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755294600713_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755300711740_Agent-5.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755300711740_Agent-5.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755301784321_Agent-1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755301784321_Agent-1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755343361038_Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_comms/inbox/response_1755343361038_Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/activity.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/activity.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/health.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/health.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/metrics.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/agent_monitors/agent5/metrics.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/050ee057-7bc6-4431-9e4d-549b7868cc15.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/050ee057-7bc6-4431-9e4d-549b7868cc15.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/0b14db1b-af9b-4a56-b1a2-59d53df881da.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/0b14db1b-af9b-4a56-b1a2-59d53df881da.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/2a683c8b-c0d3-4c14-84f0-aa54415e605f.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/2a683c8b-c0d3-4c14-84f0-aa54415e605f.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/3a3030c3-1d5f-46ce-96fd-9cc77cd2e5af.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/3a3030c3-1d5f-46ce-96fd-9cc77cd2e5af.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/4510f744-a333-4bf3-856a-6fe6e5691a12.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/4510f744-a333-4bf3-856a-6fe6e5691a12.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/644f912e-4cc8-42e1-bfde-466480f04e29.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/644f912e-4cc8-42e1-bfde-466480f04e29.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/6cf4e251-7421-4dc8-b9b4-eba9be20a670.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/6cf4e251-7421-4dc8-b9b4-eba9be20a670.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/7823e83b-fdd6-4328-9b69-0d713a975701.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/7823e83b-fdd6-4328-9b69-0d713a975701.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/7a3ca711-b461-4dbe-b31f-23150ed55a42.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/7a3ca711-b461-4dbe-b31f-23150ed55a42.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/82c4a019-f42d-4ee7-91e0-c8ad0ab99047.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/82c4a019-f42d-4ee7-91e0-c8ad0ab99047.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/8aee1ab7-529f-44f8-9e7c-06cf4587bef2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/8aee1ab7-529f-44f8-9e7c-06cf4587bef2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/a0ace16e-5dbe-4e69-b462-4c9cac026405.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/a0ace16e-5dbe-4e69-b462-4c9cac026405.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/a0ad2e6d-267b-4183-8f21-5bd3a67e4038.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/a0ad2e6d-267b-4183-8f21-5bd3a67e4038.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/d9066534-e425-4a63-96c9-a363548b657b.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/d9066534-e425-4a63-96c9-a363548b657b.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/ddd9e7cd-7cbe-4e88-b1ab-16555ac3fc98.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/ddd9e7cd-7cbe-4e88-b1ab-16555ac3fc98.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/e6e2e260-62f6-4818-bdc2-c1761e118eb7.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/collaborative_tasks/e6e2e260-62f6-4818-bdc2-c1761e118eb7.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-1_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-1_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-2_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-2_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-3_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-3_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-4_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-4_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-5_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/050ee057-7bc6-4431-9e4d-549b7868cc15_Agent-5_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-1_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-1_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-2_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-2_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-3_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-3_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-4_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-4_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-5_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/2a683c8b-c0d3-4c14-84f0-aa54415e605f_Agent-5_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-1_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-1_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-2_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-2_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-3_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-3_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-4_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-4_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-5_1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/contributions/7a3ca711-b461-4dbe-b31f-23150ed55a42_Agent-5_1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_141740.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_141740.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_141953.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_141953.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_143638.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/collaborative_tasks/reports/collaboration_report_20250816_143638.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/config/autonomous_workflow_onboarding.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/config/autonomous_workflow_onboarding.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/config/modes_runtime.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/config/modes_runtime.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/fsm/captain_state.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/fsm/captain_state.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/fsm/enhanced_fsm_state.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/fsm/enhanced_fsm_state.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/fsm/standardization_state.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/fsm/standardization_state.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/runtime/tasks/example.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/runtime/tasks/example.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/scripts/AGENT_MESSENGER_INTEGRATION.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/scripts/AGENT_MESSENGER_INTEGRATION.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/scripts/README_ONBOARDING.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/scripts/README_ONBOARDING.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/scripts/SCRIPTS_CLEANUP_SUMMARY.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/scripts/SCRIPTS_CLEANUP_SUMMARY.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/agent_monitors/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/agent_monitors/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-2.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-2.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-3.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-3.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-4.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/agent_capabilities/Agent-4.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/optimization_results/f60cca45-de80-473d-a3cf-c99cbe7f7149.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/optimization_results/f60cca45-de80-473d-a3cf-c99cbe7f7149.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/sessions/0732e72f-63af-4702-b5b3-c5b62020ced7.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/sessions/0732e72f-63af-4702-b5b3-c5b62020ced7.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/sessions/652501ea-b7b6-4017-a2ba-3b6533fe16b1.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/sessions/652501ea-b7b6-4017-a2ba-3b6533fe16b1.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/0f9b992c-29db-45b7-ac5d-a648729731b6.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/0f9b992c-29db-45b7-ac5d-a648729731b6.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/3a385a55-870d-429f-99b5-368cb9390b70.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/3a385a55-870d-429f-99b5-368cb9390b70.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/41c52db9-bad2-4781-afcd-7d9d7ced42fa.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/41c52db9-bad2-4781-afcd-7d9d7ced42fa.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/c574a023-ecd8-4e75-990c-fa54a56ff788.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/system_metrics/c574a023-ecd8-4e75-990c-fa54a56ff788.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/0e6ea8b5-53fe-48e1-9a39-5a42a6fae276.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/0e6ea8b5-53fe-48e1-9a39-5a42a6fae276.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/4cf8e0c5-8db0-4cef-afde-6b218ddc0966.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/4cf8e0c5-8db0-4cef-afde-6b218ddc0966.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/5878ea33-bd92-46d0-a51f-000d89c947bb.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/5878ea33-bd92-46d0-a51f-000d89c947bb.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/a0dc60bb-95c0-4130-b974-4e89905babf0.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/a0dc60bb-95c0-4130-b974-4e89905babf0.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/a6c01056-0190-44ec-99f7-3a7b3c4687d7.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/a6c01056-0190-44ec-99f7-3a7b3c4687d7.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/dea6f86a-5b93-4bb7-ad2a-879a7a450b17.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/task_breakdowns/dea6f86a-5b93-4bb7-ad2a-879a7a450b17.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/7c4d99e2-face-4fb8-a4d5-57362ec52da7.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/7c4d99e2-face-4fb8-a4d5-57362ec52da7.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8839a920-7792-407f-a949-b07c46e370b3.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8839a920-7792-407f-a949-b07c46e370b3.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8ae22532-18cb-4c6c-a9fa-9b04dce5fe59.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8ae22532-18cb-4c6c-a9fa-9b04dce5fe59.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8d998fd5-e399-4106-bce2-b9708cc2c56c.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/8d998fd5-e399-4106-bce2-b9708cc2c56c.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/a8bd6723-3a32-488b-8312-5b10cfd3db39.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/a8bd6723-3a32-488b-8312-5b10cfd3db39.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/aeeb06fd-227d-43d3-80a2-c34e24289c63.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/collaborative/task_manager/demo_output/workflows/aeeb06fd-227d-43d3-80a2-c34e24289c63.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/core/runtime/config/agent_workspace_map.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/core/runtime/config/agent_workspace_map.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/core/runtime/config/cursor_agent_coords.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/core/runtime/config/cursor_agent_coords.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/core/runtime/config/templates/agent_modes.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/core/runtime/config/templates/agent_modes.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/gui/components/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/gui/components/README.md"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/runtime/config/agent_workspace_map.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/runtime/config/agent_workspace_map.json"
+    },
+    {
+      "from": "archive/imports/Agent_Cellphone/src/runtime/config/cursor_agent_coords.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/Agent_Cellphone/src/runtime/config/cursor_agent_coords.json"
+    },
+    {
+      "from": "archive/imports/agent_cellphone/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/agent_cellphone/README.md"
+    },
+    {
+      "from": "archive/imports/agent_cellphone/agent_cellphone_flatten_audit.json",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/agent_cellphone/agent_cellphone_flatten_audit.json"
+    },
+    {
+      "from": "archive/imports/agent_cellphone/agent_cellphone_flatten_audit.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/agent_cellphone/agent_cellphone_flatten_audit.md"
+    },
+    {
+      "from": "archive/imports/legacy_home_DreamOS/README.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/archive/imports/legacy_home_DreamOS/README.md"
+    },
+    {
+      "from": "audit_report.md",
+      "to": "_ops/quarantine/tree_noise_20260504_014333/audit_report.md"
+    }
+  ],
+  "kept_md": [
+    ".pytest_cache/README.md",
+    "00_foundation/IMPLEMENTATION_ROADMAP.md",
+    "00_foundation/PRODUCT_REQUIREMENTS_DOCUMENT.md",
+    "00_foundation/PROJECT_REQUIREMENTS_ANALYSIS.md",
+    "00_foundation/PROJECT_STATUS.md",
+    "00_foundation/README.md",
+    "00_foundation/TECHNICAL_SPECIFICATIONS.md",
+    "00_index/README_CURATED.md",
+    "01_core/AGENT_README.md",
+    "01_core/CONFIG_STRUCTURE.md",
+    "01_core/FSM_STRUCTURE.md",
+    "01_core/INTER_AGENT_COMMUNICATION_GUIDE.md",
+    "01_core/README.md",
+    "01_runtime_core/AGENT_README.md",
+    "01_runtime_core/AGENT_RESCUE_SYSTEM.md",
+    "01_runtime_core/AutonomousModes.md",
+    "01_runtime_core/CONFIG_STRUCTURE.md",
+    "01_runtime_core/FSM_STRUCTURE.md",
+    "01_runtime_core/PROJECT_FOCUS_CONFIGURATION.md",
+    "02_architecture/FINAL_PROJECT_STRUCTURE.md",
+    "02_architecture/PRODUCT_REQUIREMENTS_DOCUMENT.md",
+    "02_architecture/TECHNICAL_SPECIFICATIONS.md",
+    "03_execution/DOCS_PRUNING_CANDIDATES_2026-04-07.md",
+    "03_execution/IMPLEMENTATION_ROADMAP.md",
+    "03_execution/PROJECT_ROADMAP.md",
+    "03_execution/SSOT_UPDATE_LOG.md",
+    "AGENTS.md",
+    "README_CURATED.md",
+    "_ops/reports/agent_cellphone_flatten_decision.md",
+    "_ops/reports/imports/legacy_home_DreamOS_decision.md",
+    "_ops/reports/repo_boundaries/REPO_BOUNDARIES.md",
+    "_ops/reports/repo_boundaries/agent_cellphone_target_map.md",
+    "_ops/reports/repo_consolidation/agent_cellphone_import.md",
+    "_ops/reports/repo_consolidation/agent_cellphone_import_cleanup.md",
+    "_ops/reports/repo_consolidation/agent_cellphone_import_inventory.md",
+    "architecture_map.md",
+    "contracts/agent_contract.md",
+    "contracts/folder_layout.md",
+    "contracts/state_machine.md",
+    "docs/execution_lockdown.md",
+    "domain_model.md",
+    "dreamos/.pytest_cache/README.md",
+    "dreamos/README.md",
+    "prioritized_fix_plan.md",
+    "repo_inventory.md",
+    "run_log.md",
+    "test_assessment.md",
+    "truth_matrix.md"
+  ],
+  "kept_json": [
+    "03_execution/changes_2025-08-10_phase2-contract.json",
+    "99_manifest/selection_manifest.json",
+    "_ops/reports/tree_noise_prune_20260504_014306.json",
+    "contracts/message_schema.json",
+    "manifest.json",
+    "src/core/schemas/bus_message.schema.json"
+  ]
+}
