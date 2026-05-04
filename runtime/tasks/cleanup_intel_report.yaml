@@ -1,0 +1,15 @@
+task: "Generate DreamOS cleanup intelligence report"
+actions_taken:
+  - "Collect git state"
+  - "Count total files and directories"
+  - "Count pycache, pyc, json, md, yaml, js, html, and tsx files"
+  - "Rank top file extensions"
+  - "Rank largest directories"
+  - "Identify file-type hotspots"
+  - "List generated cache"
+  - "List candidate legacy paths"
+  - "List preserve candidates"
+verify:
+  - "bash _ops/scripts/cleanup_intel_report.sh"
+commit_message: "chore: add cleanup intelligence report"
+status: "pending"

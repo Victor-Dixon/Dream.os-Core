@@ -1,0 +1,15 @@
+task: "Close DreamOS cleanup intelligence lane"
+actions_taken:
+  - "Remove accidental terminal paste artifacts"
+  - "Preserve latest cleanup intelligence report"
+  - "Preserve cleanup intelligence script"
+  - "Preserve cleanup intelligence task artifact"
+  - "Verify repo file counts and generated cache counts"
+verify:
+  - "test ! -f file"
+  - "test ! -f filename"
+  - "test -f _ops/scripts/cleanup_intel_report.sh"
+  - "test -f runtime/tasks/cleanup_intel_report.yaml"
+  - "find . -path ./.git -prune -o -type f -name '*.pyc' -print | wc -l"
+commit_message: "chore: add cleanup intelligence report"
+status: "pending"
