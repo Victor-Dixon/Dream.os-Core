@@ -1,0 +1,14 @@
+task: "Update Dream.OS Core Manifest with Fast TDD Command-Shape protocol"
+actions_taken:
+  - "Promote command-shape learning scaffold into the manifest"
+  - "Require paste-ready heredoc bash for code-producing responses"
+  - "Require targeted verification gates before closure"
+  - "Require YAML prompts to be written as real runtime/tasks/*.yaml artifacts"
+  - "Define cleanup classification rules"
+verify:
+  - "test -f docs/agents/DREAM_OS_CORE_MANIFEST_v3.md"
+  - "grep -q 'Fast TDD Command-Shape Protocol' docs/agents/DREAM_OS_CORE_MANIFEST_v3.md"
+  - "grep -q 'No inert YAML' docs/agents/DREAM_OS_CORE_MANIFEST_v3.md"
+  - "test -f runtime/tasks/update_manifest_fast_tdd_command_shape.yaml"
+commit_message: "docs: update manifest with fast TDD command-shape protocol"
+status: "pending"
