@@ -6,3 +6,7 @@ __pycache__/
 
 _ops/quarantine/
 *.zip
+
+# Externalized legacy/import payloads
+archive/imports/
+DreamOS_external_archive/
