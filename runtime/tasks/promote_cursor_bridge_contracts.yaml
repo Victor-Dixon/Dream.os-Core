@@ -1,0 +1,14 @@
+task: "Promote Cursor bridge contracts into canonical DreamOS"
+actions_taken:
+  - "Copy GPT command schema from Victor.os into contracts/cursor_bridge"
+  - "Copy Cursor feedback schema from Victor.os into contracts/cursor_bridge"
+  - "Add README documenting source, destination, and ownership intent"
+  - "Add promotion report"
+  - "Defer runtime validator wiring to a later lane"
+verify:
+  - "python -m json.tool contracts/cursor_bridge/gpt_command_schema.json >/dev/null"
+  - "python -m json.tool contracts/cursor_bridge/cursor_feedback_schema.json >/dev/null"
+  - "test -f contracts/cursor_bridge/README.md"
+  - "git diff --stat"
+commit_message: "feat: promote cursor bridge schemas"
+status: "pending"
