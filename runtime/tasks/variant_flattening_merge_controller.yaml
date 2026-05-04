@@ -1,0 +1,40 @@
+task: "Flatten Dream.OS variants into canonical DreamOS safely"
+actions_taken:
+  - "Declare ~/projects/DreamOS as canonical active repo"
+  - "Finish gutting/classifying source variants before merge"
+  - "Prevent dirty bulk merges from reintroducing runtime, archive, vendor, docs, and fixture bloat"
+  - "Require each variant to produce promote/reference/externalize/delete/defer manifests"
+  - "Merge by functional lane, not by whole repo"
+variant_repos:
+  - "~/projects/Victor.os"
+  - "~/projects/Dream.os"
+  - "~/projects/Dream.os-Core"
+  - "~/projects/AgentTools"
+classification:
+  delete:
+    - "__pycache__"
+    - "*.pyc"
+    - ".pytest_cache"
+    - "duplicate promoted code"
+    - "vendor payload already owned elsewhere"
+  externalize:
+    - "runtime logs"
+    - "old reports"
+    - "stale docs/specs/plans"
+    - "salvageable prototypes"
+  promote:
+    - "unique source modules"
+    - "tests"
+    - "schemas"
+    - "scripts"
+    - "contracts"
+  preserve:
+    - "active configs"
+    - "active schemas"
+    - "working tests"
+verify:
+  - "Each variant has clean git status or documented pending changes"
+  - "Each variant has a salvage/promote manifest"
+  - "Canonical DreamOS remains testable after each promoted lane"
+commit_message: "chore: add DreamOS variant flattening merge controller"
+status: "pending"
