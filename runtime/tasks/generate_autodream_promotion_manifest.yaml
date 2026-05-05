@@ -1,0 +1,10 @@
+task: "Generate AutoDream.Os promotion manifest"
+actions_taken:
+  - "Classify remaining AutoDream.Os files after cleanup"
+  - "Separate contracts, config, tests, source review, and doc review lanes"
+  - "Generate markdown and TSV promotion reports"
+verify:
+  - "bash _ops/scripts/generate_autodream_promotion_manifest.sh"
+  - "test -d _ops/reports/autodream_promotions_*"
+commit_message: "chore: add AutoDream promotion manifest"
+status: "pending"
