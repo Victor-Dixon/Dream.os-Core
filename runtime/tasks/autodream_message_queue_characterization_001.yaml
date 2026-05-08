@@ -1,0 +1,16 @@
+id: autodream_message_queue_characterization_001
+lane: consolidation
+source_repo: AutoDream.Os
+target_repo: DreamOS
+source:
+  - src/core/message_queue.py
+  - src/core/message_queue_persistence.py
+  - src/domain/ports/message_bus.py
+objective: Characterize AutoDream message queue semantics against canonical DreamOS bus boundaries.
+constraints:
+  - No direct copy.
+  - No schema overwrite.
+  - Tests before implementation.
+verification:
+  - pytest -q tests/compat/autodream/test_autodream_message_queue_sources.py
+status: active
