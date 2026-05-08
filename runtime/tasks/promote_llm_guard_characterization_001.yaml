@@ -1,0 +1,17 @@
+id: promote_llm_guard_characterization_001
+lane: salvage
+source: /data/data/com.termux/files/home/projects/_STAGING/dreamos_incoming_unique/dream-os-hardened-v33-1/dream-os-hardened/core/llm_guard.js
+target_repo: DreamOS
+mode: characterization_first
+objective: Extract and characterize llm guard semantics from incoming JS reference before any implementation.
+constraints:
+  - No direct JS port.
+  - Preserve canonical DreamOS architecture.
+  - Tests before implementation.
+deliverables:
+  - semantic audit report
+  - characterization tests
+  - implementation recommendation
+verification:
+  - pytest -q tests/salvage
+status: active
