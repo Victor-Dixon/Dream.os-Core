@@ -20,6 +20,39 @@ class InvalidMessageTransitionError(ValueError):
     """Raised when an invalid lifecycle transition is attempted."""
 
 
+
+class InvalidPromptError(ValueError):
+    """Raised when an LLM prompt violates guard policy."""
+
+BLOCKED_PROMPT_MARKERS: tuple[str, ...] = (
+    "ignore previous instructions",
+    "bypass safety",
+    "system prompt",
+    "developer message",
+)
+
+MAX_PROMPT_CHARS = 12000
+
+
+def validate_prompt(prompt: str, *, max_chars: int = MAX_PROMPT_CHARS) -> str:
+    if not isinstance(prompt, str):
+        raise InvalidPromptError("Prompt must be a string.")
+
+    normalized = prompt.strip()
+    if not normalized:
+        raise InvalidPromptError("Prompt must not be empty.")
+
+    if len(normalized) > max_chars:
+        raise InvalidPromptError("Prompt exceeds maximum allowed length.")
+
+    lowered = normalized.lower()
+    for marker in BLOCKED_PROMPT_MARKERS:
+        if marker in lowered:
+            raise InvalidPromptError(f"Prompt rejected by blocked marker: {marker}")
+
+    return normalized
+
+
 ALLOWED_TRANSITIONS: dict[str, set[str]] = {
     "new": {"claimed"},
     "claimed": {"running", "expired"},

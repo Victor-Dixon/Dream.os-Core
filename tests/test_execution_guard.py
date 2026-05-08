@@ -13,7 +13,9 @@ from src.core.execution_guard import (
     TRANSITION_AUDIT,
     InvalidExecutionPathError,
     InvalidMessageTransitionError,
+    InvalidPromptError,
     require_bus_message,
+    validate_prompt,
     validate_transition,
 )
 from src.core.message import BusMessage
