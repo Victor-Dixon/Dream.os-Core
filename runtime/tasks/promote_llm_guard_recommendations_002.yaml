@@ -1,0 +1,15 @@
+id: promote_llm_guard_recommendations_002
+lane: salvage
+source: /data/data/com.termux/files/home/projects/_STAGING/dreamos_incoming_unique/dream-os-hardened-v33-1/dream-os-hardened/core/llm_guard.js
+target_repo: DreamOS
+objective: Produce implementation recommendations from incoming llm_guard semantics.
+constraints:
+  - Report only.
+  - No production implementation yet.
+  - Preserve canonical architecture.
+deliverables:
+  - recommendation report
+  - proposed test targets
+verification:
+  - grep -q "Recommended Ports" _ops/reports/llm_guard_recommendations.md
+status: active
