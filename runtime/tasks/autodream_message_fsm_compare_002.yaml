@@ -1,0 +1,11 @@
+id: autodream_message_fsm_compare_002
+lane: consolidation
+source_repo: AutoDream.Os
+target_repo: DreamOS
+objective: Compare AutoDream message queue lifecycle language against canonical DreamOS execution guard FSM.
+constraints:
+  - Report only.
+  - No production code mutation.
+verification:
+  - grep -q "Recommendation" _ops/reports/autodream_message_fsm_compare.md
+status: active
