@@ -4,17 +4,17 @@
 
 | state | AutoDream count | DreamOS guard count |
 |---|---:|---:|
-| `new` | 0 | 0 |
-| `claimed` | 0 | 0 |
-| `running` | 0 | 0 |
-| `complete` | 0 | 0 |
-| `failed` | 0 | 0 |
-| `expired` | 0 | 0 |
-| `pending` | 0 | 0 |
-| `processing` | 0 | 0 |
-| `delivered` | 0 | 0 |
-| `ack` | 0 | 0 |
-| `retry` | 0 | 0 |
+| `new` | 1 | 1 |
+| `claimed` | 0 | 2 |
+| `running` | 4 | 2 |
+| `complete` | 2 | 2 |
+| `failed` | 20 | 2 |
+| `expired` | 15 | 3 |
+| `pending` | 14 | 0 |
+| `processing` | 18 | 0 |
+| `delivered` | 7 | 0 |
+| `ack` | 54 | 0 |
+| `retry` | 22 | 0 |
 
 ## Recommendation
 
