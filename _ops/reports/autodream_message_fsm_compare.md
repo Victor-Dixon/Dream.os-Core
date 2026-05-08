@@ -1,1 +1,23 @@
-# AutoDream Message FSM Compare\n\n## Canonical DreamOS FSM\n\n- Source: `src/core/execution_guard.py`\n- Canonical states are controlled by `ALLOWED_TRANSITIONS`.\n\n## State Signal Counts\n\n| state | AutoDream count | DreamOS guard count |\n|---|---:|---:|\n| `new` | 0 | 0 |\n| `claimed` | 0 | 0 |\n| `running` | 0 | 0 |\n| `complete` | 0 | 0 |\n| `failed` | 0 | 0 |\n| `expired` | 0 | 0 |\n| `pending` | 0 | 0 |\n| `processing` | 0 | 0 |\n| `delivered` | 0 | 0 |\n| `ack` | 0 | 0 |\n| `retry` | 0 | 0 |\n\n## Interpretation\n\n- AutoDream appears queue-centric with pending/processing/delivered/retry language.\n- DreamOS canonical guard is message-lifecycle/FSM-centric: new/claimed/running/complete/failed/expired.\n- Promotion should map AutoDream queue concepts onto DreamOS FSM, not replace the FSM.\n\n## Recommendation\n\n1. Do not import AutoDream message queue implementation.\n2. Add a compatibility mapping report/model if needed:\n   - pending -> new\n   - processing -> running\n   - delivered -> complete\n   - retry/failure -> failed or expired depending on lease state\n3. Keep `ALLOWED_TRANSITIONS` as canonical SSOT.
+# AutoDream Message FSM Compare
+
+## State Signal Counts
+
+| state | AutoDream count | DreamOS guard count |
+|---|---:|---:|
+| `new` | 0 | 0 |
+| `claimed` | 0 | 0 |
+| `running` | 0 | 0 |
+| `complete` | 0 | 0 |
+| `failed` | 0 | 0 |
+| `expired` | 0 | 0 |
+| `pending` | 0 | 0 |
+| `processing` | 0 | 0 |
+| `delivered` | 0 | 0 |
+| `ack` | 0 | 0 |
+| `retry` | 0 | 0 |
+
+## Recommendation
+
+- Keep `ALLOWED_TRANSITIONS` as canonical SSOT.
+- Map AutoDream queue concepts onto DreamOS FSM only through tests.
+- Do not import AutoDream queue implementation.
