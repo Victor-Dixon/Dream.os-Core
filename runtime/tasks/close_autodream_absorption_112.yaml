@@ -1,0 +1,8 @@
+id: close_autodream_absorption_112
+title: Close AutoDream absorption boundary
+lane: variant_salvage
+source_repo: AutoDream.Os
+target_repo: DreamOS
+intent: Retire hard dependency on missing AutoDream.Os while preserving salvage trail.
+verify:
+  - pytest -q tests/compat/autodream
