@@ -15,3 +15,8 @@ DreamOS is the canonical runtime and contract layer for the Dream.OS autonomous 
 - Discord control-plane UX
 - Governance inventory
 - Marketing/event automation
+
+
+## Proof Status
+
+Discord claims were not evidenced in the current proof audit. Treat Discord integration as planned or external unless executable code and tests are added to this repo.
